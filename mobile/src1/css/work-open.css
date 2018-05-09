@@ -1,0 +1,686 @@
+.page-content {
+    background: #f9f9f8;
+}
+
+.margin-r-10 {
+    margin-right: 10px;
+}
+
+.u-float-right {
+    float: right;
+}
+
+.grey {
+    color: #999999
+}
+
+.wrap-work-content .sign-info {
+    width: 30%;
+}
+
+.el-button--primary:focus, .el-button--primary:hover {
+    background: #b2d802 !important;
+    border-color: #b2d802 !important;
+    color: #fff;
+}
+
+.el-button--primary {
+    color: #fff;
+    background-color: #b2d802 !important;
+    border-color: #b2d802 !important;
+}
+
+.wrap-work-content {
+    padding: 0;
+    min-height: 700px;
+}
+
+.wrap-work-content .search-content {
+    background: #eee;
+}
+
+.wrap-work-content .main-content {
+    margin-top: 20px;
+}
+
+.wrap-work-content .clear-bg {
+    background: none;
+}
+
+.wrap-work-content .header-con {
+    padding-top: 10px;
+}
+
+.wrap-work-content .picture-list {
+    background: #eeeeee;
+    min-height: 579px;
+}
+
+.wrap-work-content .picture-list .check-box {
+    width: 34px;
+    text-align: center;
+    display: inline-block;
+}
+
+.wrap-work-content .picture-list ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+.wrap-work-content .picture-list li {
+    background: #fff;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 1px 5px #ccc;
+}
+
+.wrap-work-content .picture-list li.active {
+    border-color: #b2d802;
+}
+
+.wrap-work-content .edit-thumb {
+    background: #b2d802;
+    padding: 5px 18px;
+    text-shadow: none;
+    margin-top: 5px;
+    border: none;
+    color: #fff;
+}
+
+.wrap-work-content .rename-thumb {
+    margin-right: 5px;
+}
+
+.wrap-work-content .selectedAll {
+    margin-left: 10px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.wrap-work-content .selectedAll label {
+    font-weight: 100;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-bottom: 0;
+    color: #999999;
+}
+
+.wrap-work-content .selectedAll input {
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.wrap-work-content .search-layout label {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.wrap-work-content .dropdown-btn {
+    padding: 3.5px 10px;
+    background: #dddddd;
+}
+
+.wrap-work-content .ico-caret {
+    background-position: 4px 1px !important;
+}
+
+.wrap-work-content .move-thumb {
+    padding: 4px 22px;
+}
+
+.wrap-work-content .mount-con {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.wrap-work-content .vertical-middle {
+    vertical-align: middle;
+}
+
+.wrap-work-content .mount-con .ico-group {
+    margin-right: 2px;
+}
+
+.wrap-work-content .mount-con span {
+    color: #999999;
+}
+
+.wrap-work-content .picture-list a {
+    color: #999999;
+}
+
+.wrap-work-content .flow-text {
+    max-width: 110px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    display: block;
+}
+
+.wrap-work-content .build-thumb {
+    color: #fd7272;
+    padding: 9px 5px;
+}
+
+.wrap-work-content .splite-thumb-title {
+    max-width: 59px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.wrap-work-content .menu-group-btn {
+    position: relative;
+}
+
+.wrap-work-content .menu-slide-wrap {
+    float: left;
+    position: relative;
+    width: 653px;
+}
+
+.wrap-work-content .material-icon-search {
+    cursor: pointer;
+    display: inline-block;
+    height: 13px;
+    width: 14px;
+    background: transparent url(http://make.westlakevr.cn/images/sprite/sprite-material.png) no-repeat;
+    background-position: -17px -32px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.wrap-work-content .menu-group-btn .menu-li {
+    margin-bottom: 0;
+    padding: 0;
+    width: 1100px;
+    display: inline-block;
+}
+
+.wrap-work-content .wrapBox {
+    margin-left: 40px;
+}
+
+.wrap-work-content .arrow-left,
+.wrap-work-content .arrow-right {
+    display: inline-block;
+    vertical-align: middle;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    color: #999999;
+}
+
+.wrap-work-content .arrow-left {
+    left: 10px;
+    top: 6px;
+}
+
+.wrap-work-content .arrow-right {
+    right: -26px;
+    top: 6px;
+}
+
+.wrap-work-content .search {
+    vertical-align: middle;
+    width: 100%;
+    padding: 5px 10px;
+    opacity: .8;
+    background: #fff;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 30px 0 10px;
+}
+
+.wrap-work-content .menu-btn-default {
+    text-shadow: none;
+    padding: 7px 0;
+    text-align: center;
+    margin-right: 2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 2px solid #ddd;
+    color: #999999;
+    width: 100px;
+    background: #fff;
+}
+
+.wrap-work-content .border-item {
+    border-color: #dddddd
+}
+
+.wrap-work-content .menu-btn-default.selected {
+    border: 2px solid #b2d802;
+    color: #b2d802;
+}
+
+.wrap-work-content .pic-title {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.wrap-work-content .pic-title p:first-child {
+    margin-bottom: 5px;
+}
+
+.wrap-work-content .pic-title p {
+    color: #999999;
+}
+
+.wrap-work-content .pic-size {
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+}
+
+.wrap-work-content .ico-group {
+    background: url(http://make.westlakevr.cn/images/sprite/group-icon.png) no-repeat;
+    display: inline-block;
+    height: 20px;
+    height: 20px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.wrap-work-content .ico-praise {
+    background-position: -14px -28px;
+}
+
+.wrap-work-content .praise-mount {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.wrap-work-content .line-h-50 {
+    line-height: 50px;
+}
+
+.wrap-work-content .ico-scanned {
+    background-position: -40px -28px;
+}
+
+.wrap-work-content .ico-share {
+    background-position: -62px -26px;
+}
+
+.wrap-work-content .ico-talk {
+    background-position: -60px 0px;
+}
+
+.wrap-work-content .ico-message {
+    background-position: -85px -26px;
+}
+
+.wrap-work-content .ico-edit {
+    background-position: -15px 0px;
+}
+
+.wrap-work-content .ico-del {
+    background-position: -33px 0px;
+}
+
+.wrap-work-content .ico-material {
+    background-position: -109px 0px;
+}
+
+.wrap-work-content .handle-btn {
+    line-height: 50px;
+    margin-right: 5px;
+}
+
+.wrap-work-content .handle-btn a {
+    margin-right: 5px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.m-cols-inline {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.m-font-14 {
+    font-size: 14px;
+}
+
+.m-font-12 {
+    font-size: 12px;
+}
+
+span p {
+    color: #999999;
+}
+
+.clear-margin {
+    margin: 0;
+}
+
+/*说一说管理*/
+.footer-border {
+    border-top: 0;
+}
+
+.modal-grey {
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+.comment-container h4 {
+    margin: 0;
+}
+
+.comment-container .msg-main-content {
+    background: #eee;
+}
+
+.comment-container .msg-content {
+    margin-top: 10px;;
+}
+
+.comment-container label {
+    font-weight: 100;
+    vertical-align: middle;
+}
+
+.comment-container .msg-caption {
+    float: left;
+}
+
+.comment-container .search-content {
+    float: right;
+}
+
+.comment-container .msg-header-content div {
+    background: #999 none repeat scroll 0 0;
+    color: #fff;
+    border-right: 1px solid #fff;
+    height: 30px;
+    line-height: 30px;
+}
+
+.comment-container .msg-header-content div:last-child {
+    border-right: 0;
+}
+
+.comment-container .comment-con .mar-t-b div {
+    height: 40px;
+    line-height: 40px;
+    color: #666666;
+    border-right: 1px solid #eee;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.comment-container .comment-con {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.comment-container .comment-con:first-child {
+    margin-top: 0;
+}
+
+.comment-container .msg-header-content, .msg-main-content {
+    text-align: center;;
+}
+
+.comment-container .footer-wrap {
+    position: relative;
+    height: 43px;
+}
+
+.comment-container .tab-page-div {
+    bottom: 2px;
+}
+
+.comment-container .search-layout {
+    display: inline-block;
+    position: relative;
+}
+
+.comment-container .search {
+    width: 180px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+.tree-view .search-wrap {
+    margin-bottom: 10px;
+    position: relative
+}
+
+.tree-view .search-wrap label {
+    width: 100%;
+}
+
+.tree-view .album-list .list-group-item, .tree-view .work-list .list-group-item, .tree-view .scene-list .list-group-item {
+    cursor: pointer;
+}
+
+.tree-view .browse-mount {
+    margin-right: 15px;
+}
+
+.tree-view {
+    max-height: 804px;
+    overflow-x: hidden;
+}
+
+.tree-view .album-list .list-group-item {
+    padding: 5px 15px;
+}
+
+.tree-view .work-list .list-group-item, .tree-view .scene-list .list-group-item {
+    padding: 3px 15px;
+}
+
+.tree-view .material-pic {
+    width: 240px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.tree-view .center {
+    text-align: center;
+}
+
+.tree-view .card-title {
+    color: #353535;
+}
+
+.tree-view label {
+    margin-bottom: 0;
+}
+
+.tree-view p {
+    margin-bottom: 0;
+}
+
+.tree-view .ml-15 {
+    margin-left: 15px;
+}
+
+.tree-view .ico-praise, .tree-view .ico-scanned {
+    margin-right: 2px;
+}
+
+.tree-view .tab-page-div {
+    bottom: -32px;
+    right: -4px;
+}
+
+.tree-view .material-icon-check-div {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 5px;
+    position: absolute;
+    width: 26px;
+    left: 0;
+    top: 1px;
+}
+
+.tree-view .material-icon-check-div .material-icon-check {
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    background: transparent url(http://make.westlakevr.cn/images/sprite/sprite-material.png) no-repeat;
+}
+
+.tree-view .material-icon-check-div .material-icon-check.checked {
+    background-position: -16px 0;
+}
+
+.tree-view .panel-footer {
+    height: 45px;
+}
+
+.tree-view .cards {
+    padding-top: 0;
+}
+
+.tree-view .tree-contain {
+    width: 30%;
+    padding: 0 10px;
+}
+
+.tree-view .relative {
+    position: relative;
+}
+
+.tree-view .material {
+    width: 60%;
+    display: inline-block;
+}
+
+.tree-view .el-tree {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-color: #ddd;
+}
+
+.tree-view .search-wrap .search {
+    width: 100%;
+}
+
+.tree-view .menu-li {
+    padding: 0;
+}
+
+.tree-view .material-icon-search {
+    cursor: pointer;
+    display: inline-block;
+    height: 13px;
+    width: 14px;
+    background: transparent url(http://make.westlakevr.cn/images/sprite/sprite-material.png) no-repeat;
+    background-position: -17px -32px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.tree-view .model-header li {
+    float: left;
+}
+
+.tree-view .cards {
+    padding-top: 15px;
+}
+
+.tree-view .el-checkbox {
+    position: absolute;
+    top: -1px;
+}
+
+.tree-view .model-header {
+    padding: 20px 0;
+}
+
+.tree-view .el-checkbox__inner.is-checked {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.tree-view .el-checkbox__inner {
+    border-color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tree-view .el-checkbox__inner:not(.is-disabled):hover {
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.tree-view .material-icon-check-div {
+    z-index: 100;
+    line-height: 21px;
+    text-align: center
+}
+
+.tree-view .material-contain {
+    padding: 0 20px;
+    width: 60%
+}
+
+.tree-view .dialog-contain {
+    display: flex;
+}
+
+.tree-view .material-panel {
+    width: 40%;
+    display: inline-block
+}
+
+.custom-dialog .tree-view .dialog-contain {
+    display: block;
+}
+
+.custom-dialog .tree-view .material-panel {
+    width: 100%;
+}
+
+.custom-dialog .tree-view .material-contain {
+    width: 100%;
+    padding: 0;
+}
+
+.tree-view .show {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.tree-view .angle-ico {
+    float: right;
+    font-size: 20px;
+    cursor: pointer
+}
+.my-search-container{
+    width: 75%;
+}

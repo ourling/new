@@ -1,0 +1,117 @@
+@mixin font($s,$c,$b:0){
+  @if $c{
+    color: $c;
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }@else {
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }
+}
+@mixin position($type:'X'){
+  position: absolute;
+  @if($type == 'X'){
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }@else if($type == 'Y'){
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }@else {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ag-inform-list{
+  margin: 0 auto 20px;
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  .text{
+    @include font(16px,#333);
+    @include position('Y');
+  }
+  .form-input{
+    @include font(13px,#666);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #EAE9E9;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 38px;
+    margin-left: 70px;
+    outline: none;
+    width: 406px;
+  }
+  .ag-fenge{
+    display: block;
+    float: left;
+    width: 34px;
+    margin: auto;
+    text-align: center;
+    color: #666;
+    line-height: 38px;
+  }
+  .select-container{
+    margin-left: 70px;
+    .item{
+      @include font(13px,#666);
+      float: left;
+      width: 186px !important;
+      height: 38px;
+      border-radius: 5px;
+      border: 1px solid #EAE9E9;
+      outline: none;
+    }
+  }
+}
+.tips {
+  @include font(24px,#ff0000);
+  @include position('X');
+  bottom: 2%;
+  text-align: center;
+}
+.agency-btn{
+  @include font(16px,#fff);
+  display: block;
+  margin: auto;
+  text-align: center;
+  background: #F53D3D;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 15px 0;
+  width: 260px;
+}
+.banner-container{
+  @include position('X');
+  box-sizing: border-box;
+  background: url('../images/agency/banner-content.png') no-repeat center;
+  background-size: contain;
+  bottom: 5%;
+  width: 1000px;
+  .agency-content{
+    padding: 50px 0;
+    margin: auto;
+    width: 53%;
+  }
+}
+.banner{
+  background: url('../images/agency/banner.jpg') no-repeat center;
+  background-size: cover;
+  height: fill-available;
+  height: -webkit-fill-available;
+}

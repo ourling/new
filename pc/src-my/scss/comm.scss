@@ -1,0 +1,57 @@
+
+@import "mixin/mixin";
+//width size
+$container-w: 1200px;
+
+//font  size
+$font: 16px;
+
+//ine-height size
+$l-height-fix: 50px;
+
+//padding size
+$padding-m: 15px;
+$padding-sm: 10px;
+
+//margin size
+$margin-fixed: 70px;
+
+//color bg
+$bg-def: #fff;
+$bg-nav: #169EF4;
+
+//color font
+$color-def: #fff;
+$color-aHover: #46DEFF;
+
+//color border
+$bor-nav: #6FC9F2;
+$bor-dashed: #47b5fa;
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear:before,
+.clear:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+[v-cloak] { display: none }
+
+.card-container {
+  @extend .clear;
+}
+.card-4 {
+  @include card(25%);
+}
+.card-5{
+  @include card(20%);
+}

@@ -1,0 +1,114 @@
+@import "../mixin/template";
+%position {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.banner {
+  width: 100%;
+  .banner-container{
+    top: 2.55rem;
+    .banner-btn{
+      @include font(.28rem,#fff);
+      background: #E9A501;
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+  overflow: hidden;
+  width: 100%;
+}
+.mbaby-container {
+  color: #666;
+  min-height: 5rem;
+  padding-top: $padding;
+  width: 100%;
+}
+.part{
+  .title-container{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    @include font(.32rem,#000);
+    .text {
+      @include font(.22rem,#787878);
+      line-height: .4rem;
+    }
+    .icon {
+      background: #5AA2E7;
+      height: .32rem;
+    }
+  }
+}
+.card-container{
+  position: relative;
+  overflow: hidden;
+  .btn{
+    @include font(.24rem,#40B0FF);
+    display: block;
+    margin: auto;
+    border: 1px solid #169EF4;
+    border-radius: .08rem;
+    padding: .17rem .2rem;
+    text-align: center;
+  }
+  .title{
+    @include font(.28rem,#40B0FF,.25rem);
+    &.align-c{
+      @include align(center)
+    }
+  }
+  .txt{
+    @include font(.22rem,#787878,.1rem);
+    line-height: .4rem;
+    @include align(false);
+  }
+}
+.mbaby-foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    position: absolute;
+    top: 3rem;
+    text-align: center;
+    width: 100%;
+    .foot-btn{
+      @include font(.3rem, #40B0FF);
+      background: #fff;
+      box-sizing: border-box;
+      border-radius: .1rem;
+      display: block;
+      margin: .2rem auto;
+      padding: .18rem .23rem;
+      width: 3.36rem;
+    }
+  }
+}
+.img-container{
+  @extend %position;
+  width: 45%;
+}
+.card-container-4{
+  .btn{
+    margin-left: 0;
+    margin-top: .2rem;
+    width: 1.75rem;
+  }
+  .card-2:first-child{
+    float: left;
+  }
+  .card-2:last-child{
+    float: right;
+    .img-container{
+      right: 2%;
+    }
+  }
+}
+.card-container-6{
+  .btn{
+    background: #169EF4;
+    color: #fff;
+    margin-top: .35rem;
+    width: 30%;
+  }
+}

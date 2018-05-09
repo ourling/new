@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    if (!isHome) {
+        /* 二维码初始化 */
+        var $qrCodeModal = $('#qrCodeModal');
+        var $sceneShareHtml = $('#sceneShareHtml');
+        var $shareCode = $qrCodeModal.find('.share-code');
+
+        var customHeader = data.basic.customHeader || {};
+        if (!customHeader.isDefault) window.headImgUrl = customHeader.headerPath;
+
+        var qrCodeHasHeadImg = function (element) {
+            element.qrcode({
+                //设置渲染方式，有table和canvas
+                render: "canvas",
+                //二维码内容
+                text: GLOBAL_WX_URL + '/open/nl?id=' + panoId,
+                //二维码的宽度
+                width: "206",
+                //二维码的高度
+                height: "206",
+                //二维码的后景色
+                background: "#ffffff",
+                //二维码的前景色
+                foreground: "#000000",
+                //二维码中间的图片
+                src: headImgUrl
+            })
+
+        };
+        qrCodeHasHeadImg($shareCode, 1);
+
+        var codeHtml = function () {
+            return '<iframe src="' + (GLOBAL_HOME_URL + "/open/nl?id=" + panoId) + '" frameborder="no" border="0" style="width: 1000px;height: 600px;"></iframe>';
+        };
+        $sceneShareHtml.val(codeHtml);
+        copyData('copyCode', codeHtml());
+
+        if (browserType === 'pc') {
+            $qrCodeModal.find('.qr-code-mobile').hide();
+            $qrCodeModal.find('.qr-code-pc').show();
+        } else {
+            $qrCodeModal.find('.qr-code-mobile').show();
+            $qrCodeModal.find('.qr-code-pc').hide();
+        }
+
+        $qrCodeModal.on('hide.zui.modal', function () {
+            toggleBtns(true);
+        });
+
+        /* 简介初始化 */
+        var $descModal = $('#descModal');
+        $descModal.find('.work-name').text(panoConfig.basic.panoTitle);
+        $descModal.find('.work-desc').html(stringToHTML(panoConfig.basic.panoDesc));
+        $descModal.on('hide.zui.modal', function () {
+            toggleBtns(true);
+        });
+
+        /* 微信初始化 */
+        var $weChatModal = $('#weChatModal');
+        var wxCodePath = panoConfig.basic;
+        if (wxCodePath.sharePic !== undefined) {
+            var code, content;
+            code = wxCodePath.sharePic;
+            content = "<img src='" + code + "'>";
+            $weChatModal.find('.wechat-code').html(content);
+        }
+        $weChatModal.on('hide.zui.modal', function () {
+            toggleBtns(true);
+        });
+
+        /* 名片初始化 */
+        var $cardModal = $('#cardModal');
+        var cardPath = panoConfig.basic;
+        if (cardPath.businessCard !== undefined) {
+            var content, cardObj;
+            cardObj = cardPath.businessCard;
+            content = '<div> <div class="top-card"> <img class="card-bg" src="http://static.westlakevr.cn/images/pano/openalert/stripe-pic.jpg"> </div> <div class="main-card"> <div class="flew"> <div class="company-con col-sm-9"> <p class="fily company-title">' + cardObj.cardTitle + '</p> <p class="fily company-remark">' + cardObj.cardRemark + '</p> </div> <div class="company-logo col-sm-4"> <img class="pic-url" src="' + cardObj.cardPicUrl + '"> </div> </div> <div> <div class="flew" style="min-height: 188px;"> <div class="company-info col-sm-9"> <div class="form-group"> <label class="col-sm-1 control-label phone-label"><i class="icon icon-phone phone-ico f24 v-mid"></i></label> <div class="col-sm-12 circle-ico"> <span class="f20 fily">' + cardObj.phoneNum + '</span> </div> </div> <div class="form-group"> <label class="col-sm-1 control-label email-label"><i class="icon icon-envelope-alt email-ico f22 v-mid"></i></label> <div class="col-sm-12 circle-ico"> <span class="f20 fily">' + cardObj.email + '</span> </div> </div> <div class="form-group"> <label class="col-sm-1 control-label address-label"><i class="icon icon-map-marker address-ico f28 v-mid"></i></label> <div class="col-sm-12 circle-ico"> <span class="f20 fily">' + cardObj.address + '</span> </div> </div> <div class="form-group"> <label class="col-sm-1 control-label chat-label"><i class="icon icon-wechat chat-ico f22 v-mid"></i></label> <div class="col-sm-12 circle-ico"> <span class="f20 fily">' + cardObj.wxPublic + '</span> </div> </div> <div class="form-group"> <label class="col-sm-1 control-label qq-label"><i class="icon icon-qq qq-ico f22 v-mid"></i></label> <div class="col-sm-12 circle-ico"> <span class="f20 fily">' + cardObj.qq + '</span> </div> </div> </div> <div class="company-code col-sm-4"> <img id="company-code" class="company-code-img" src="' + cardObj.sharePic + '"> </div> </div> </div> </div> <div class="footer-card"></div> </div>';
+            $cardModal.find('.card-desc').html(content);
+            $("#company-code").on('click', function () {
+                var $this = $(this);
+                $this.toggleClass('max');
+                $this.toggleClass('min');
+            });
+        }
+        $cardModal.on('hide.zui.modal', function () {
+            toggleBtns(true);
+        });
+
+        //微信分享
+        if (browserType == "wx") { //微信打开
+            if (isSlientLogin) {
+                $moreModal.find('.btn-wechat-layout').show();
+            }
+            initWxConfig(data);
+        }
+
+        if (data.basic.sceneChooseIcon === undefined) {
+            data.basic.sceneChooseIcon = true;
+        }
+
+        if (data.basic.sceneChooseIcon) {
+            $('.btn-scene-layout').show();
+        } else {
+            $('.btn-scene-layout').hide();
+        }
+        //是否开始时弹出场景选择
+        if (data.basic.sceneChooseIcon && data.basic.scenechoose) {
+            settings["events[skin_events].onloadcomplete"] += "open_show_scene_thumb();";
+        }
+        //是否显示开场提示
+        if (!isBlank(data.basic.openAlert) && !isBlank(data.basic.openAlert.useAlert) && data.basic.openAlert.useAlert) {
+            if (browserType === 'pc') {
+                settings["events[skin_events].onloadcomplete"] += "show_openAlert('" + data.basic.openAlert.imgPathPc + "');";
+            } else {
+                settings["events[skin_events].onloadcomplete"] += "show_openAlert('" + data.basic.openAlert.imgPathPhone + "');";
+            }
+        }
+        //是否显示遮罩
+        if (!isBlank(data.basic.skyLandShade) && !isBlank(data.basic.skyLandShade.wholeFlag) && (data.basic.skyLandShade.wholeFlag)) { //全局遮罩
+            var useShade = data.basic.skyLandShade.useShade;
+            if (useShade) {
+                var isDefault = data.basic.skyLandShade.isDefault;
+                var imgPath = isDefault ? "http://static.westlakevr.cn/images/wq-logo.png" : data.basic.skyLandShade.imgPath;
+                var location = data.basic.skyLandShade.location;
+                if (location == 0) {
+                    location = -90;
+                } else {
+                    location = 90;
+                }
+                settings["events[skin_events].onloadcomplete"] += "show_shade('" + imgPath + "'," + location + ",true);";
+            }
+        } else { //单场景遮罩
+            settings["events[skin_events].onloadcomplete"] += "js(getShade(get(xml.scene)));";
+        }
+        /* 链接、电话和导航 */
+        if (!isBlank(data.basic.urlPhoneNvg) && !isBlank(data.basic.urlPhoneNvg.linkSettings) && data.basic.urlPhoneNvg.linkSettings.length > 0) {
+            var htmlStr = '';
+            var linkSettings = data.basic.urlPhoneNvg.linkSettings;
+            for (var i = 0; i < linkSettings.length; i++) {
+                var navItem = linkSettings[i];
+                var title = navItem.title;
+                var type = navItem.type;
+                var btnHTML;
+                if (type == 0) {
+                    // 地图导航
+                    var locationData = navItem.content;
+                    if (navItem.isDefault === undefined || navItem.isDefault) {
+                        btnHTML = '<div class="btn-location"></div>';
+                    } else {
+                        btnHTML = '<img src="' + navItem.iconUrl + '">';
+                    }
+                    htmlStr += '<div class="btn-container btn-location-layout" data-lat="' + locationData.lat + '" data-lng="' + locationData.lng + '">' + btnHTML + '<span>' + (isBlank(title) ? '定位' : title) + '</span></div>';
+                } else if (type == 1) {
+                    // 网站连接
+                    var url = navItem.content.url;
+                    if (navItem.isDefault === undefined || navItem.isDefault) {
+                        btnHTML = '<div class="btn-link"></div>';
+                    } else {
+                        btnHTML = '<img src="' + navItem.iconUrl + '">';
+                    }
+                    htmlStr += '<div class="btn-container btn-link-layout" data-url="' + url + '">' + btnHTML + '<span>' + (isBlank(title) ? '链接' : title) + '</span></div>';
+                } else {
+                    // 电话
+                    var tel = navItem.content.tel.replace('-', '');
+                    if (!isNaN(tel)) {
+                        var telLink = "tel://" + tel;
+                        if (navItem.isDefault === undefined || navItem.isDefault) {
+                            btnHTML = '<div class="btn-phone"></div>';
+                        } else {
+                            btnHTML = '<img src="' + navItem.iconUrl + '">';
+                        }
+                        htmlStr += '<div class="btn-container btn-phone-layout" data-tel="' + telLink + '">' + btnHTML + '<span>' + (isBlank(title) ? '联系方式' : title) + '</span></div>';
+                    }
+                }
+            }
+            $('.bottom-left-btn-layout').append(htmlStr);
+        }
+        //背景音乐
+        if (!isBlank(data.basic.bgMusic) && !isBlank(data.basic.bgMusic.wholeFlag) && data.basic.bgMusic.wholeFlag) { //要么全局设置音乐,否则就是每个场景设置不同得音乐
+            if (data.basic.bgMusic.useMusic) {
+                settings["onstart"] += "playsound(bgmusic, '" + data.basic.bgMusic.mediaUrl + "', 0);";
+                isGlobalMusic = true;
+            }
+        } else {
+            if (!isBlank(data.basic.bgMusic) && !isBlank(data.basic.bgMusic.sceneSettings)) {
+                $(data.basic.bgMusic.sceneSettings).each(function (idx) {
+                    if (this.useMusic) {
+                        settings['scene[' + this.sceneName + '].bgmusic'] = this.mediaUrl;
+                    }
+                });
+            }
+        }
+        //语音解说
+        var speechObj = data.basic.speechExplain;
+        if (!isBlank(speechObj) && !isBlank(speechObj.wholeFlag) && speechObj.wholeFlag) {
+            if (speechObj.useSpeech) {
+                settings["onstart"] += "playsound(bgspeech, '" + speechObj.mediaUrl + "', 0);";
+                isGlobalSpeech = true;
+            }
+        } else {
+            if (!isBlank(speechObj) && !isBlank(speechObj.sceneSettings)) {
+                $(speechObj.sceneSettings).each(function (idx) {
+                    if (this.useSpeech) {
+                        settings['scene[' + this.sceneName + '].bgspeech'] = this.mediaUrl;
+                    }
+                });
+            }
+        }
+        /* Logo 显示区域事件,数据绑定 */
+        var logoObj = data.basic.customLogo;
+        var $logoContainer = $('#logoContainer');
+        var $logoImg = $logoContainer.find('.logo-image');
+
+        if (!isBlank(data.basic.shootPhone)) {
+            var $phone = $logoContainer.find('.logo-phone a');
+            var phone = data.basic.shootPhone;
+            // $phone.text('拍摄热线: ' + phone);
+            $phone.prop('href', 'tel:' + phone.replace('-', ''));
+        }
+
+        if (!isBlank(logoObj) && !isBlank(logoObj.useCustomLogo) && logoObj.useCustomLogo) {
+            $logoImg.attr('src', logoObj.logoImgPath);
+            if (!isBlank(logoObj.linkUrl)) {
+                $logoImg.on('click', function () {
+                    window.open(logoObj.linkUrl)
+                });
+            }
+        }
+
+        const stories = data.panoSetting.stories
+        if (stories && Object.getOwnPropertyNames(stories).length > 0) {
+            $('.btn-nav-layout').show()
+        }
+    }
+</script>
+</body>
+</html>

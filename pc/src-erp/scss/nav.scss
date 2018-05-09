@@ -1,0 +1,109 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+//true  递减   false 递增
+@mixin Delay($name,$delay,$num,$boo,$s:1){
+  @for $i from $s through $num{
+    #{$name}:nth-child(#{$i}){
+      @if($boo){
+        -webkit-transition-delay: #{$delay - ($i * 50) + 50}ms;
+        -moz-transition-delay: #{$delay - ($i * 50) + 50}ms;
+        -ms-transition-delay: #{$delay - ($i * 50) + 50}ms;
+        -o-transition-delay: #{$delay - ($i * 50) + 50}ms;
+        transition-delay: #{$delay - ($i * 50) + 50}ms;
+      } @else {
+        -webkit-transition-delay: #{$delay + ($i * 50) - 50}ms;
+        -moz-transition-delay: #{$delay + ($i * 50) - 50}ms;
+        -ms-transition-delay: #{$delay + ($i * 50) - 50}ms;
+        -o-transition-delay: #{$delay + ($i * 50) - 50}ms;
+        transition-delay: #{$delay + ($i * 50) - 50}ms;
+      }
+    }
+  }
+}
+.menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 58px;
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li{
+    background: linear-gradient(#292929, #252525);
+    min-width: 160px;
+  }
+  a{
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    color: #808080;
+    display: block;
+    font-family: 'Lucida Console';
+    font-size: 18px;
+    line-height: 54px;
+    padding: 0 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  > li{
+    display: block;
+    float: left;
+    position: relative;
+  }
+  > li:first-child{
+    border-radius: 5px 0 0;
+  }
+  li:hover{
+    background-color: #1c1c1c;
+    .submenu{
+      height: auto;
+      z-index: 10;
+      @include Delay('li',0,8,false);
+      li{
+        opacity: 1;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+      }
+    }
+    > a{
+      border-radius: 5px 0 0 0;
+      border-left: 3px solid #C4302B;
+      color: #C4302B;
+    }
+  }
+}
+.submenu {
+  max-height: 0;
+  position: absolute;
+  top: 100%;
+  z-index: 0;
+  li{
+    opacity: 0;
+
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+  }
+  li:hover{
+    a{
+      border-left: 3px solid #454545;
+      border-radius: 0;
+      color: #ffffff;
+    }
+  }
+  @include Delay('li',350,8,true)
+}

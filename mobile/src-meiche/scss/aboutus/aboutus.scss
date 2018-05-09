@@ -1,0 +1,201 @@
+@import "../mixin/template";
+[class*=card-]{
+  .txt{
+    @include font(.2rem,#333);
+  }
+}
+.banner{
+  width: 100%;
+}
+.mobile-body{
+  background: #F5F5F5;
+  padding-bottom: .9rem;
+}
+.aboutus-container{
+  width: 100%;
+  .title-container{
+    @include font(.3rem,#121013);
+    border-bottom: none;
+    text-align: center;
+    font-weight: 700;
+    .text{
+      @include font(.2rem,#333);
+      padding-top: .1rem;
+    }
+  }
+}
+.part{
+  background: #fff;
+  margin-bottom: 0;
+  .card-container{
+    padding: .4rem .2rem;
+  }
+}
+.part-01{
+  .title-icon{
+    @include icon(5.82rem,.62rem,inline-block);
+    background: url("../../images/aboutus/title01-icon.png") no-repeat center;
+    background-size: contain;
+  }
+  .card-container{
+    padding-top: 0;
+    text-indent: .4rem;
+    .light{
+      @include font(.28rem,#2F48A5);
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+}
+.part-02{
+  background: #F4F4F4;
+  .card-container{
+    padding-top: 0;
+    .icon{
+      @include icon(1.14rem,1.14rem);
+      margin-bottom: .18rem;
+    }
+    .card-title{
+      @include font(.26rem,#333,.1rem);
+      font-weight: 700;
+      text-align: center;
+    }
+    .txt{
+      text-align: center;
+      text-align-last: center;
+    }
+    @include iconimg('../../images/aboutus/part02-icon',3);
+  }
+}
+.part-03{
+  .card-container{
+    padding-top: 0;
+    position: relative;
+    overflow: visible;
+    .card-title{
+      @include font(.26rem,#333,.1rem);
+      font-weight: 700;
+      text-align: center;
+    }
+    .card-2-b{
+      border: none;
+    }
+    .txt{
+      @include font(.28rem,#333);
+      text-align: center;
+      text-align-last: center;
+      margin-top: .16rem;
+    }
+  }
+  .card-container:before{
+    content: "";
+    @include position('X');
+    top: -.25rem;
+    height: .135rem;
+    background: url('../../images/aboutus/title02-icon.png') no-repeat center;
+    background-size: contain;
+    width: 100%;
+  }
+}
+.part-04{
+  .card-container{
+    padding: .2rem;
+    position: relative;
+    overflow: visible;
+    .card-2-b{
+      border: none;
+    }
+  }
+  .img{
+    @include position('Y');
+  }
+  .card-title{
+    @include font(.3rem,#333);
+    font-weight: 700;
+  }
+  .card-title-bar{
+    @include font(.2rem,#333,.2rem);
+  }
+  .content{
+    position: relative;
+  }
+  .content:after,.content:before{
+    position: absolute;
+    content: "";
+    @include icon(.48rem,.07rem);
+    background: #A51918;
+  }
+  .content:before{
+    left: 0;
+    top: -.2rem;
+  }
+  .content:after{
+    right: 0;
+    bottom: -.2rem;
+  }
+  .txt{
+    @include align(false);
+    font-size: .2rem;
+    .light{
+      color: #A51918;
+      font-weight: 700;
+    }
+  }
+  .po{
+    position: relative;
+    padding-left: .25rem;
+    margin-bottom: .15rem;
+    .light{
+      @include font(.3rem,#E10403);
+      font-weight: 700;
+    }
+  }
+  .po:before{
+    @include icon(.1rem,.1rem);
+    position: absolute;
+    top: 20%;
+    content: "";
+    border-radius: 50%;
+    background: #333;
+    left: 0;
+  }
+}
+.part-05{
+  .card-container{
+    padding: .2rem;
+    position: relative;
+    overflow: visible;
+    border: .02rem solid #A51918;
+    margin: 0 .2rem .2rem;
+    .card-2-b{
+      border: none;
+      margin-bottom: 0;
+    }
+  }
+  .content{
+    .card-title{
+      @include font(.22rem,#333);
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: .1rem;
+      margin-bottom: .2rem;
+    }
+    .card-title:after{
+      content: '';
+      @include position('X');
+      background: #A51918;
+      bottom: 0;
+      height: .02rem;
+      width: 100%;
+    }
+    .txt{
+      @include align(false);
+      font-size: .2rem;
+      .light{
+        color: #A51918;
+        font-weight: 700;
+      }
+    }
+  }
+}

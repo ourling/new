@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>上传编辑</title>
+    <meta charset="uft-8">
+    <script src="../js/wyboot/wyboot.js"></script>
+</head>
+<body>
+<div id="app">
+    <button type="button" class="btn btn-lg btn-primary" @click="openAlert">启动对话框</button>
+
+
+
+    <!-- 对话框HTML -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title">编辑卡片</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="uploaderExample" class="uploader">
+                        <div class="file-list" data-drag-placeholder="请拖拽文件到此处"></div>
+                        <button type="button" class="btn btn-primary" @click="upImg">选择文件</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let app = new Vue({
+    el: "#app",
+    data: {},
+    mounted(){},
+    methods: {
+        openAlert(){
+            $("#myModal").modal('show')
+        },
+        upImg(){
+//            console.log($('#uploaderExample').uploader({autoUpload: true}));
+            $('#uploaderExample').uploader({
+                autoUpload: true,            // 当选择文件后立即自动进行上传操作
+                url: 'img'  // 文件上传提交地址
+            });
+//            var uploader = $('#myUploader').data('zui.uploader');
+        }
+    }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav-template</title>
+    <script src="../js/wyboot/wyboot.js"></script>
+    <link rel="stylesheet" href="../css/templates/nav.css">
+    <link rel="stylesheet" href="../css/templates/footer.css">
+</head>
+<body>
+<header id="head" v-cloak>
+    <fix-nav :fixnav="fixNav"></fix-nav>
+    <static-nav :staticnav="staticNav" @drop-open="dropOpen" @drop-close="dropClose"></static-nav>
+</header>
+<footer id="foot"  v-cloak>
+    <ecbao-foot></ecbao-foot>
+</footer>
+<script src="../js/templates/footer/footer.js"></script>
+<script src="../js/templates/nav/nav.js"></script>
+<script>
+    var theRequest = {};
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+    }
+    GetRequest();
+</script>
+</body>
+</html>

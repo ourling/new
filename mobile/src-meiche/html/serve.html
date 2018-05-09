@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>美车服务</title>
+    <link rel="stylesheet" href="../css/serve/serve.css?t=20171219">
+    <script src="../js/wyboot/wyboot.js"></script>
+</head>
+<body>
+<div id="app" class="clear">
+    <app-head></app-head>
+    <div id="mobile-body" class="mobile-body">
+        <section id="banner">
+            <div class="banner">
+                <img class="response-img" :src="banner.url" alt="">
+                <div class="banner-container">
+                    <h2 class="banner-title">{{banner.title}}</h2>
+                    <p class="banner-text">{{banner.titleBar}}</p>
+                </div>
+            </div>
+        </section>
+        <section id="main" class="mobile-container chain-container">
+            <div class="part part-01">
+                <div class="title-container"><i class="icon"></i>{{part01.title}}
+                    <p class="text">根据用户的数据360度个性化跟踪系统</p>
+                </div>
+                <div class="card-container">
+                    <img class="response-img" :src="part01.url" alt="">
+                </div>
+            </div>
+            <div class="part part-02">
+                <div class="title-container"><i class="icon"></i>{{part02.title}}</div>
+                <div class="card-container">
+                    <img class="response-img" :src="part02.url" alt="">
+                </div>
+            </div>
+            <div class="part part-03">
+                <div class="title-container"><i class="icon"></i>{{part03.title}}</div>
+                <div class="card-container">
+                    <img class="response-img" :src="part03.url" alt="">
+                    <div class="content">
+                        <div class="card-3">
+                            <span @click="tel" class="txt fl">立即咨询</span>
+                        </div>
+                        <div class="card-3">
+                            <span @click="tel" class="txt">立即咨询</span>
+                        </div>
+                        <div class="card-3">
+                            <span @click="tel" class="txt fr">立即咨询</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part part-04">
+                <div class="card-container">
+                    <img class="response-img" :src="part04.url" alt="">
+                    <p class="txt txt-top">{{part04.phone}}</p>
+                    <p class="txt">{{part04.date}}</p>
+                    <p class="txt">{{part04.address}}</p>
+                    <p class="txt">{{part04.mailNum}}</p>
+                    <p class="txt">{{part04.mail}}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 遮罩层区 -->
+    <app-foot :active="hasMark"></app-foot>
+    <!-- 遮罩层区 -->
+    <app-mask-tel></app-mask-tel>
+    <app-mask-menu @mask="mask"></app-mask-menu>
+</div>
+<script src="../js/comm.js?t=20171219"></script>
+<script src="../js/serve/serve.js?t=20171219"></script>
+</body>
+</html>

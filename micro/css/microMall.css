@@ -1,0 +1,544 @@
+.clear:before, .mic-container:before, .mic-foot:before, .clear:after, .mic-container:after, .mic-foot:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.card-1-b {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-2-b {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 49%;
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+  margin-bottom: .18rem; }
+
+.card-2-b:nth-child(2n-1) {
+  margin-right: 2%; }
+
+.card-3-b {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 32.3%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-3-b:nth-child(2) {
+  margin: 0 1.5%; }
+
+.card-2 {
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-3 {
+  width: 33.3%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-4 {
+  width: 25%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-5 {
+  width: 20%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
+.response-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto; }
+
+.t-center {
+  text-align: center; }
+
+.t-left {
+  text-align: left; }
+
+.t-just {
+  text-align: justify;
+  text-justify: distribute;
+  text-align-last: left; }
+
+.none {
+  display: none; }
+
+.banner {
+  position: relative; }
+  .banner .banner-bg {
+    display: block;
+    height: 600px;
+    width: 100%;
+    position: relative; }
+  .banner .banner-1 {
+    background: url("../images/banner.jpg") no-repeat center;
+    background-size: cover; }
+  .banner .banner-title-container {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    top: 114px;
+    text-align: center; }
+    .banner .banner-title-container .title {
+      color: #fff;
+      font-size: 50px;
+      font-weight: normal;
+      margin-bottom: 15px;
+      font-weight: 700; }
+    .banner .banner-title-container .title-bar {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 30px; }
+    .banner .banner-title-container .text {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 0;
+      padding: 30px 0;
+      width: 1000px;
+      margin: 0 auto 72px;
+      position: relative; }
+    .banner .banner-title-container .text:before, .banner .banner-title-container .text:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 5%, #fff 50%, rgba(255, 255, 255, 0) 95%);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 5%, #fff 50%, rgba(255, 255, 255, 0) 95%); }
+    .banner .banner-title-container .text:before {
+      top: 0; }
+    .banner .banner-title-container .text:after {
+      bottom: 0; }
+    .banner .banner-title-container .mic-btn {
+      color: #fff;
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 0;
+      border-radius: 35px;
+      box-sizing: border-box;
+      background: #4C6CFE;
+      cursor: pointer;
+      display: block;
+      font-weight: 700;
+      padding: 18px 0;
+      margin: auto;
+      width: 343px; }
+
+.title-container {
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 42px 0; }
+  .title-container .title {
+    color: #504F54;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 0;
+    font-weight: 700; }
+  .title-container .title-bar {
+    color: #504F54;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 20px; }
+  .title-container .txt {
+    color: #504F54;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 0;
+    background: #F5F5F5;
+    margin: 32px auto 0;
+    padding: 15px 35px;
+    width: 1000px; }
+  .title-container.spe {
+    position: relative; }
+  .title-container.spe:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    display: block;
+    height: 92px;
+    width: 92px;
+    margin: auto;
+    content: ""; }
+
+.container-bar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 45px 0;
+  margin: auto;
+  width: 1200px; }
+  .container-bar .item {
+    color: #333;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    float: left;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    width: 33.3%; }
+    .container-bar .item .icon {
+      background-size: contain;
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      margin: auto;
+      vertical-align: middle;
+      margin-right: 12px; }
+    .container-bar .item .content {
+      position: relative; }
+    .container-bar .item .content:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: transparent;
+      left: 0;
+      bottom: -19px;
+      -webkit-transition: .5s;
+      transition: .5s; }
+    .container-bar .item .icon-1 {
+      background: url("../images/part03-icon1.png") no-repeat center center;
+      background-size: contain; }
+    .container-bar .item .icon-2 {
+      background: url("../images/part03-icon2.png") no-repeat center center;
+      background-size: contain; }
+    .container-bar .item .icon-3 {
+      background: url("../images/part03-icon3.png") no-repeat center center;
+      background-size: contain; }
+  .container-bar .item:last-child {
+    border-right: none; }
+  .container-bar .item:hover {
+    color: #3998FF; }
+  .container-bar .active {
+    color: #3998FF; }
+    .container-bar .active .content:before {
+      background: #3998FF; }
+
+.mic-container {
+  width: 1200px;
+  margin: auto; }
+  .mic-container .title {
+    color: #504F54;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px; }
+  .mic-container .txt {
+    color: #504F54;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 0; }
+
+.mic-foot {
+  background: url("../images/foot.jpg") no-repeat center;
+  background-size: cover;
+  height: 412px; }
+  .mic-foot .title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 58px;
+    font-weight: 700;
+    margin-top: 130px; }
+  .mic-foot .mic-btn {
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 0;
+    background: #02CC69;
+    border-radius: 28px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    padding: 15px 0;
+    width: 300px; }
+
+.mic-part2 {
+  padding-bottom: 40px; }
+
+.mic-part3 {
+  background: #FAFAFC;
+  padding-bottom: 52px; }
+
+.mic-part4 {
+  padding: 10px 0 52px; }
+  .mic-part4 .spe .title-bar {
+    margin-top: 0;
+    font-weight: 700; }
+  .mic-part4 .spe:before {
+    background: url("../images/title-bg4.png") no-repeat center;
+    background-size: contain; }
+
+.mic-part5 {
+  padding: 52px 0;
+  background: #FAFAFC; }
+  .mic-part5 .spe .title-bar {
+    margin-top: 0;
+    font-weight: 700; }
+  .mic-part5 .spe:before {
+    background: url("../images/title-bg5.png") no-repeat center;
+    background-size: contain; }
+
+.mic-part6 {
+  padding: 52px 0; }
+  .mic-part6 .spe .title-bar {
+    margin-top: 0;
+    font-weight: 700; }
+  .mic-part6 .spe:before {
+    background: url("../images/title-bg6.png") no-repeat center;
+    background-size: contain; }
+
+.mic-part7 {
+  padding: 52px 0;
+  background: #FAFAFC; }
+  .mic-part7 .spe .title-bar {
+    margin-top: 0;
+    font-weight: 700; }
+  .mic-part7 .spe:before {
+    background: url("../images/title-bg7.png") no-repeat center;
+    background-size: contain; }
+
+.mic-part8 {
+  background: url("../images/part08-bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 648px; }
+  .mic-part8 .title {
+    color: #fff !important; }
+
+.mic-container-1 .card-3-b {
+  padding: 0 20px;
+  height: 480px; }
+
+.mic-container-1 .title {
+  padding: 16px 0;
+  background: #eee; }
+
+.mic-container-1 .txt {
+  width: 80%;
+  margin: 0 auto;
+  position: relative; }
+
+.mic-container-1 .icon {
+  background-size: contain;
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: auto;
+  margin-bottom: 24px;
+  margin-top: 53px;
+  position: relative; }
+
+.mic-container-1 .txt:before {
+  background-size: contain;
+  display: block;
+  height: 5px;
+  width: 5px;
+  margin: auto;
+  position: absolute;
+  left: -18px;
+  top: 8px;
+  content: "";
+  background: #6E6C75;
+  border-radius: 50%; }
+
+.mic-container-1 .icon-1 {
+  background: url("../images/part01-icon1.png") no-repeat center center;
+  background-size: contain; }
+
+.mic-container-1 .icon-2 {
+  background: url("../images/part01-icon2.png") no-repeat center center;
+  background-size: contain; }
+
+.mic-container-1 .icon-3 {
+  background: url("../images/part01-icon3.png") no-repeat center center;
+  background-size: contain; }
+
+.mic-container-3 {
+  margin-top: 25px;
+  height: 700px;
+  overflow: hidden; }
+
+.mic-container-4 {
+  padding-top: 66px;
+  width: 1100px !important; }
+  .mic-container-4 .title {
+    font-weight: 700; }
+  .mic-container-4 .icon {
+    background-size: contain;
+    display: block;
+    height: 105px;
+    width: 105px;
+    margin: auto;
+    margin-bottom: 25px; }
+  .mic-container-4 .icon-1 {
+    background: url("../images/part04-icon1.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-4 .icon-2 {
+    background: url("../images/part04-icon2.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-4 .icon-3 {
+    background: url("../images/part04-icon3.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-4 .icon-4 {
+    background: url("../images/part04-icon4.png") no-repeat center center;
+    background-size: contain; }
+
+.mic-container-5 {
+  padding-top: 66px;
+  width: 1100px !important; }
+  .mic-container-5 .card-4 {
+    margin-right: 73px;
+    width: 20%; }
+  .mic-container-5 .card-4:last-child {
+    margin-right: 0; }
+  .mic-container-5 .title {
+    font-weight: 700; }
+  .mic-container-5 .icon {
+    background-size: contain;
+    display: block;
+    height: 204px;
+    width: 204px;
+    margin: auto;
+    margin-bottom: 27px; }
+  .mic-container-5 .icon-1 {
+    background: url("../images/part05-icon1.jpg") no-repeat center center;
+    background-size: contain; }
+  .mic-container-5 .icon-2 {
+    background: url("../images/part05-icon2.jpg") no-repeat center center;
+    background-size: contain; }
+  .mic-container-5 .icon-3 {
+    background: url("../images/part05-icon3.jpg") no-repeat center center;
+    background-size: contain; }
+  .mic-container-5 .icon-4 {
+    background: url("../images/part05-icon4.jpg") no-repeat center center;
+    background-size: contain; }
+
+.mic-container-6 {
+  padding-top: 30px;
+  width: 1100px !important; }
+  .mic-container-6 .card-2 {
+    padding: 0 45px 0 157px;
+    margin-bottom: 60px; }
+  .mic-container-6 .icon {
+    background-size: contain;
+    display: inline-block;
+    height: 137px;
+    width: 137px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .mic-container-6 .icon-1 {
+    background: url("../images/part06-icon1.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-6 .icon-2 {
+    background: url("../images/part06-icon2.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-6 .icon-3 {
+    background: url("../images/part06-icon3.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-6 .icon-4 {
+    background: url("../images/part06-icon4.png") no-repeat center center;
+    background-size: contain; }
+
+.mic-container-7 {
+  padding-top: 30px; }
+  .mic-container-7 .card-2 {
+    height: 409px; }
+  .mic-container-7 .icon {
+    background-size: contain;
+    display: block;
+    height: 84px;
+    width: 84px;
+    margin: auto;
+    margin: 39px auto 28px; }
+  .mic-container-7 .txt {
+    margin: auto;
+    width: 60%; }
+  .mic-container-7 .icon-1 {
+    background: url("../images/part07-icon1.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-7 .icon-2 {
+    background: url("../images/part07-icon2.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-7 .icon-3 {
+    background: url("../images/part07-icon3.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-7 .icon-4 {
+    background: url("../images/part07-icon4.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-7 .bg-1 {
+    background: url("../images/part07-bg1.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-7 .bg-2 {
+    background: url("../images/part07-bg2.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-7 .bg-3 {
+    background: url("../images/part07-bg3.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-7 .bg-4 {
+    background: url("../images/part07-bg4.png") no-repeat center center;
+    background-size: contain; }
+
+.mic-container-8 {
+  width: 940px !important; }
+  .mic-container-8 .icon {
+    background-size: contain;
+    display: block;
+    height: 181px;
+    width: 130px;
+    margin: auto;
+    margin: 20px auto 19px 0; }
+  .mic-container-8 .icon-1 {
+    background: url("../images/part08-icon1.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-8 .icon-2 {
+    background: url("../images/part08-icon2.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-8 .icon-3 {
+    background: url("../images/part08-icon3.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-8 .icon-4 {
+    background: url("../images/part08-icon4.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-8 .icon-5 {
+    background: url("../images/part08-icon5.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-8 .icon-6 {
+    background: url("../images/part08-icon6.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-8 .icon-7 {
+    background: url("../images/part08-icon7.png") no-repeat center center;
+    background-size: contain; }
+  .mic-container-8 .icon-8 {
+    background: url("../images/part08-icon8.png") no-repeat center center;
+    background-size: contain; }
+
+.mic-container-9 {
+  margin-bottom: 72px;
+  width: 1000px !important; }

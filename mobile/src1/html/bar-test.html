@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bar-unfill {
+            height:15px;
+            display:block;
+            background:#fff;
+            width:100%;
+            border-radius:8px
+        }
+        @-webkit-keyframes progressbar {
+            from {
+                width:0
+            }
+            to {
+                width:100%
+            }
+        }
+        .bar-fill-stripes {
+            height: 15px;
+            display: block;
+            background: #e74c3c;
+            border-radius: 8px;
+            background-image: linear-gradient(-45deg,
+                rgba(255, 255, 255, .2) 5%, transparent 5%,
+                transparent 10%, rgba(255, 255, 255, .2) 10%,
+                rgba(255, 255, 255, .2) 15%, transparent 15%,
+                transparent 20%, rgba(255, 255, 255, .2) 20%,
+                rgba(255, 255, 255, .2) 25%, transparent 25%,
+                transparent 30%, rgba(255, 255, 255, .2) 30%,
+                rgba(255, 255, 255, .2) 35%, transparent 35%,
+                transparent 40%, rgba(255, 255, 255, .2) 40%,
+                rgba(255, 255, 255, .2) 45%, transparent 45%,
+                transparent 50%, rgba(255, 255, 255, .2) 50%,
+                rgba(255, 255, 255, .2) 55%, transparent 55%,
+                transparent 60%, rgba(255, 255, 255, .2) 60%,
+                rgba(255, 255, 255, .2) 65%, transparent 65%,
+                transparent 70%, rgba(255, 255, 255, .2) 70%,
+                rgba(255, 255, 255, .2) 75%, transparent 75%,
+                transparent 80%, rgba(255, 255, 255, .2) 80%,
+                rgba(255, 255, 255, .2) 85%, transparent 85%,
+                transparent 90%, rgba(255, 255, 255, .2) 90%,
+                rgba(255, 255, 255, .2) 95%, transparent 95%,
+                transparent 100%, rgba(255, 255, 255, .2) 100%,
+                transparent);
+            -webkit-transition: width .8s ease;
+            -moz-transition: width .8s ease;
+            transition: width .8s ease;
+            -webkit-animation: progressbar 1s;
+            animation: progressbar 1s;
+        }
+    </style>
+</head>
+<body>
+    <span class="bar-unfill">
+        <span class="bar-fill-stripes"></span>
+    </span>
+</body>
+</html>

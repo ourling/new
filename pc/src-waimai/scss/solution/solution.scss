@@ -1,0 +1,221 @@
+@import "../minix/template";
+.banner {
+  position: relative;
+  background: url("../../images/solution/waimai-banner.png") no-repeat center center;
+  background-size: cover;
+  height: 550px;
+  .banner-container{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    .title{
+      @include font(47px,#fff,20px);
+    }
+    .title-bar{
+      @include font(45px,#fff,20px);
+    }
+    .title-txt{
+      @include font(24px,#fff,20px);
+    }
+    .title-btn{
+      background: url("../../images/solution/waimai-banner-btn.png") no-repeat center center;
+      background-size: contain;
+      padding: 10px 18px 18px;
+      margin-left: 0;
+    }
+  }
+}
+
+.agent-container-1 {
+  .container{
+    padding-bottom: 0;
+  }
+  .card-container{
+    .title{
+      padding: 30px 0;
+      margin-bottom: 0;
+    }
+  }
+  .card-4{
+    &.spe{
+      top: 45px;
+    }
+  }
+}
+
+.agent-container-3 {
+  .btn-bottom{
+    background: #35B0FE;
+    width: 260px;
+    margin: 65px auto 40px;
+  }
+}
+
+.agent-container-4 {
+  .card-container{
+    .card-title{
+      font-size: 18px;
+    }
+    .card-title-spe{
+      @include font(18px, #2B62FF, 15px);
+      @include align(center);
+    }
+    .txt{
+      @include font(14px, #666,35px);
+      @include align();
+      line-height: 1.8;
+    }
+  }
+  .card-3-spe{
+    box-sizing: border-box;
+    border: 1px solid #D2D2D2;
+    border-top: 2px solid #35B0FE;
+    padding: 25px 35px;
+    width: 330px;
+    height: 465px;
+    overflow: hidden;
+  }
+  .card-3-spe:nth-child(3){
+    margin: auto;
+  }
+}
+
+.agent-container-5 {
+  margin-bottom: 20px;
+  .container{
+    border: 1px solid #D2D2D2;
+    border-top: 2px solid #35B0FE;
+  }
+  .card-5{
+    padding: 20px 15px;
+  }
+  .card-container{
+    .card-title{
+      @include font(18px, #2B62FF, 15px);
+    }
+    .txt{
+      @include font(14px, #666,35px);
+    }
+  }
+}
+
+.agent-container-6 {
+  background: url("../../images/solution/waimai-part06-bg.png") no-repeat center center;
+  background-size: cover;
+  height: 850px;
+  position: relative;
+  .title{
+    color: #fff !important;
+  }
+  .container-6{
+    width: 100%;
+    position: absolute;
+    bottom: 120px;
+  }
+  .btn{
+    background: #fff;
+    color: #345BED;
+    width: 180px;
+  }
+}
+
+.container {
+  margin: auto;
+  padding: 10px 0 40px;
+  width: 1200px;
+}
+.title-container {
+  @include align(center);
+  padding: 40px 0;
+  .title {
+    @include font($size-font-bg, #333, 15px);
+    @include align(center);
+    display: inline-block;
+    position: relative;
+  }
+  .title-bar {
+    @include font($size-font, $color-font);
+  }
+}
+.card-container {
+  @extend .clear;
+  .card-title {
+    @include font(20px, #333, 15px);
+    @include align(center);
+  }
+  .card-title-bar {
+    @include font(16px,#666);
+    @include align(center);
+  }
+  .txt{
+    @include font(16px,#8F8F8F);
+    @include align();
+  }
+}
+
+.card-container-1 {
+  .content{
+    background: #1B1B1B;
+    box-sizing: border-box;
+    height: 280px;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 100px 13px 0;
+    .card-title {
+      @include font(16px, #169EF4, 30px);
+      @include align(center);
+    }
+  }
+  .content-1{
+    width: 284px;
+  }
+  .content-2{
+    width: 277px;
+  }
+  .content-3{
+    width: 287px;
+  }
+  .content-4{
+    width: 288px;
+  }
+  .icon {
+    @include icon(100%, 306px);
+  }
+  @include iconimg('../../images/solution/waimai-part01-icon', 4);
+}
+.card-container-2 {
+  .icon {
+    @include icon(133px, 141px);
+    margin-bottom: 33px;
+  }
+  @include iconimg('../../images/solution/waimai-part02-icon', 5);
+}
+.card-container-3 {
+  margin: auto;
+  width: 800px;
+  .btn-top{
+    background: #F57A7A;
+    width: 140px;
+    margin-top: 15px;
+  }
+  .card-box-item{
+    color: #2D63FF;
+    display: block;
+    margin: auto;
+    width: 70%;
+    border: 1px solid #D2D2D2;
+    padding: 13px 0;
+    text-align: center;
+  }
+}
+.card-container-5 {
+  .icon {
+    @include icon(45px, 40px);
+    margin: 30px auto;
+  }
+  @include iconimg('../../images/solution/waimai-part05-icon', 5);
+  padding-bottom: 0;
+}

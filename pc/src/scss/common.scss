@@ -1,0 +1,17 @@
+.app-nav{
+  background: #495060;
+  .app-nav-item{
+    width: 1200px;
+    margin: 0 auto !important;
+  }
+}
+.app-banner{
+  min-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  .demo-carousel{
+    background: #506b9e;
+    color: #fff;
+    height: 450px;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta charset="UTF-8">
+    <title>收藏本站的代码</title>
+    <script>
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                }
+                catch (e) {
+                    alert("加入收藏失败，请使用Ctrl D进行添加");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<a href="javascript:AddFavorite('www.111cn.net', '网页设计教程')">收藏本站</a>
+</body>
+</html>

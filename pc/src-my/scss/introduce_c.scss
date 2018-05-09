@@ -1,0 +1,299 @@
+.container {
+  font-family: MicrosoftYaHei;;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  min-width: 1200px;
+  max-width: 1920px;
+  margin: 0 auto;
+  .container-flex {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .product_list {
+    background: url(../../images/img/公司介绍_05.png) no-repeat center;
+    height: 798px;
+    position: relative;
+    .product_list_detail {
+      z-index: 1;
+      position: absolute;
+      bottom: 42px;
+      left: 50%;
+      margin-left: -600px;
+      height: 152px;
+      ul {
+        li {
+          float: left;
+          width: 180px;
+          height: 152px;
+          color: #FFFFFF;
+          margin: 0 29px;
+          padding: 30px 0;
+          text-align: center;
+          p {
+            line-height: 2;
+            font-size: 14px;
+            &.title {
+              font-size: 20px;
+            }
+          }
+
+          &:nth-child(1) {
+            p:nth-child(1) {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .company_intro {
+    background: url(../../images/img/公司介绍_08.png) no-repeat center;
+    position: relative;
+    height: 518px;
+    .company_intro_content {
+      padding-top: 68px;
+      position: relative;
+      color: #FFFFFF;
+      .company_intro_detail {
+        padding: 10px 30px;
+        height: 376px;
+        .section-title {
+          height: 27px;
+          text-align: center;
+          font-size: 28px;
+        }
+        .section-company {
+          font-size: 24px;
+          margin-top: 47px;
+        }
+        .section-content {
+          margin-top: 30px;
+          .section-introduce {
+            line-height: 2.5;
+          }
+        }
+
+      }
+
+    }
+  }
+  .company_apart {
+    background: url(../../images/img/公司介绍_11.png) no-repeat center;
+    height: 918px;
+    .company_content {
+      height: 918px;
+      position: relative;
+      .title {
+        font-size: 28px;
+        color: #FFFFFF;
+        text-align: center;
+      }
+      .company_detail {
+        color: #666666;
+        font-size: 16px;
+        height: 256px;
+        position: absolute;
+        width: 100%;
+        bottom: 224px;
+        ul {
+          li {
+            float: left;
+            margin: 0 46px;
+            height: 256px;
+            &:nth-child(1) {
+              width: 307px;
+              p {
+                margin-right: 31px;
+              }
+            }
+            &:nth-child(2) {
+              width: 303px;
+              p {
+                margin-left: 22px;
+              }
+            }
+            &:nth-child(3) {
+              width: 310px;
+              padding-left: 27px;
+              p {
+                margin-left: 17px;
+              }
+            }
+            p {
+              line-height: 30px;
+            }
+
+          }
+        }
+      }
+    }
+  }
+  .company_pro {
+    background: url(../../images/img/公司介绍_14.png) no-repeat center;
+    height: 871px;
+    .company_pro_con {
+      color: #FFFFFF;
+      .title {
+        font-size: 28px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      .des {
+        width: 780px;
+        height: 47px;
+        font-size: 16px;
+        color: #FFFFFF;
+        margin-left: 210px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .company_pro_content {
+        height: 600px;
+        margin-top: 93px;
+        position: relative;
+        .company_pro_content_1 {
+          position: absolute;
+          left: 13px;
+          top: 32px;
+          .com_left_img {
+            width: 217px;
+            height: 127px;
+            border: 1px solid #00FFFF;
+            background: url(../../images/img/intro_1.png) no-repeat center;
+          }
+          .com_right_text {
+            margin-top: 42px;
+            margin-left: 38px;
+            font-size: 14px;
+            .name {
+              height: 43px;
+              p:nth-child(1) {
+                letter-spacing: 3px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .company_pro_content_2 {
+          position: absolute;
+          left: -69px;
+          top: 194px;
+          .com_left_img {
+            width: 217px;
+            height: 127px;
+            border: 1px solid #00FFFF;
+            background: url(../../images/img/intro_2.png) no-repeat center;
+          }
+          .com_right_text {
+            margin-top: 42px;
+            margin-left: 38px;
+            font-size: 14px;
+            width: 210px;
+            height: 67px;
+            .name {
+              height: 43px;
+              p:nth-child(1) {
+                text-align: right;
+                letter-spacing: 3px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .company_pro_content_3 {
+          position: absolute;
+          left: 105px;
+          bottom: 13px;
+          .com_left_img {
+            width: 217px;
+            height: 127px;
+            border: 1px solid #00FFFF;
+            background: url(../../images/img/intro_3.png) no-repeat center;
+            margin-left: 56px;
+          }
+          .com_right_text {
+            margin-top: 42px;
+            margin-left: 38px;
+            font-size: 14px;
+            width: 248px;
+            height: 43px;
+            .name {
+              height: 43px;
+              p:nth-child(1) {
+                text-align: right;
+                letter-spacing: 3px;
+                font-size: 14px;
+              }
+            }
+          }
+
+        }
+        .company_pro_content_4 {
+          position: absolute;
+          right: -56px;
+          top: 90px;
+          .com_left_img {
+            width: 217px;
+            height: 127px;
+            border: 1px solid #00FFFF;
+            background: url(../../images/img/intro_4.png) no-repeat center;
+            margin-left: 17px;
+            margin-top: 20px;
+          }
+          .com_right_text {
+            margin-top: 42px;
+            margin-left: 38px;
+            font-size: 14px;
+            width: 242px;
+            height: 115px;
+            .name {
+              height: 43px;
+              p:nth-child(1) {
+                text-align: left;
+                letter-spacing: 3px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .company_pro_content_5 {
+          position: absolute;
+          right: -56px;
+          top: 311px;
+          .com_left_img {
+            width: 217px;
+            height: 127px;
+            border: 1px solid #00FFFF;
+            background: url(../../images/img/intro_5.png) no-repeat center;
+            margin-left: 17px;
+            margin-top: 20px;
+          }
+          .com_right_text {
+            margin-top: 42px;
+            margin-left: 38px;
+            font-size: 14px;
+            width: 242px;
+            height: 115px;
+            .name {
+              height: 43px;
+              p:nth-child(1) {
+                text-align: left;
+                letter-spacing: 3px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .record-information {
+      bottom: 0!important;
+    }
+
+  }
+}
+
+

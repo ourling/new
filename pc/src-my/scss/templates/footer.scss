@@ -1,0 +1,79 @@
+@import "../comm";
+@import "../mixin/mixin";
+footer {
+  background: #1A1F25;
+  width: 100%;
+}
+.footer-container {
+  width: 1200px;
+  margin: auto;
+  padding: 25px 0;
+}
+.information {
+  color: #fff;
+  .footer-title {
+    @include font(16px, #fff);
+    text-align: center;
+  }
+  .my-icon {
+    @include icon(44px, 44px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  @include iconimg("../../images/footer/foot-part01-icon", 4);
+}
+.partner{
+  background: url("../../images/footer/foot_backg.png") no-repeat center center;
+  background-size: cover;
+  .partner-top{
+    padding-bottom: 30px;
+  }
+  .partner-title{
+    @include font(18px,#666,15px);
+    text-align: center;
+  }
+  .partner-img{
+    background: url("../../images/footer/dsb_foot.png") no-repeat center center;
+    background-size: contain;
+    display: block;
+    height: 85px;
+  }
+  .card-2-spe{
+    @include card(76%);
+    &.right{
+      @include font(12px,#898989,5px);
+    }
+    .tel{
+      @include font(20px,#fff,5px);
+      font-weight: 700;
+    }
+    .footer-logo{
+      background: url("../../images/footer/dsb_foot_logo.png") no-repeat;
+      height: 32px;
+    }
+  }
+  .card-2-spe:last-child{
+    @include card(24%);
+  }
+  .partner-title-bar{
+    @include font(14px,#fff,25px);
+  }
+  .partner-title-li{
+    @include font(12px,#898989,8px);
+    cursor: pointer;
+    display: block;
+  }
+}
+.down-icon{
+  @include font(12px,#9e9e9e,8px);
+  .footer-container{
+    width: 1000px;
+  }
+  a{
+    color: #666;
+  }
+  a:hover{
+    color: #666;
+    text-decoration: none;
+  }
+}

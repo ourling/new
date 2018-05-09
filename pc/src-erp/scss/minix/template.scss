@@ -1,0 +1,462 @@
+$color-font: #6C6C6C;
+$size-font-bg: 24px;
+$size-font: 16px;
+$border-color: 1px solid #c5c5c5;
+//mixin  start
+//$s 字体大小 $c 字体颜色  $b margin-bottom 大小
+@mixin font($s:16px,$c: #000, $b:0) {
+  margin-top: 0;
+  @if $c {
+    color: $c;
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  } @else {
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }
+}
+
+@mixin align($t:left) {
+  @if $t {
+    text-align: $t;
+  } @else {
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+  }
+}
+
+@mixin card($w,$b:false,$c:1%) {
+  @if $b {
+    border: $border-color;
+    width: ($w - $c);
+  } @else {
+    width: $w;
+  }
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+}
+
+@mixin icon($w,$h,$b:block) {
+  display: $b;
+  height: $h;
+  width: $w;
+  margin: auto;
+}
+
+@mixin iconimg($path,$num,$name:".icon",$size:contain,$s:1,$z:"png") {
+  @for $i from $s through $num {
+    #{$name}-#{$i} {
+      background: url('#{$path}#{$i}.#{$z}') no-repeat center center;
+      background-size: $size;
+    }
+  }
+}
+
+%position {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin position($type:'X'){
+  position: absolute;
+  @if($type == 'X'){
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }@else if($type == 'Y'){
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }@else {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+//mixin  end
+//card 布局  start
+//有边框
+.card-3-b {
+  @include card(33.3%, true);
+  position: relative;
+}
+
+.card-3-b:nth-child(2) {
+  margin: 0 1.5%;
+}
+
+.card-4-b {
+  @include card(25%, true);
+  position: relative;
+  margin-left: 1%;
+}
+
+.card-4-b:first-child {
+  margin-left: 0;
+}
+
+.btn{
+  @include font(18px, #fff);
+  cursor: pointer;
+  display: block;
+  width: 30%;
+  padding: 13px 18px;
+  text-align: center;
+  margin: auto;
+}
+//无边框
+.card-1 {
+  margin-bottom: 50px;
+}
+
+.card-1:last-child {
+  margin-bottom: 0;
+}
+
+.card-2 {
+  @include card(50%)
+}
+
+.card-3 {
+  @include card(33.3%);
+  position: relative;
+}
+
+.card-4 {
+  @include card(25%);
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.card-5 {
+  @include card(20%);
+  position: relative;
+}
+
+.card-6 {
+  @include card(16.66%);
+  position: relative;
+}
+
+.card-8{
+  @include card(12.5%);
+  margin-bottom: 25px;
+}
+//card 布局  end
+
+.clear:before, .clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.response-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mark {
+  color: #169EF4 !important;
+}
+.hr{
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #D2D2D2;
+  margin: 25px 0;
+}
+
+//后台获取展示效果
+.warp-container {
+  height: 586px;
+  overflow: hidden;
+  .container {
+    padding: 60px 0;
+    height: 466px;
+  }
+  .card-2-spe {
+    @include card(70%);
+    position: relative;
+    padding-right: 30px;
+  }
+  .card-2-spe:last-child {
+    @include card(30%);
+  }
+  .item-title-container {
+    width: 100%;
+    margin-bottom: 30px;
+    .item-title {
+      @include font(20px, #000);
+      display: inline-block;
+    }
+    .item-more {
+      @include font(16px, #FFA830);
+      cursor: pointer;
+      float: right;
+    }
+  }
+  .item-container {
+    .item {
+      @include font(14px, $color-font);
+      position: relative;
+      display: block;
+      margin: 0 0 20px 20px;
+    }
+    .item:before {
+      @extend %position;
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: #FFA830;
+      left: -20px;
+    }
+  }
+  .item-btn-container{
+    padding-top: 20px;
+    .card-3-spe {
+      @include card(30%);
+      @include font(18px,#fff);
+      background: #FFA830;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+    .card-3-spe:nth-child(2){
+      margin: 0 5%;
+    }
+  }
+}
+.swiper-container-1 {
+  width: 100%;
+  height: 270px;
+}
+
+//nav start
+.nav{
+  font-size: 16px;
+  color: #fff;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  background: transparent;
+  transition: .4s;
+  .dropDownList{
+    top: 72px;
+  }
+}
+.fix-nav{
+  position: fixed;
+  background: rgba(51,51,51,.8);
+  .dropDownList{
+    top: 100%;
+  }
+}
+.nav-container{
+  width: 1200px;
+  margin: auto;
+  .logo{
+    background: url("../../images/comm/nav/logo.png") no-repeat center;
+    background-size: contain;
+    float: left;
+    width: 85px;
+    height: 32px;
+    margin-top: 13px;
+  }
+  .nav-content{
+    float: left;
+    padding-left: 100px;
+    .item{
+      display: inline-block;
+    }
+    .a{
+      display: inline-block;
+      padding: 20px 22px;
+      color: #179FF4;
+      position: relative;
+      margin-right: 60px;
+    }
+    .a:after{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background: transparent;
+      bottom: 18%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      -webkit-transition: .5s;
+      transition: .5s;
+    }
+  }
+  .login{
+    color: #fff;
+    border-radius: 5px;
+    float: right;
+    padding: 0 35px;
+    background: #3D8DFA;
+    line-height: 32px;
+    height: 32px;
+    margin-top: 15px;
+  }
+}
+.dropDownList {
+  background: rgba(56,153,249,.9);
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0.9;
+  z-index: 2;
+  .menuSystemList {
+    width: 1200px;
+    margin: auto;
+    .width1200 {
+      margin-left: 110px;
+      .item-drop {
+        float: left;
+        font-size: 18px;
+        padding: 0 35px 15px;
+        .url, .li {
+          display: block;
+        }
+        .url {
+          border-bottom: 1px dashed #47b5fa;
+          font-size: 18px;
+          padding: 25px 0 15px;
+          margin-bottom: 20px;
+          .icon {
+            display: inline-block;
+            vertical-align: sub;
+            margin-right: 10px;
+            height: 23px;
+            width: 21px;
+          }
+        }
+        .li{
+          font-size: 16px;
+          margin-bottom: 16px;
+        }
+        .li:before{
+          background: #fff;
+          display: inline-block;
+          content: "";
+          height: 4px;
+          margin: 0 10px;
+          width: 4px;
+          vertical-align: middle;
+        }
+      }
+      &.border {
+        .item-drop {
+          border-right: 1px solid #47b5fa;
+        }
+        .item-drop:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+#product{
+  @include iconimg("../../images/comm/nav/item01-icon",4)
+}
+.a.active{
+  color: #3D8DFA;
+}
+.a:hover{
+  color: #3D8DFA;
+  &.a:after{
+    background: #3D8DFA;
+  }
+}
+a{
+  color: #fff;
+  transition: .4s;
+}
+//nav end
+
+
+footer {
+  background: #1A1F25;
+  width: 100%;
+}
+.footer-container {
+  width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+.partner{
+  background: url("../../images/comm/foot/foot_backg.png") no-repeat center center;
+  background-size: cover;
+  @extend .clear;
+  .partner-top{
+    padding-bottom: 30px;
+  }
+  .partner-text{
+    @include font(18px,#666);
+    text-align: center;
+    float: left;
+    margin: 20px 20px 0 0;
+  }
+  .partner-img{
+    background: url("../../images/comm/foot/foot_aiju_cooperation.png") no-repeat center center;
+    background-size: contain;
+    height: 85px;
+    width: 872px;
+    float: left;
+  }
+  .card-2-spe{
+    @include card(76%);
+    &.right{
+      @include font(12px,#898989,5px);
+    }
+    .tel{
+      @include font(20px,#fff,5px);
+      font-weight: 700;
+    }
+    .footer-logo{
+      background: url("../../images/comm/foot/aj_foot_logo.png") no-repeat;
+      height: 45px;
+      margin-bottom: 15px;
+    }
+  }
+  .card-2-spe:last-child{
+    @include card(24%);
+  }
+  .partner-title-bar{
+    @include font(14px,#fff,25px);
+  }
+  .partner-title-li{
+    @include font(12px,#898989,8px);
+    cursor: pointer;
+    display: block;
+  }
+}
+.down-icon{
+  @include font(12px,#9e9e9e);
+  .footer-container{
+    width: 1000px;
+  }
+  a{
+    color: #666;
+  }
+  a:hover{
+    color: #666;
+    text-decoration: none;
+  }
+  .item{
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}

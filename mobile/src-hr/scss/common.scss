@@ -1,0 +1,32 @@
+html,body{
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+body{
+  font: 100% "microsoft yahei",Helvetica;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #eee;
+  width: 100%;
+}
+a{ outline:none; }
+a:hover{ text-decoration: none; }
+a:focus{outline:0;}
+a {
+  color: #666;
+  text-decoration: none;
+}
+em, i {
+  font-style: normal;
+}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lf,.fl{ float: left;}
+.rt,.fr{ float: right; }

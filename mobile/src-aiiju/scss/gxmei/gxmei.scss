@@ -1,0 +1,131 @@
+@mixin position($type:'X'){
+  position: absolute;
+  @if($type == 'X'){
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }@else if($type == 'Y'){
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }@else {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+//$s 字体大小 $c 字体颜色  $b margin-bottom 大小
+@mixin font($s:.24rem,$c: #333, $b:0){
+  @if $c{
+    color: $c;
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }@else {
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }
+}
+@mixin icon($w,$h,$b:block){
+  background-size: contain;
+  display: $b;
+  height: $h;
+  width: $w;
+  margin: auto;
+}
+
+@mixin iconimg($path,$num,$name:'icon',$s:1,$z:"png"){
+  @for $i from $s through $num {
+    .#{$name}-#{$i} {
+      background: url('#{$path}#{$i}.#{$z}') no-repeat center center;
+      background-size: contain;
+    }
+  }
+}
+body{
+  background: #F1F1F1;
+}
+.response-img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.mark-btn{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: -webkit-linear-gradient(top, rgba(256,256,256,1), rgba(256,256,256,0));
+  background: -o-linear-gradient(top, rgba(256,256,256,1), rgba(256,256,256,0));
+  background: -moz-linear-gradient(top, rgba(256,256,256,1), rgba(256,256,256,0));
+  background: linear-gradient(to top, rgba(256,256,256,1), rgba(256,256,256,0));
+}
+.mark-form{
+  position: fixed;
+  z-index: 9;
+  background: rgba(0,0,0,.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .content{
+    @include position('B');
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: .16rem;
+    padding: .3rem;
+    width: 80%;
+  }
+  .input-group{
+    border-bottom: 1px solid #DFDFDF;
+    width: 100%;
+    position: relative;
+    -webkit-transition: .3s;
+    transition: .3s;
+    &.no-border{
+      border: none;
+    }
+    .icon{
+      @include icon(.4rem,.4rem);
+      @include position('Y');
+    }
+    @include iconimg('../../images/agency/part1-icon',5);
+    .form-control{
+      @include font(.3rem,#333);
+      border: none;
+      padding: .3rem;
+      position: relative;
+      margin-left: .4rem;
+    }
+    .form-control:focus{
+      outline-offset: 0;
+      outline: none;
+    }
+  }
+  .txt{
+    @include font(.28rem,#484848);
+    text-align: center;
+  }
+}
+.btn{
+  display: block;
+  margin: .5rem auto;
+  width: 40%;
+  background: #FFDD00;
+  padding: .2rem;
+  border-radius: .16rem;
+}
+.btn-txt{
+  @include font(.3rem,#484848,.5rem);
+  text-align: center;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+  opacity: 0
+}
+.waring{
+  border-bottom-color: #ff0000 !important;
+}

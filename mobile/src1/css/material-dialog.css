@@ -1,0 +1,246 @@
+/*素材弹窗*/
+
+.tree-view .search-wrap {
+    margin-bottom: 10px;
+    position: relative
+}
+
+.tree-view .search-wrap label {
+    width: 100%;
+}
+
+.tree-view .album-list .list-group-item, .tree-view .work-list .list-group-item, .tree-view .scene-list .list-group-item {
+    cursor: pointer;
+}
+
+.tree-view .browse-mount {
+    margin-right: 15px;
+}
+
+.tree-view {
+    max-height: 840px;
+    overflow-x: hidden;
+}
+
+.tree-view .album-list .list-group-item {
+    padding: 10px 15px;
+}
+
+.tree-view .work-list .list-group-item, .tree-view .scene-list .list-group-item {
+    padding: 10px 15px;
+}
+
+.tree-view .material-pic {
+    width: 240px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.tree-view .center {
+    text-align: center;
+}
+
+.tree-view .card-title {
+    color: #353535;
+}
+
+.tree-view label {
+    margin-bottom: 0;
+}
+
+.tree-view p {
+    margin-bottom: 0;
+}
+
+.tree-view .ml-15 {
+    margin-left: 15px;
+}
+
+.tree-view .ico-praise, .tree-view .ico-scanned {
+    margin-right: 2px;
+}
+
+.tree-view .tab-page-div {
+    bottom: -40px;
+    right: -4px;
+}
+
+.tree-view .material-icon-check-div {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 5px;
+    position: absolute;
+    width: 26px;
+    left: 0;
+    top: 1px;
+}
+
+.tree-view .material-icon-check-div .material-icon-check {
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    background: transparent url(http://make.westlakevr.cn/images/sprite/sprite-material.png) no-repeat;
+}
+
+.tree-view .material-icon-check-div .material-icon-check.selected {
+    background-position: -16px 0;
+}
+
+.tree-view .panel-footer {
+    height: 60px;
+}
+
+.tree-view .cards {
+    padding-top: 0;
+}
+
+.tree-view .tree-contain {
+    width: 30%;
+    padding: 0 10px;
+}
+
+.tree-view .relative {
+    position: relative;
+}
+
+.tree-view .material {
+    width: 60%;
+    display: inline-block;
+}
+
+.tree-view .el-tree {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-color: #ddd;
+}
+
+.tree-view .panel-heading {
+    padding: 16px 15px;
+}
+
+.tree-view .search-wrap .search {
+    width: 100%;
+}
+
+.tree-view .menu-li {
+    padding: 0;
+}
+
+.tree-view .material-icon-search {
+    cursor: pointer;
+    display: inline-block;
+    height: 13px;
+    width: 14px;
+    background: transparent url(http://make.westlakevr.cn/images/sprite/sprite-material.png) no-repeat;
+    background-position: -17px -32px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.tree-view .model-header li {
+    float: left;
+}
+
+.tree-view .cards {
+    padding-top: 15px;
+}
+
+.tree-view .el-checkbox {
+    position: absolute;
+    top: -1px;
+}
+
+.tree-view .model-header {
+    padding: 20px 0;
+}
+
+.tree-view .el-checkbox__inner.is-checked {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.tree-view .el-checkbox__inner {
+    border-color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tree-view .el-checkbox__inner:not(.is-disabled):hover {
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.tree-view .material-icon-check-div {
+    z-index: 100;
+    line-height: 21px;
+    text-align: center
+}
+
+.tree-view .material-contain {
+    padding: 0 20px;
+    width: 60%
+}
+
+.tree-view .dialog-contain {
+    display: flex;
+}
+
+.tree-view .material-panel {
+    width: 40%;
+    display: inline-block
+}
+
+.tree-view .show {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.tree-view .angle-ico {
+    float: right;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.dialog-footer .el-button {
+    padding: 5px 10px;
+}
+
+.dialog-footer .footer-btn {
+    position: absolute;
+    right: 40px;
+    bottom: 32px
+}
+
+.el-dialog__footer{
+    border-top: 0!important;
+}
+
+.el-button--primary:focus, .el-button--primary:hover {
+    background: #b2d802 !important;
+    border-color: #b2d802 !important;
+    color: #fff;
+}
+
+.el-button--primary {
+    color: #fff;
+    background-color: #b2d802 !important;
+    border-color: #b2d802 !important;
+}
+
+.btn-sure {
+    background-color: #9abb01 !important;
+    color: #fff !important;
+    text-shadow: none !important;
+}
+
+.btn-sure:hover, .btn-sure:focus {
+    background-color: #9abb01 !important;
+    border: solid 1px #9abb01;
+    color: #fff !important;
+    text-shadow: none;
+    outline-color: #9abb01;
+}

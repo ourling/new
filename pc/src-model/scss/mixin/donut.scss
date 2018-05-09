@@ -1,0 +1,114 @@
+@import "template";
+@mixin rotate($deg,$opacity){
+  -webkit-transform: rotateY($deg);
+  transform: rotateY($deg);
+  opacity: $opacity;
+}
+.donut-container{
+  @extend .clear;
+  padding: 30px 0;
+  .donut-2{
+    @include card(48%);
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+  .donut-2:nth-child(2n){
+    margin-right: 0;
+  }
+  .donut-3{
+    @include card(32.3%);
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
+  }
+  .donut-3:nth-child(3n){
+    margin-right: 0;
+  }
+  .donut-4{
+    @include card(23.5%);
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+  .donut-4:nth-child(4n){
+    margin-right: 0;
+  }
+  .donut-5{
+    @include card(18.5%);
+    margin-right: 1.75%;
+    margin-bottom: 1.75%;
+  }
+  .donut-5:nth-child(5n){
+    margin-right: 0;
+  }
+  .donut-6{
+    @include card(15%);
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+  .donut-6:nth-child(6n){
+    margin-right: 0;
+  }
+  .donut-2:hover .donut-img{
+    @include rotate(180deg,0);
+  }
+  .donut-2:hover .donut-txt{
+    @include rotate(360deg,1);
+  }
+  .donut-3:hover .donut-img{
+    @include rotate(180deg,0);
+  }
+  .donut-3:hover .donut-txt{
+    @include rotate(360deg,1);
+  }
+  .donut-4:hover .donut-img{
+    @include rotate(180deg,0);
+  }
+  .donut-4:hover .donut-txt{
+    @include rotate(360deg,1);
+  }
+  .donut-5:hover .donut-img{
+    @include rotate(180deg,0);
+  }
+  .donut-5:hover .donut-txt{
+    @include rotate(360deg,1);
+  }
+  .donut-6:hover .donut-img{
+    @include rotate(180deg,0);
+  }
+  .donut-6:hover .donut-txt{
+    @include rotate(360deg,1);
+  }
+  .icon {
+    position: relative;
+    display: block;
+    margin: auto;
+  }
+  .title-bar{
+    position: relative;
+    text-align: center;
+  }
+  .donut{
+    position: absolute;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    height: 100%;
+    width: 100%;
+  }
+  .donut-img {
+    z-index: 5;
+    backface-visibility: hidden;
+  }
+  .donut-txt{
+    @include align(false);
+    @include rotate(180deg,0);
+    z-index: 5;
+    backface-visibility: hidden;
+    .content{
+      @include position('Y');
+      padding: 0 36px 0 45px;
+      width: 100%;
+    }
+    .txt{
+      margin-bottom: 15px;
+    }
+  }
+}

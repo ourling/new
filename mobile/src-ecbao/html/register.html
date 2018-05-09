@@ -1,0 +1,296 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="电商宝为电商多平台卖家提供最专业精准全面的财务数据店铺管理软件，无缝对接多电商平台，提供全渠道订单管理、全渠道批量打单、全渠道库存管理、全渠道商品管理。">
+    <meta name="keywords" content="电商宝，京东财务分析，天猫财务软件，网店管理系统，网店管理软件，saas平台，电商数据分析，淘宝财务管理软件">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.ecbao.cn/dsb/assert/images/favicon.ico">
+    <link rel="stylesheet" href="http://www.ecbao.cn/dsb/assert/home_login/login.css?t=20161124">
+    <script>
+        //字体尺寸转化
+        (function (doc, win, undefined) {
+            let docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        let clientWidth = docEl.clientWidth;
+                        if (clientWidth === undefined) return;
+                        //字体转换  当前屏幕宽度 / 设计稿尺寸的一半  100px == 1rem
+                        docEl.style.fontSize = clientWidth / 7.5 + 'px';
+                        FontSize = docEl.style.fontSize
+                    };
+            if (doc.addEventListener === undefined) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false)
+        })(document, window);
+    </script>
+    <title>登录注册-电商宝ERP</title>
+    <script type="text/javascript">
+        var globle_url = 'http://www.ecbao.cn/dsb/';
+        var system_url = 'http://www.ecbao.cn/dsb/';
+        var static_url = 'http://www.ecbao.cn/dsb/assert/';
+        var upload_url = 'http://www.ecbao.cn/dsb/uploads/';
+        var self_home = 'dsb/';
+        var isActive = 0;
+        var redirectUrl = '';
+        var intentVersion = '';
+    </script>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+<div class="" style="display: none; position: absolute;">
+    <div class="aui_outer">
+        <table class="aui_border">
+            <tbody>
+            <tr>
+                <td class="aui_nw"></td>
+                <td class="aui_n"></td>
+                <td class="aui_ne"></td>
+            </tr>
+            <tr>
+                <td class="aui_w"></td>
+                <td class="aui_c">
+                    <div class="aui_inner">
+                        <table class="aui_dialog">
+                            <tbody>
+                            <tr>
+                                <td colspan="2" class="aui_header">
+                                    <div class="aui_titleBar">
+                                        <div class="aui_title" style="cursor: move; display: block;"></div>
+                                        <a class="aui_close" href="javascript:/*artDialog*/;"
+                                           style="display: block;">×</a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="aui_icon" style="display: none;">
+                                    <div class="aui_iconBg" style="background: none;"></div>
+                                </td>
+                                <td class="aui_main" style="width: auto; height: auto;">
+                                    <div class="aui_content" style="padding: 20px 25px;"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="aui_footer">
+                                    <div class="aui_buttons" style="display: none;"></div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+                <td class="aui_e"></td>
+            </tr>
+            <tr>
+                <td class="aui_sw"></td>
+                <td class="aui_s"></td>
+                <td class="aui_se" style="cursor: se-resize;"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div style="display:none">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260352182&amp;web_id=1260352182" language="JavaScript"></script>
+    <script src="https://c.cnzz.com/core.php?web_id=1260352182&amp;t=z" charset="utf-8" type="text/javascript"></script>
+    <a href="http://www.cnzz.com/stat/website.php?web_id=1260352182" target="_blank" title="站长统计">站长统计</a>
+</div>
+
+<div class="symbol_header"></div>
+<div class="register-container">
+    <div class="doc_box">
+        <a class="logo-title" href="http://www.ecbao.cn/dsb/home_login/">返回登录页</a>
+        <div class="register_content" id="retrieve_pwd">
+            <div class="mybox_con_top" style="margin-bottom: 36px;">电商宝注册</div>
+            <div id="showSuccessLoopTip" style="display: none;"></div>
+            <div class="left_area">
+                <span class="error error1" style="display: none;"></span>
+                <span class="error error2"></span>
+                <span class="error error3" style="display: none;"></span>
+                <span class="error error4"></span>
+                <span class="error error5"></span>
+                <span class="error error6" style="display: none;"></span>
+                <span class="error error7" style="display: none;"></span>
+                <div style="display:block;" data-view="phoneRegister" class="form_body">
+                    <input id="source" name="source" type="hidden" value="">
+                    <div data-controltype="Phone" data-propertyname="phone" class="input_item clearfix"
+                         style="display: block;position:relative;border-bottom:1px solid #eee;">
+                        <div class="input_box" style="margin-bottom:1px;">
+                            <input type="text" autocomplete="off" data-required="required" placeholder="手机号" id="mobile"
+                                   name="mobile" value="" tabindex="10" class="input input_white phone" >
+                            <div class="line" style="bottom:-2px;"></div>
+                        </div>
+                    </div>
+
+
+                    <div data-controltype="PhoneVerificationCode" data-propertyname="phoneVerificationCode"
+                         class="input_item" style="display: block;border-bottom:1px solid #eee;">
+                        <div class="input_group clearfix" style="margin-top:1px;">
+                            <div class="input_box" style="margin-bottom:1px;display: inline-block;">
+                                <input type="text" id="authcode"
+                                       style="border-right:1px solid #eee;" name="authcode"
+                                       maxlength="6" tabindex="10" autocomplete="off" data-required="required"
+                                       placeholder="验证码" class="input input_white first_child kapkey">
+                                <div class="line" style="bottom:-2px;"></div>
+                            </div>
+                            <label id="authcode_error"></label>
+                            <input type="button" id="btnSendCode" onclick="sendMessage()" data-required="required"
+                                   value="获取验证码" class="btn btn_blue btn_active btn_lg last_child">
+                        </div>
+                    </div>
+                    <div data-controltype="pwd" data-propertyname="pwd" class="input_item clearfix"
+                         style="display: block;position:relative;border-bottom:1px solid #eee;">
+                        <div class="input_box" style="margin-bottom:1px;">
+                            <input type="password" autocomplete="off" data-required="required" placeholder="密码至少需要8位"
+                                   id="password" name="password" value="" tabindex="10" class="input input_white password"
+                                   ">
+                            <div class="line" style="bottom:-2px;"></div>
+                        </div>
+                    </div>
+                    <div data-controltype="pwd" data-propertyname="pwd" class="input_item clearfix"
+                         style="display: block;position:relative;border-bottom:1px solid #eee;">
+                        <div class="input_box" style="margin-bottom:1px;">
+                            <input type="password" autocomplete="off" data-required="required" placeholder="确定密码"
+                                   id="password1" name="password1" value="" tabindex="10"
+                                   class="input input_white password1">
+                            <div class="line" style="bottom:-2px;"></div>
+                        </div>
+                    </div>
+                    <p class="txt">
+                        <input id="agreement" type="checkbox" checked="checked">已接受《<span id="agree"
+                                                                                          style="color:#399bf4;cursor: pointer"
+                                                                                          onclick="show_mybox('user_agreement');">电商宝用户协议</span>》
+                        <a style="position:absolute;right:0px;top:0;color:#399bf4;font-weight:bold;"
+                           href="http://www.ecbao.cn/dsb/home_login?source=&amp;redirect=">已有账号？登录</a>
+                    </p>
+                    <div class="register-btn input_item clearfix" id="finish_reg"
+                         data-propertyname="submit" data-controltype="Botton">
+                        <button type="button" class="btn btn_primary">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-copyright">
+            <span>软件证书编号：浙RC-2016-0918  |  软件著作权登记号：2016SR285973 |  浙ICP备12032625号-3 | <a target="_blank"
+                                                                                          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602004534"
+                                                                                          style="display:inline-block;text-decoration:none;height:20px;line-height:20px;color:#999;"><img
+                    src="http://www.ecbao.cn/dsb/assert/home_login/images/safe.png" style="float:left;">浙公网安备
+                33010602004534号</a></span><br>
+        杭州爱聚科技有限公司 版权所有2012-2017
+    </div>
+</div>
+<!--用户协议弹窗-->
+<div id="user_agreement" class="mybox" style="display: none;">
+    <div class="mybox_bg"></div>
+    <div class="mybox_con" id="user_agreement_content">
+        <div class="mybox_con_top">
+            电商宝用户协议<a href="javascript:void(0)" onclick="close_mybox(this);"><b>×</b></a>
+        </div>
+        <div class="mybox_con_body" id="user_agreement_body">
+            <h2>【首部及导言】</h2>
+            <h2>
+                　　为协助用户有效利用电商宝资源，维护用户合法权益，特制订《电商宝用户规则》（以下简称“本规则”）。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款，以及开通或使用某项服务的单独协议，并选择接受或不接受。限制、免责条款可能以加粗形式提示您注意。<br>　　除非您已阅读并接受本规则所有条款，否则您无权申请或成为电商宝用户。您申请或使用电商宝软件的行为即视为您已阅读并同意受本规则的约束。
+            </h2>
+            <h2>一、【规则的范围】</h2>
+            <p>　　1.1 本规则是爱聚科技制定的关于获取和使用电商宝软件的相关用户规则。本规则适用于爱聚科技提供的需要注册或使用电商宝的全部软件和服务。<br>　　1.2
+                您通过电商宝软件使用爱聚科技的软件和服务时，须同时遵守各项服务的单独协议。</p>
+            <h2>二、【电商宝账号的性质】</h2>
+            <p>　　电商宝账号是爱聚科技创设的用于识别用户身份的标识。电商宝账号的所有权属于爱聚科技。</p>
+            <h2>三、【电商宝账号的获取方式】</h2>
+            <p>　　3.1 您可以通过如下方式免费或有偿申请注册成为电商宝用户，包括但不限于：<br>
+                　　（1）软件客户端；<br>
+                　　（2）爱聚科技网站；<br>
+                　　（3）参与爱聚科技开展或授权开展的活动；<br>
+                　　（4）其他爱聚科技授权的方式。<br>
+                　　3.2 您完成申请注册程序后，依照爱聚科技的业务规则获得该账号的使用权。<br>
+                　　3.3 无论您通过何种方式注册成为电商宝用户，均受本规则约束。</p>
+            <h2>四、【用户身份信息验证】</h2>
+            <p>　　4.1
+                您在申请使用电商宝软件过程中，需要填写一些必要的信息，请保持这些信息的及时更新，以便爱聚科技向您提供帮助，或更好地为您提供服务。若国家法律法规有特殊规定的，您需要填写真实的身份信息。若您填写的信息不完整或不准确，则可能无法使用服务或在使用过程中受到限制。
+                <br>　　4.2
+                爱聚科技与用户一同致力于个人信息的保护，保护用户个人信息是爱聚科技的一项基本原则。未经您的同意，爱聚科技不会向爱聚科技以外的任何公司、组织和个人披露您的个人信息。法律法规另有规定的情况除外。</p>
+            <h2>五、【电商宝账号的使用】</h2>
+            <p>　　5.1 您可以按照爱聚科技的业务规则通过用户注册信息登录和使用爱聚科技提供的各种软件和服务。</p>
+            <h2>六、【电商宝账户的安全问题】</h2>
+            <p><b>　　6.1 电商宝密码由您自行设定。您应妥善保管您的电商宝用户名与密码。</b><br>
+                　　6.2 爱聚科技与您共同负有维护电商宝用户安全的责任。爱聚科技会采取并不断更新技术措施，努力保护您的电商宝账号在服务器端的安全。<br>
+                　　6.3 您需要采取特定措施保护您的账号安全，包括但不限于妥善保管电商宝用户名与密码、安装防病毒木马软件、定期更改密码等措施。</p>
+            <h2>七、【电商宝账号的找回】</h2>
+            <p>　　如果您的电商宝账号被盗、密码遗忘或因其他原因导致无法正常登录，您可以按照爱聚科技密码找回途径找回。</p>
+            <h2>八、【用户行为规范】</h2>
+            <p><b>　　8.1 您不得恶意注册电商宝用户账号。爱聚科技可以对恶意注册行为进行独立判断和处理。</b><br>
+                <b>　　8.2 电商宝账号使用权仅属于初始申请注册人。未经爱聚科技许可，您不得赠与、借用、租用、转让或售卖电商宝账号或者以其他方式许可非初始申请注册人使用电商宝用户。</b><br>
+                　　8.3
+                如果您当前使用的电商宝账号并不是您初始申请注册的或者通过爱聚科技提供的其他途径获得的，但您却知悉该电商宝账号当前的密码，您不得用该账号登录或进行任何操作，并请您在第一时间通知爱聚科技或者该账号的初始申请注册人。
+            </p>
+            <h2>九、【责任承担】</h2>
+            <p>　　9.1 您理解并同意，作为电商宝账号的初始申请注册人和使用人，您应承担该账号项下所有活动产生的全部责任。<br>
+                9.2 因爱聚科技原因导致您的电商宝账号被盗，爱聚科技将依法承担相应责任。非因爱聚科技原因导致的，爱聚科技不承担任何责任。<br>
+                <b>　　9.3 爱聚科技依照业务规则限制、冻结或终止您的电商宝账号使用，可能会给您造成一定的损失，该损失由您自行承担，爱聚科技不承担任何责任。</b><br>
+                <b>　　9.4 您不得有偿或无偿转让电商宝账号，以免产生纠纷。您应当自行承担由此产生的任何责任，同时爱聚科技保留追究上述行为人法律责任的权利。</b></p>
+            <h2>十、【电商宝账号使用的限制、冻结或终止】</h2>
+            <p><b>　　10.1 如您违反法律法规、爱聚科技各服务协议或业务规则的规定，爱聚科技有权进行独立判断并随时限制、冻结或终止您对电商宝账号的使用，且根据实际情况决定是否恢复使用。</b><br>
+                <b>　　10.2 如果爱聚科技发现您并非账号初始申请注册人，爱聚科技有权在未经通知的情况下终止您使用该账号。</b><br>
+                <b>　　10.3 为了充分利用电商宝软件资源，如果您存在注册电商宝账号后未及时进行初次登录使用，或长期未登陆使用电商宝等情形，爱聚科技有权终止该账号的继续使用。</b><br>
+                <b>　　10.4 爱聚科技按照本规则或相关法律法规，限制、冻结或终止您对电商宝账号的使用，而由此给您带来的损失由您自行承担。</b></p>
+            <h2>十一、【客户服务】</h2>
+            <p>　　如果您对爱聚科技采取的电商宝用户使用限制措施有异议，或在使用电商宝的过程中有其他问题的，均可联系爱聚科技客户服务部门（QQ： 800036070 电话：0571-89935939
+                邮箱：help@iyenei.com），我们会给予您必要的帮助。</p>
+            <h2>十二、【其他】</h2>
+            <p>　　12.1
+                您申请或使用电商宝即视为您已阅读并同意受本规则的约束。爱聚科技有权在必要时修改本规则条款。您可以在爱聚科技相关页面查阅本规则的最新版本。本规则条款变更后，如果您继续使用电商宝账号，即视为您已接受修改后的规则。如果您不接受修改后的规则，应当停止使用电商宝软件。<br>
+                　　12.2 本协议内容为爱聚科技旗下其余产品使用或服务协议不可分割的组成部分，您在使用爱聚科技其余产品或服务应当同时遵守。<br>
+                <b>　　12.3 本规则签订地为中华人民共和国浙江省杭州市西湖区。</b><br>
+                <b>　　12.4 本规则的成立、生效、履行、解释及纠纷解决，适用中华人民共和国大陆地区法律（不包括冲突法）。</b><br>
+                <b>　　12.5 若您和爱聚科技之间发生任何纠纷或争议，首先应友好协商解决；协商不成的，您同意将纠纷或争议提交本规则签订地有管辖权的人民法院管辖。</b><br>
+                　　12.6 本规则所有条款的标题仅为阅读方便，本身并无实际涵义，不能作为本规则涵义解释的依据。<br>
+                　　12.7 本规则条款无论因何种原因部分无效或不可执行，其余条款仍有效，对双方具有约束力。</p>
+
+            <p style="text-align: right;">杭州爱聚科技有限公司</p>
+            <br>
+            <p style="text-align: center;">Copyright © 2015电商宝（杭州爱聚科技有限公司）www.ecbao.cn 浙ICP备12032625号</p>
+        </div>
+    </div>
+</div>
+<script src="http://www.ecbao.cn/dsb/assert/all/comm.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.phone').focus();
+        if ($('.error').html() == "") {
+            $('.register_content .mybox_con_top').css({'margin-bottom': '36px'});
+
+        } else {
+            $('.register_content .mybox_con_top').css({'margin-bottom': '50px'});
+
+        }
+    });
+    var InterValObj; //timer变量，控制时间
+    var count = 60; //间隔函数，1秒执行
+    var curCount;//当前剩余秒数
+    var code = ""; //验证码
+    var codeLength = 8;//验证码长度
+    //timer处理函数
+    function SetRemainTime() {
+        if (curCount == 0) {
+            window.clearInterval(InterValObj);//停止计时器
+            $("#btnSendCode").removeAttr("disabled");//启用按钮
+            $("#btnSendCode").val("重新发送");
+            code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
+        } else {
+            curCount--;
+            $("#btnSendCode").val("重新获取" + "（" + curCount + "）");
+        }
+    }
+</script>
+<script src="http://www.ecbao.cn/dsb/assert/home_login/index.js?t=201709072" charset="utf-8"></script>
+<script src="http://www.ecbao.cn/dsb/assert/home_login/artdialog/artDialog.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://www.ecbao.cn/dsb_asserts/js/placeholder.js?t=20151203"></script>
+<script type="text/javascript" src="http://www.ecbao.cn/dsb/assert/web_app/js/jQuery.md5.js?t=20151203"></script>
+<!-- 增加电商宝自己的推广统计代码 -->
+<script type="text/javascript" src="http://acrm.ecbao.cn/assert/astart_reg.js?t=20170503"></script>
+
+</body>
+</html>

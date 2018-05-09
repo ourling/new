@@ -1,0 +1,144 @@
+@import "../mixin/template";
+%position {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.banner {
+  width: 100%;
+  .banner-container{
+    top: 2.6rem;
+    .banner-btn{
+      @include font(.28rem,#fff);
+      background: transparent;
+      height: .6rem;
+      width: 3rem;
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+}
+.part{
+  border: none;
+  margin-bottom: 0;
+}
+.part-2{
+  background: #F6F6F6;
+}
+.part-4{
+  background: url("../../images/solutions/food/food-part04-bg.png") no-repeat center;
+  background-size: cover;
+}
+.food-container {
+  color: #666;
+  min-height: 5rem;
+  width: 100%;
+}
+.title-container {
+  @include align(center);
+  padding: .25rem 0;
+  .title {
+    @include font(.3rem, #783006, .15rem);
+    @include align(center);
+    display: inline-block;
+    position: relative;
+    &.spe{
+      color: #fff;
+    }
+  }
+  .title:after, .title:before {
+    @extend %position;
+    content: "";
+    display: block;
+    height: .04rem;
+    width: 1.28rem;
+  }
+  .title:before {
+    background: url("../../images/solutions/food/line-left.png") no-repeat;
+    background-size: cover;
+    right: 103%;
+  }
+  .title:after {
+    background: url("../../images/solutions/food/line-right.png") no-repeat;
+    background-size: cover;
+    left: 103%;
+  }
+  .title-bar {
+    @include font(.24rem, #783006);
+  }
+  &.spe{
+    .title {
+      color: #fff;
+    }
+    .title-bar {
+      color: #fff;
+    }
+    .title:before {
+      background: url("../../images/solutions/food/line-left-s.png") no-repeat;
+      background-size: cover;
+    }
+    .title:after {
+      background: url("../../images/solutions/food/line-right-s.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.card-container{
+  .title{
+    @include font(.22rem,#fff,.25rem);
+    &.align-c{
+      @include align(center)
+    }
+  }
+  .txt{
+    @include font(.2rem,#783006);
+    @include align(center);
+  }
+}
+.food-foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    position: absolute;
+    top: 1rem;
+    text-align: center;
+    width: 100%;
+    .foot-btn{
+      background: transparent;
+      box-sizing: border-box;
+      border-radius: .1rem;
+      display: block;
+      padding: .18rem .23rem;
+      width: 1.8rem;
+      margin-left: 4.2rem;
+    }
+  }
+}
+.card-container-2{
+  .card-4{
+    margin-bottom: .3rem;
+  }
+  .icon{
+    @include icon(1.45rem,1.45rem);
+    margin-bottom: .3rem;
+  }
+  @include iconimg("../../images/solutions/food/food-part02-icon",4,"icon");
+}
+.card-container-4{
+  .card-4{
+    margin-bottom: .3rem;
+    height: 2rem;
+    .title{
+      margin-top: 1.8rem;
+    }
+  }
+  .icon{
+    @include icon(2.2rem,2.2rem);
+    position: absolute;
+    top: 0;
+    left: .2rem;
+  }
+  @include iconimg("../../images/solutions/food/food-part04-icon",12,"icon");
+}

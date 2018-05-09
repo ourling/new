@@ -1,0 +1,245 @@
+@import "../mixin/template";
+
+.banner {
+  width: 100%;
+  .banner-container {
+    top: 1rem;
+    .response-img{
+      width: 52%;
+      margin: 0 auto .2rem;
+    }
+    .banner-title{
+      @include font(.64rem,#fff,.3rem);
+    }
+    .banner-content{
+      padding: 0 .8rem;
+      .title{
+        @include font(.2rem,#fff);
+      }
+      .icon{
+        @include icon(.47rem,.47rem);
+        margin: 0 auto .25rem;
+      }
+      @include iconimg('../../images/solutions/index/banner-icon',4)
+    }
+    .banner-btn {
+      background: url('../../images/solutions/index/banner-btn.png') no-repeat center;
+      background-size: contain;
+      width: 3.64rem;
+      height: 1.11rem;
+      padding: 0;
+    }
+  }
+}
+
+.mobile-body {
+  background: #F8F8F8;
+}
+
+.index-container {
+  width: 100%;
+}
+.index-foot{
+  position: relative;
+  margin-bottom: .8rem;
+  height: 3.87rem;
+  background: #373D41;
+  .foot-container{
+    position: absolute;
+    top: .6rem;
+    text-align: center;
+    width: 100%;
+    .foot-title{
+      @include font(.4rem, #fff,.2rem);
+    }
+    .foot-title-bar{
+      @include font(.32rem, #fff,.15rem);
+    }
+    .foot-btn{
+      background: url("../../images/solutions/index/foot-btn.png") no-repeat center;
+      background-size: contain;
+      display: block;
+      margin: .55rem auto 0;
+      width: 3.35rem;
+      height: 1.06rem;
+    }
+  }
+}
+
+.part {
+  border: none;
+  margin-bottom: 0;
+  .title-container {
+    @include font(.4rem, #333);
+    padding: .25rem;
+    text-align: center;
+    .text{
+      @include font(.2rem, #E7E7E7);
+      padding-top: .3rem;
+    }
+  }
+  .line{
+    position: relative;
+    color: #fff;
+  }
+  .line:before{
+    @include position('X');
+    top: .9rem;
+    content: "";
+    background: #fff;
+    width: 8%;
+    height: .05rem;
+  }
+}
+.part-1{
+  background: #2C3134;
+}
+.part-2{
+  background: #373D41;
+}
+.part-6{
+  background: #373D41;
+  padding-bottom: .8rem;
+  .title-container{
+    color: #fff !important;
+  }
+}
+.part-7{
+  .card-container-top{
+    background: #F4F4F4;
+    padding: .15rem .5rem !important;
+  }
+  .card-container-bottom{
+    .card-2-spe{
+      @include card(70%);
+    }
+    .card-2-spe:last-child{
+      @include card(30%)
+    }
+    .erwei-title{
+      @include font(.2rem,#666);
+      text-align: center;
+      margin-top: .1rem;
+    }
+    .card-4{
+      @include font(.24rem,#4E91FF);
+      margin-top: .45rem;
+    }
+  }
+}
+.part-8{
+  background: #F4F4F4;
+  .more{
+    @include font(.28rem,#666);
+    float: right;
+    margin-top: .45rem;
+    text-decoration: underline;
+  }
+}
+
+.card-container {
+  position: relative;
+  .title {
+    @include font(.28rem, #333);
+    text-align: center;
+  }
+  .title-bar{
+    @include font(.24rem,#333);
+  }
+  .txt {
+    @include font(.2rem, #666, .1rem);
+    @include align(false);
+  }
+  .title-spe {
+    @include font(.22rem, #333, .3rem);
+    text-align: center;
+  }
+}
+.card-container-1{
+  width: 80%;
+  margin: auto;
+}
+.card-container-2 {
+  padding-bottom: .4rem !important;
+}
+.card-container-3-1 {
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+  .icon{
+    @include icon(.6rem,.6rem);
+    margin-bottom: .25rem;
+  }
+  @include iconimg("../../images/solutions/index/part03-icon", 4,'icon');
+}
+.card-container-3-2 {
+  border-bottom: 1px solid #DCDCDC;
+  padding: .3rem .6rem !important;
+  .title-bar{
+    position: relative;
+    padding-left: .3rem;
+  }
+  .title-bar:before{
+    position: absolute;
+    top: .09rem;
+    background: #9BC3F3;
+    left: 0;
+    content: "";
+    width: 0.15rem;
+    height: 0.15rem;
+    border-radius: 50%;
+  }
+}
+.card-container-4-1 {
+  .card-1{
+    margin-bottom: .5rem;
+    .card-title{
+      position: relative;
+      @include font(.3rem,#333);
+      padding-left: .2rem;
+    }
+    .card-title:before{
+      @include position('Y');
+      left: 0;
+      content: "";
+      width: 0.04rem;
+      height: .24rem;
+      background: #70E2FF;
+    }
+    .card-title:after{
+      @include position('Y');
+      right: -.2rem;
+      content: "";
+      width: 77%;
+      height: 1px;
+      background: #DCDCDC;
+    }
+  }
+  .card-2-b{
+    height: 2.5rem;
+    margin-bottom: .2rem;
+    .title{
+      margin-top: .8rem;
+    }
+    .title-bar{
+      text-align: center;
+    }
+    &.spe{
+      background: url("../../images/solutions/index/part04-bg.png") no-repeat center;
+      background-size: cover;
+      .title,.title-bar{
+        color: #fff;
+      }
+    }
+  }
+}
+.card-container-7{
+  .title-btn{
+    background: #57A137;
+  }
+  .card-logo{
+    @include icon(3.61rem,1.5rem);
+    background: url("../../images/solutions/fresh/sxManage-part06-bg.png") no-repeat center;
+    background-size: contain;
+    margin-bottom: .25rem;
+  }
+}

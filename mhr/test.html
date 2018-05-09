@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>爱聚微招聘</title>
+</head>
+<body>
+<div id="app">
+    <child-component :count="1"></child-component>
+</div>
+<script src="lib/vue2.0.js"></script>
+<script>
+    let Child = {
+        name: 'child-component',
+        props: {
+            count: {
+                type: Number,
+                default: 1
+            }
+        },
+        template: `
+            <div class="child">
+                <child-component :count="count + 1" v-if="count < 3"></child-component>
+            </div>
+        `
+    }
+    let app = new Vue({
+        el: "#app",
+        components: {
+            'child-component': Child
+        }
+    })
+</script>
+</body>
+</html>

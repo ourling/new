@@ -1,0 +1,106 @@
+.response-img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@mixin bg($height,$url,$point:'png'){
+  height: $height;
+  background: url('#{$url}.#{$point}' ) no-repeat center;
+  background-size: cover;
+}
+@mixin btn($url,$bottom: 55px){
+  background: url($url) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  height: 79px;
+  width: 236px;
+  position: absolute;
+  bottom: $bottom;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.book-banner{
+  min-width: 1200px;
+  .item{
+    width: auto;
+  }
+  .item-1{
+   @include bg(500px,'../../images/book/banner');
+  }
+}
+.book-container{
+  min-width: 1200px;
+  .item{
+    width: 1200px;
+    margin: auto;
+  }
+  .item-1{
+    @include bg(452px,'../../images/book/part-bg1');
+  }
+  .item-2{
+    @include bg(452px,'../../images/book/part-bg2');
+  }
+  .part-3{
+    padding-top: 42px;
+  }
+  .part-4{
+    padding: 140px 0 100px;
+    width: 456px;
+    margin: auto;
+  }
+  .item-5{
+    @include bg(684px,'../../images/book/part-bg5');
+  }
+  .item-6{
+    @include bg(638px,'../../images/book/part-bg6');
+    position: relative;
+    .btn{
+      @include btn("../../images/book/btn-1.png");
+    }
+  }
+  .item-7{
+    @include bg(482px,'../../images/book/part-bg7');
+    position: relative;
+    .btn{
+      @include btn("../../images/book/btn-2.png");
+    }
+  }
+  .item-8{
+    @include bg(484px,'../../images/book/part-bg8');
+    position: relative;
+    .btn{
+      @include btn("../../images/book/btn-3.png");
+    }
+  }
+  .item-9{
+    @include bg(482px,'../../images/book/part-bg9');
+    position: relative;
+    .btn{
+      @include btn("../../images/book/btn-4.png");
+    }
+  }
+  .item-10{
+    @include bg(556px,'../../images/book/part-bg10');
+    position: relative;
+    .btn{
+      @include btn("../../images/book/btn-5.png");
+    }
+  }
+  .item-11{
+    @include bg(580px,'../../images/book/part-bg11');
+    position: relative;
+    .btn{
+      @include btn("../../images/book/btn-6.png",82px);
+    }
+  }
+}
+.book-foot{
+  min-width: 1200px;
+  .item{
+    width: auto;
+  }
+  .item-1{
+    @include bg(421px,'../../images/book/foot');
+  }
+}

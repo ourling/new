@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>关闭当前窗口，按下 F5 或点击以下链接触发 onbeforeunload 事件。</p>
+<a href="http://www.runoob.com">点击跳转到菜鸟教程</a>
+<script>
+    window.onbeforeunload = function b() {
+        setTimeout(function () {
+                    setTimeout(beforeloadResult, 50)
+                }
+                , 50);
+        return '确认离开网页？';
+    };
+    function beforeloadResult() {
+        alert("你取消了离开网页！");
+    }
+</script>
+
+</body>
+</html>

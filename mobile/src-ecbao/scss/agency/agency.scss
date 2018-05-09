@@ -1,0 +1,126 @@
+@import "../mixin/template";
+
+.margin-8 {
+  margin-bottom: .4rem;
+}
+
+.banner {
+  width: 100%;
+}
+
+.mobile-body {
+  background: #F8F8F8;
+}
+
+.agent-container {
+  color: #666;
+  margin-bottom: .2rem;
+  padding-top: .2rem;
+  width: 100%;
+}
+
+.register-img{
+  background: url("../../images/agency/register-btn.png") no-repeat;
+  background-size: contain;
+  display: block;
+  height: 1rem;
+  margin: .3rem auto 0;
+  width: 80%;
+}
+.part {
+  background: #fff;
+  border-bottom: 1px solid #DFDFDF;
+  border-top: 1px solid #DFDFDF;
+  margin-bottom: .2rem;
+  padding-bottom: .2rem;
+  .title-container {
+    border-bottom: 1px solid #DFDFDF;
+    color: #333;
+    text-align: center;
+  }
+  .input-group{
+    border-bottom: 1px solid #DFDFDF;
+    margin-bottom: .2rem;
+    width: 100%;
+    position: relative;
+    -webkit-transition: .3s;
+    transition: .3s;
+    &.no-border{
+      border: none;
+    }
+    .icon{
+      @include icon(.4rem,.4rem);
+      @include position('Y');
+    }
+    @include iconimg('../../images/agency/part1-icon',5);
+    .form-control{
+      @include font(.3rem,#333);
+      border: none;
+      padding: .3rem;
+      position: relative;
+      margin-left: .4rem;
+    }
+    .form-control:focus{
+      outline-offset: 0;
+      outline: none;
+    }
+  }
+  .contacts-group{
+    @include font(.3rem,#333,.3rem);
+    width: 100%;
+    .num{
+      float: left;
+    }
+    .contacts-container{
+      margin-left: 1.2rem;
+      .address{
+        padding-bottom: .2rem;
+      }
+    }
+  }
+}
+.search-group{
+  margin-bottom: .8rem;
+  height: 2rem;
+  padding: .2rem;
+  position: relative;
+  .form-control{
+    border: 1px solid #DFDFDF;
+    border-radius: .1rem 0 0 .1rem;
+    box-sizing: border-box;
+    float: left;
+    height: .75rem;
+    padding: .2rem .3rem;
+    width: 86%;
+  }
+  .form-control:focus{
+    outline: none;
+  }
+  .input-group-addon{
+    background: url("../../images/agency/search-btn.png") no-repeat;
+    background-size: contain;
+    display: block;
+    height: .75rem;
+    margin-left: 86%;
+    width: .75rem;
+  }
+}
+.ag-text{
+  @include position('X');
+  bottom: .8rem;
+  @include font(.3rem,#333);
+}
+.alert-container{
+  position: relative;
+  height: 1.5rem;
+}
+.phone_tips{
+  @include position('X');
+  @include font(.3rem,#666);
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.waring{
+  border-bottom-color: #ff0000 !important;
+}

@@ -1,0 +1,222 @@
+@import "../mixin/template";
+
+.banner{
+  width: 100%;
+  .banner-container{
+    text-align: center;
+    top: .6rem;
+    .mark{
+      @include font(.36rem,#fff);
+      font-weight: 700;
+    }
+    .icon-point{
+      @include icon(.1rem,.1rem,inline-block);
+      background: #0D7AFB;
+      border-radius: 50%;
+      margin: 0 .1rem;
+      vertical-align: middle;
+    }
+    .banner-title{
+      @include font(.47rem,#fff,.2rem);
+    }
+    .banner-title-bar{
+      @include font(.3rem,#fff);
+    }
+    .banner-btn{
+      width: 3.58rem;
+      background: #0D7AFB;
+    }
+  }
+}
+
+.mobile-body {
+  //margin-bottom: .9rem;
+}
+
+.part{
+  border: none;
+  .title-container{
+    .mark{
+      color: #0F7AFB;
+      font-weight: 600;
+    }
+    @include font(.3rem,#141414);
+    text-align: center;
+    .text{
+      @include font(.24rem,#141414);
+      padding-top: .15rem;
+    }
+  }
+}
+.part-2{
+  background: #F7F8FA;
+  padding-bottom: .3rem;
+  .card-2:first-child{
+    @include position('Y');
+    width: 40%;
+  }
+  .card-2:last-child{
+    float: right;
+    width: 55%;
+  }
+}
+.part-3{
+  .card-2:first-child{
+    float: left;
+    width: 55%;
+  }
+  .card-2:last-child{
+    @include position('Y');
+    right: 0;
+    width: 40%;
+  }
+}
+.part-4{
+  background: #F7F8FA;
+  padding: .6rem 0;
+  .card-2:first-child{
+    @include position('Y');
+    width: 40%;
+  }
+  .card-2:last-child{
+    float: right;
+    width: 55%;
+  }
+}
+.part-5{
+  padding: .3rem 0;
+}
+.part-6{
+  background: #F7F8FA;
+  padding: .2rem 0;
+  .card-2:first-child{
+    @include position('Y');
+    width: 40%;
+  }
+  .card-2:last-child{
+    float: right;
+    width: 55%;
+  }
+}
+.part-7{
+  .title-container{
+    padding-bottom: 0 !important;
+  }
+}
+.part-8{
+  background: url('../../images/marketing/part08-bg.png') no-repeat center;
+  background-size: cover;
+  padding-bottom: .3rem;
+  .title-container{
+    padding-bottom: 0;
+   color: #fff;
+    .text{
+      color: #fff;
+    }
+  }
+  .card-container {
+    .title {
+      @include font(.26rem, #fff,.12rem);
+      text-align: center;
+    }
+  }
+}
+.part-10{
+  background: #232428;
+  margin-bottom: 0;
+  .icon{
+    @include icon(.8rem,.8rem);
+    margin-bottom: .25rem;
+  }
+  @include iconimg('../../images/marketing/part10-icon',4);
+  .title-container{
+    color: #fff;
+    .text{
+      color: #fff;
+    }
+  }
+  .card-container {
+    .title {
+      @include font(.26rem, #fff,.12rem);
+      text-align: center;
+    }
+    .txt{
+      @include align(center);
+      color: #fff;
+      padding: 0 .05rem;
+    }
+  }
+}
+
+.marketing-container {
+  color: #666;
+  width: 100%;
+}
+
+.card-container {
+  position: relative;
+  .title {
+    @include font(.26rem, #127BF1,.12rem);
+  }
+  .txt{
+    @include font(.2rem,#141414);
+    line-height: 1.5;
+    @include align();
+  }
+}
+
+.card-container-1 {
+  .card-2-b{
+    height: 3.26rem;
+  }
+  .icon{
+    @include position('X');
+  }
+  .icon-1{
+    @include icon(1.79rem,1.4rem);
+    top: .5rem;
+  }
+  .icon-2{
+    @include icon(1.27rem,1.54rem);
+    top: .47rem;
+  }
+  .icon-3{
+    @include icon(.78rem,1.88rem);
+    top: .36rem;
+  }
+  .icon-4{
+    @include icon(2.04rem,1.02rem);
+    top: .83rem;
+  }
+  @include iconimg("../../images/product/part01-icon", 4,'icon');
+}
+.foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    @include position('X');
+    top: .4rem;
+    text-align: center;
+    width: 100%;
+    .foot-title{
+      @include font(.36rem,#fff,.2rem);
+    }
+    .foot-title-bar{
+      @include font(.31rem,#fff,.1rem);
+    }
+    .foot-btn{
+      @include font(.24rem,#fff);
+      background: #0D7AFB;
+      box-sizing: border-box;
+      display: block;
+      text-align: center;
+      width: 2.44rem;
+      padding: .1rem 0;
+      margin: auto;
+      border-radius: .05rem;
+    }
+  }
+  .foot-mark{
+    @include font(.4rem,#fff);
+  }
+}

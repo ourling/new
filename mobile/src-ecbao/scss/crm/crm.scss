@@ -1,0 +1,138 @@
+@import "../mixin/template";
+.mark{
+  color: #707171 !important;
+}
+.banner {
+  width: 100%;
+  .banner-container{
+    .banner-title{
+      @include font(.44rem,#fff);
+    }
+    .banner-title-bar{
+      @include font(.29rem,#fff);
+    }
+    .banner-btn{
+      @include font(.26rem,#7000E3);
+      box-shadow: 0 0.1rem 0.3rem #214692;
+      background: #FFF;
+      width: 3.26rem;
+    }
+    .title-container{
+      text-align: center;
+      padding: .15rem .3rem;
+      .item{
+        @include font(.22rem,#fff);
+        background: #9027FC;
+        float: left;
+        padding: .08rem;
+        width: 1.38rem;
+        margin-right: .24rem;
+      }
+      .item:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+}
+.crm-container {
+  color: #666;
+  min-height: 5rem;
+  padding-top: $padding;
+  width: 100%;
+}
+.part{
+  &.spe{
+    padding-bottom: 0;
+  }
+  .title-container{
+    @include font(.32rem, #333);
+    padding: .4rem .3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .text{
+      padding-top: .15rem;
+      @include font(.24rem,#B6B7BD);
+    }
+    .icon {
+      background: #5AA2E7;
+    }
+  }
+}
+.part:last-child{
+  margin-bottom: 0;
+}
+.card-container{
+  .title{
+    @include font(.3rem,#333,.25rem);
+    &.align-c{
+      @include align(center)
+    }
+  }
+  .txt{
+    @include font(.22rem,#707171);
+    @include align(false);
+  }
+}
+.crm-foot{
+  background: #1B1E2D;
+  padding: .47rem 0 .52rem;
+  margin-bottom: .8rem;
+  .foot-container{
+    text-align: center;
+    width: 100%;
+    .foot-title{
+      @include font(.34rem,#6693FE,.2rem);
+    }
+    .foot-title-bar{
+      @include font(.31rem,#6693FE,.45rem);
+    }
+    .foot-btn{
+      @include font(.31rem, #6693FE);
+      border: 2px solid #6693FE;
+      box-sizing: border-box;
+      border-radius: .1rem;
+      display: block;
+      margin: .2rem auto;
+      padding: .13rem .23rem;
+      width: 2.19rem;
+    }
+  }
+}
+.card-container-1{
+  .top-container{
+    text-align: center;
+    .response-img{
+      width: 80%;
+      margin: 0 auto .2rem;
+    }
+    .top-title{
+      @include font(.22rem,#4199F9,.35rem);
+    }
+  }
+}
+.card-container-9{
+  position: relative;
+  .card-position{
+    @include position('Y');
+    text-align: center;
+    right: 0;
+    width: 50%;
+  }
+  .title{
+    @include font(.24rem,#000,.4rem);
+    line-height: .45rem;
+  }
+  .crm-btn{
+    background: #509EFF;
+    @include font(.24rem,#FFF);
+    display: block;
+    margin: auto;
+    width: 2.53rem;
+    text-align: center;
+    padding: .18rem;
+    border-radius: .1rem;
+
+  }
+}

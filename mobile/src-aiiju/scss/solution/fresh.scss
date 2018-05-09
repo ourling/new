@@ -1,0 +1,187 @@
+@import "../mixin/template";
+
+.banner {
+  width: 100%;
+  .banner-container {
+    top: 2.8rem;
+    .banner-btn {
+      background: #FFFD4D;
+      color: #FF4D4D;
+      width: 2rem;
+      font-size: .24rem;
+      padding: .15rem .23rem;
+    }
+  }
+}
+
+.mobile-body {
+  background: #F8F8F8;
+}
+
+.sxManage-container {
+  color: #666;
+  min-height: 5rem;
+  padding-top: $padding;
+  width: 100%;
+}
+.sxManage-foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    position: absolute;
+    top: .6rem;
+    text-align: center;
+    width: 100%;
+    .foot-title{
+      @include font(.39rem, #fff,.55rem);
+      font-weight: 700;
+    }
+    .foot-title-bar{
+      @include font(.33rem, #fff,.15rem);
+    }
+    .foot-btn{
+      @include font(.3rem, #40B0FF);
+      background: #fff;
+      box-sizing: border-box;
+      border-radius: .1rem;
+      display: block;
+      margin: .2rem auto;
+      padding: .18rem .23rem;
+      width: 2.46rem;
+    }
+  }
+}
+
+.part {
+  //padding-bottom: .8rem;
+  .title-container {
+    font-size: .32rem;
+    @include bor(bottom);
+    &.spe{
+      color: #fff;
+      border-bottom-color: #fff;
+      .text{
+        @include font(.2rem,#fff);
+      }
+      .icon{
+        background: #FFF;
+      }
+    }
+    .icon {
+      background: #5AA2E7;
+      height: .32rem;
+    }
+  }
+}
+.part-4{
+  background: #57A137;
+}
+
+.card-container {
+  position: relative;
+  &.info{
+    padding : 0 0 .2rem;
+  }
+  .title-btn {
+    @include font(.24rem, #fff);
+    display: block;
+    border-radius: .1rem;
+    text-align: center;
+    padding: .18rem .15rem;
+    margin: auto;
+    width: 30%;
+  }
+  .title {
+    @include font(.24rem, #333, .25rem);
+    &.align-c {
+      @include align(center)
+    }
+    &.spe-g{
+      color: #74B46B;
+      font-weight: 700;
+    }
+    &.spe-b{
+      color: #74A2D1;
+      font-weight: 700;
+    }
+    &.spe-y{
+      color: #EDBF3A;
+      font-weight: 700;
+    }
+  }
+  .txt {
+    @include font(.2rem, #909090, .1rem);
+    @include align(false);
+  }
+  .title-spe {
+    @include font(.22rem, #fff, 0);
+    text-align: center;
+    line-height: .68rem;
+  }
+  .card-2-b {
+    padding: .3rem;
+    .icon {
+      @include icon(1.26rem, 1.26rem);
+      margin: 0 auto .2rem;
+    }
+  }
+  .card-2{
+    &.icon{
+      margin-bottom: .25rem;
+      height: .68rem;
+    }
+    &.spe{
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 0;
+    }
+    .icon{
+      margin-bottom: .25rem;
+      height: .68rem;
+    }
+  }
+}
+
+.card-container-2 {
+  @include iconimg("../../images/solutions/fresh/sxManage-part02-icon", 4,'icon');
+}
+
+.card-container-3 {
+  @include iconimg("../../images/solutions/fresh/sxManage-part03-icon", 3,'icon');
+}
+
+.card-container-6{
+  .title-btn{
+    background: #57A137;
+  }
+  .icon{
+    @include icon(3.61rem,1.5rem);
+    background: url("../../images/solutions/fresh/sxManage-part06-bg.png") no-repeat center;
+    background-size: contain;
+    margin-bottom: .25rem;
+  }
+}
+
+.card-container-7{
+  .title-btn{
+    margin-top: .25rem;
+    margin-bottom: .33rem;
+    background: #5BA0FF;
+  }
+  .title-btn-spec{
+    @include font(.17rem,#909090);
+    text-align: center;
+  }
+  .pointer{
+    position: absolute;
+    @include icon(.33rem,.5rem);
+    background: url("../../images/solutions/fresh/sxManage-part07-pointer.png") no-repeat center;
+    background-size: contain;
+    bottom: 14%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,60 @@
+@import "../mixin/template";
+.banner{
+  width: 100%;
+  .banner-container{
+    top: 1.2rem;
+    .banner-title{
+      @include font(.72rem,#fff,.2rem);
+      font-weight: 700;
+    }
+  }
+}
+.mobile-body{
+  background: #F5F5F5;
+  padding-bottom: .9rem;
+}
+.chain-container{
+  padding-top: .2rem;
+  width: 100%;
+}
+.part{
+  background: #fff;
+  border-bottom: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
+  .title-container{
+    .text{
+      @include font(.2rem,#8E8E8E);
+    }
+  }
+  .card-container{
+    padding: .4rem .2rem;
+  }
+}
+.part-03{
+  .content{
+    text-align: center;
+    margin-top: .3rem;
+  }
+  .txt{
+    display: inline-block;
+    @include font(.24rem,#fff);
+    background: #75ACFF;
+    border-radius: .2rem;
+    width: 80%;
+    padding: .12rem 0;
+  }
+}
+.part-04{
+  margin-bottom: 0;
+  .title-container{
+    padding-top: 0;
+  }
+  .card-container{
+    .txt{
+      @include font(.2rem,#333,.25rem);
+    }
+    .txt-top{
+      margin-top: .45rem;
+    }
+  }
+}

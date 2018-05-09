@@ -1,0 +1,171 @@
+@import "../mixin/template";
+.part{
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  .title-container{
+    @include font(.3rem,#FFCE4D);
+    text-align: center;
+    padding: .23rem
+  }
+}
+.card-container{
+  .card-1{
+    margin-bottom: .32rem;
+    &.spe{
+      position: relative;
+      margin-bottom: .4rem;
+    }
+    .agent-btn{
+      @include font(.26rem,#E6AE0F);
+      display: block;
+      text-align: center;
+      margin: auto;
+      width: 2.48rem;
+      padding: .12rem 0;
+      border: 1px solid #FFCE4D;
+    }
+  }
+  .form-ctrl,.form-ctrl-province{
+    @include font(.24rem,#FFCE4D);
+    box-sizing: border-box;
+    border-radius: 0;
+    display: block;
+    height: .5rem;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    padding: .14rem .25rem;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .form-ctrl:first-child{
+    width: 46%;
+    float: left;
+  }
+  .form-ctrl:last-child{
+    width: 46%;
+    float: right;
+  }
+  .form-ctrl:focus{
+    border-color: #FFCE4D;
+  }
+}
+.part-1{
+  background: url("../../images/scrm/part01-bg.png") no-repeat center;
+  background-size: cover;
+}
+.part-9{
+  background: url("../../images/scrm/part09-bg.png") no-repeat center;
+  background-size: cover;
+  height: 7.5rem;
+  width: 100%;
+}
+.scrm-foot{
+  margin-bottom: .8rem;
+  position: relative;
+  .foot-container{
+    position: absolute;
+    width: 100%;
+    top: 2.1rem;
+    .foot-btn{
+      @include font(.22rem,#222);
+      background: #FFBA03;
+      display: block;
+      width: 2.37rem;
+      padding: .15rem 0;
+      text-align: center;
+      margin: auto;
+    }
+  }
+}
+.container-php {
+  overflow: hidden;
+  .card-2-spe {
+    @include card(50%);
+    position: relative;
+    padding-right: .2rem;
+  }
+  .card-2-spe:last-child {
+    @include card(50%);
+    padding-right: 0;
+  }
+  .item-title-container {
+    width: 100%;
+    margin-bottom: .15rem;
+    .item-title {
+      @include font(.2rem, #000);
+      display: inline-block;
+    }
+    .item-more {
+      @include font(.2rem, #FFA830);
+      cursor: pointer;
+      float: right;
+    }
+  }
+  .item-container {
+    .item {
+      @include font(.2rem, #6C6C6C);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+    .item-content{
+      position: relative;
+      margin-bottom: .15rem;
+      margin-left: .3rem;
+    }
+    .item-content:before {
+      @include position('Y');
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: #FFA830;
+      left: -.3rem;
+    }
+  }
+  .item-btn-container{
+    padding-top: .2rem;
+    .card-3-spe {
+      @include card(32%);
+      @include font(.2rem,#fff);
+      background: #FFA830;
+      padding: .15rem .06rem;
+      text-align: center;
+    }
+    .card-3-spe:nth-child(2){
+      margin: 0 2%;
+    }
+  }
+  .swiper-container-2 {
+    margin-top: .5rem;
+  }
+}
+.container-swiper{
+  height: 6.4rem;
+  top: 1rem;
+  .response-img{
+    height: 100%;
+  }
+  .swiper-button-next {
+    background-image: url('../../images/scrm/next.png');
+    right: .1rem;
+  }
+  .swiper-button-prev {
+    background-image: url('../../images/scrm/prev.png');
+    left: .1rem;
+  }
+}
+
+.phone_tips{
+  @include position('X');
+  @include font(.24rem,#E6AE0F);
+  bottom: -.4rem;
+  width: 100%;
+  text-align: center;
+}
+.waring{
+  border-bottom-color: #ff0000 !important;
+}

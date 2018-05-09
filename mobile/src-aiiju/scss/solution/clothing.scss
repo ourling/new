@@ -1,0 +1,96 @@
+@import "../mixin/template";
+
+.banner {
+  width: 100%;
+  .banner-container {
+    top: 2.5rem;
+    .banner-btn {
+      @include font(.27rem,#fff);
+      background: #4788F8;
+      width: 2.62rem;
+      padding: .18rem .23rem;
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+}
+.clothing-container {
+  color: #666;
+  min-height: 5rem;
+  padding-top: $padding;
+  width: 100%;
+}
+.clothing-foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    position: absolute;
+    top: 1.5rem;
+    text-align: center;
+    width: 100%;
+    .foot-btn{
+      @include font(.3rem, #40B0FF);
+      background: #fff;
+      box-sizing: border-box;
+      border-radius: .1rem;
+      display: block;
+      margin: .2rem auto;
+      padding: .16rem .23rem;
+      width: 2.4rem;
+    }
+  }
+}
+.part {
+  //padding-bottom: .8rem;
+  .title-container {
+    @include font(.32rem,#000);
+    @include bor(bottom);
+    .icon {
+      background: #5AA2E7;
+      height: .32rem;
+    }
+  }
+}
+.part-4{
+  background: #57A137;
+}
+.card-container {
+  position: relative;
+  .title-btn {
+    @include font(.24rem, #fff);
+    display: block;
+    border-radius: .1rem;
+    text-align: center;
+    padding: .18rem .15rem;
+    margin: auto;
+    width: 30%;
+  }
+  .txt {
+    @include font(.2rem, #504F4F, .1rem);
+    @include align(center);
+  }
+}
+.card-container-1{
+  .txt{
+    margin-top: .4rem;
+  }
+}
+.card-container-6{
+  .title-btn{
+    margin-top: .25rem;
+    margin-bottom: .33rem;
+    background: #5BA0FF;
+  }
+  .title-btn-spec{
+    @include font(.17rem,#909090);
+    text-align: center;
+  }
+  .pointer{
+    @include position('X');
+    @include icon(.33rem,.5rem);
+    background: url("../../images/solutions/clothing/pointer.png") no-repeat center;
+    background-size: contain;
+    bottom: 14%;
+  }
+}

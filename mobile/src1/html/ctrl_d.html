@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟</title>
+</head>
+<body>
+<a href="javascript:;" onclick="test()">添加收藏夹</a>
+<script src="../plugins/jq/jquery-1.7.2.js"></script>
+<script>
+//    $.ctrl = function (key, callback, args) {
+//        var isCtrl = false;
+//        $(document).keydown(function (e) {
+//            if (!args) args = [];
+//            if (e.ctrlKey) isCtrl = true;
+//            if (e.keyCode == key.charCodeAt(0) && isCtrl) {
+//                callback.apply(this, args);
+//                console.log(e.keyCode);
+//            }
+//        }).keyup(function (e) {
+//            if (e.ctrlKey) isCtrl = false;
+//        });
+//    };
+//    function test() {
+//        $.ctrl('D', function () {
+//            console.log(1)
+//        });
+//    }
+function ctrl(key) {
+    var isCtrl = false;
+    $(document).keydown(function (e) {
+        var isCtrl = true;
+        if (isCtrl) {
+            console.log('e.keyCode' + e.keyCode);
+            console.log('key.charCodeAt(0)' + key.charCodeAt(0));
+            console.log('isCtrl' + isCtrl);
+        }
+    })
+};
+function test() {
+    ctrl('D');
+}
+</script>
+</body>
+</html>

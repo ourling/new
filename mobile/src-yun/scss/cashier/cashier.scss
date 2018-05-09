@@ -1,0 +1,167 @@
+@import "../mixin/template";
+.banner{
+  width: 100%;
+  .banner-container{
+    padding:  0 .28rem;
+    top: .89rem;
+    .banner-title{
+      @include font(.47rem,#fff,.3rem);
+      font-weight: 700;
+    }
+    .banner-title-bar{
+      @include font(.38rem,#fff,.45rem);
+      .bar{
+        font-size: .24rem;
+      }
+    }
+    .banner-btn{
+      background: #3D8DFA;
+      width: 3.43rem;
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+}
+.part{
+  border-bottom: 1px solid #D2D2D2;
+  margin-top: .2rem;
+  background: #fff;
+  .title-container{
+    border-top: 1px solid #D2D2D2;
+    border-bottom: 1px solid #D2D2D2;
+    .title{
+      @include font(.32rem, #000);
+      text-align: left;
+      padding: .05rem  .15rem;
+      position: relative;
+    }
+    .title:before{
+      @include position('Y');
+      content: "";
+      height: .34rem;
+      width: .06rem;
+      background: #5AA2E7;
+      left: 0;
+      top: 58%;
+    }
+  }
+  .card-title{
+    @include font(.3rem,#0395EA);
+    text-align: center;
+    margin-top: .35rem;
+  }
+}
+.product-container {
+  color: #666;
+  width: 100%;
+}
+.card-container {
+  position: relative;
+  .title {
+    @include font(.3rem, #000,.2rem);
+    text-align: center;
+  }
+  .txt{
+    @include font(.22rem,#939394);
+    @include align();
+    &.align-c{
+      text-align: center;
+    }
+  }
+}
+.card-container-1 {
+  .img{
+    height: 3.2rem;
+    margin-bottom: .25rem;
+    padding: 0 .3rem;
+  }
+  &.card-container {
+    .title {
+      margin-top: 1.74rem;
+    }
+    .txt{
+     text-align: center;
+    }
+  }
+  @include iconimg("../../images/cashier/part01-bg", 4,'img');
+}
+.card-container-3{
+  .card-1{
+    margin-bottom: .3rem;
+  }
+  .txt{
+    margin-bottom: .25rem;
+  }
+}
+.card-container-4{
+  border-top: 1px solid #D2D2D2;
+  .card-container{
+    padding: .2rem 0;
+  }
+  .img{
+    height: 4.25rem;
+    padding: 0 .3rem;
+  }
+  .txt{
+    @include font(.26rem,#fff);
+    line-height: 1.5;
+    margin-top: 2.7rem;
+  }
+  .img-1 {
+    background: url('../../images/cashier/part04-bg1.png') no-repeat left center;
+    background-size: contain;
+  }
+  .img-2 {
+    background: url('../../images/cashier/part04-bg2.png') no-repeat right center;
+    background-size: contain;
+  }
+}
+.card-container-6{
+  .card-2-b{
+    padding: 0 .1rem;
+  }
+  &.card-container {
+    .title {
+      margin-bottom: .1rem;
+    }
+  }
+  .txt{
+    margin-bottom: .3rem;
+  }
+  .icon{
+    @include icon(.77rem,.77rem);
+    margin: .27rem auto .3rem;
+  }
+  @include iconimg("../../images/cashier/part06-icon", 4,'icon');
+}
+.foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    @include position('X');
+    top: .4rem;
+    text-align: center;
+    width: 100%;
+    .foot-title{
+      @include font(.36rem,#fff,.2rem);
+    }
+    .foot-title-bar{
+      @include font(.31rem,#fff,.1rem);
+    }
+    .foot-btn{
+      @include font(.24rem,#fff);
+      background: #E60012;
+      box-sizing: border-box;
+      display: block;
+      text-align: center;
+      width: 2.44rem;
+      padding: .1rem 0;
+      margin: auto;
+      border-radius: .05rem;
+    }
+  }
+  .foot-mark{
+    @include font(.4rem,#fff);
+  }
+}

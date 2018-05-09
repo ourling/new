@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="keywords" content="服装全渠道，服装新零售，服装新零售系统，服装线上线下同步，自助结账，会员营销，服装新零售管理，服装新零售解决方案，多门店一体化管理，客户信息管理，库存同步，智能配送，促销管理">
+    <meta name="description" content="爱聚新零售为服装鞋帽行业量身打造整体的全渠道新零售营销解决方案，解决实体店铺库存积压、同质竞争、复购率低等管理难题，满足服装企业零售店铺线上线下协同运营的诉求。">
+    <title>服装鞋帽行业新零售解决方案-爱聚新零售</title>
+    <link rel="stylesheet" href="../css/product/product.css">
+    <script src="../js/wyboot/wyboot.js"></script>
+</head>
+<body>
+<div id="app" class="clear">
+    <app-head></app-head>
+    <div id="mobile-body" class="mobile-body">
+        <section id="banner">
+            <div class="banner">
+                <img class="response-img" src="../images/index/banner.png" alt="">
+                <div class="banner-container">
+                    <h2 class="banner-title">{{banner.title}}</h2>
+                    <img class="response-img" src="../images/index/banner-bar.png" alt="">
+                    <span class="banner-btn" @click="login">立即体验</span>
+                </div>
+            </div>
+        </section>
+        <section id="main" class="mobile-container product-container">
+            <div class="part">
+                <div class="card-container-1 card-container">
+                    <div class="card-2-b" v-for="item in arr">
+                        <i :class="['icon','icon-'+item.id]"></i>
+                        <h4 class="title">{{item.title}}</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <app-foot :active="hasMark"></app-foot>
+    <!-- 遮罩层区 -->
+    <app-mask-tel></app-mask-tel>
+    <app-mask-menu @mask="mask"></app-mask-menu>
+</div>
+<script src="../js/comm.js"></script>
+<script src="../js/product/product.js"></script>
+<script src="//wp.qiye.qq.com/qidian/2852068262/77afa3917ffc7c53c6148357b56dbcb0" charset="utf-8"></script>
+</body>
+</html>

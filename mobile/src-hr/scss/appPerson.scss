@@ -1,0 +1,99 @@
+@import "mixin/template";
+body{
+  background: #fff;
+}
+.banner{
+  position: relative;
+  .banner-container{
+    position: absolute;
+    top: 1.08rem;
+    width: 100%;
+    .title{
+      @include font(.5rem,#fff,.2rem);
+      text-align: center;
+    }
+    .title-bar{
+      @include font(.28rem,#fff);
+      text-align: center;
+    }
+  }
+}
+.part{
+  &.b{
+    border-bottom: 1px solid #D2D2D2;
+  }
+  .container{
+    padding: .4rem .36rem;
+  }
+  .title{
+    @include font(.32rem,#1F2D3D,.32rem);
+  }
+  .title-txt{
+    @include font(.28rem,#666,.18rem);
+  }
+  .txt{
+    @include font(.28rem,#666);
+    @include align(false);
+  }
+  .part-img{
+    margin-bottom: .2rem;
+  }
+}
+.part-1{
+  .icon{
+    @include icon(1.4rem,1.4rem);
+    margin-bottom: .25rem;
+  }
+  .card-title{
+    @include font(.28rem,#666,.18rem);
+    text-align: center;
+  }
+  .txt{
+    color: #999;
+    padding: 0 .15rem;
+  }
+  .card-3{
+    padding-top: .3rem;
+  }
+  @include iconimg('../images/content3/part01-icon',3);
+}
+.part-2{
+  .container{
+    .title{
+      margin-bottom: 0;
+    }
+  }
+  .container-bottom{
+    @extend .clear;
+    background: url("../images/content3/part02-bg.png") no-repeat center;
+    background-size: cover;
+    .card-2{
+      height: 3rem;
+      .card-title{
+        @include font(.32rem,#fff,.18rem);
+        text-align: center;
+      }
+      .txt{
+        color: #fff;
+        text-align-last: center;
+      }
+    }
+    .content{
+      @include position('B');
+      width: 100%;
+    }
+  }
+}
+.part-3{
+ .container{
+   position: relative;
+   .title{
+     text-align: center;
+   }
+ }
+  .content{
+    background: url("../images/content3/part03-bg.png") no-repeat center;
+    background-size: cover;
+    padding-top: 5rem;
+  }
+}

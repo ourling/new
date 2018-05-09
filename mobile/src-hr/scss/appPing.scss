@@ -1,0 +1,71 @@
+@import "mixin/template";
+body{
+  background: #fff;
+}
+.banner{
+  position: relative;
+  .banner-container{
+    position: absolute;
+    top: 1.3rem;
+    width: 100%;
+    .title{
+      @include font(.5rem,#fff,.2rem);
+      text-align: center;
+    }
+    .title-bar{
+      @include font(.28rem,#fff);
+      text-align: center;
+    }
+  }
+}
+.part{
+  &.b{
+    border-bottom: 1px solid #D2D2D2;
+  }
+  .container{
+    padding: .4rem .36rem;
+  }
+  .title{
+    @include font(.32rem,#1F2D3D,.32rem);
+  }
+  .title-txt{
+    @include font(.28rem,#666,.18rem);
+  }
+  .txt{
+    @include font(.28rem,#666);
+    @include align(false);
+  }
+  .part-1-img{
+    margin-bottom: .75rem;
+  }
+  .part-img{
+    margin-bottom: .3rem;
+  }
+}
+.content{
+  @extend .clear;
+  position: relative;
+  margin-bottom: .42rem;
+  .card-2-spe:first-child{
+    position: absolute;
+    top: .12rem;
+    @include icon(.66rem,.66rem);
+    left: .2rem;
+  }
+  .card-2-spe:last-child{
+    float: right;
+    width: 80%;
+    .title{
+      margin-bottom: .15rem;
+    }
+  }
+}
+.content:last-child{
+  margin-bottom: 0;
+}
+.content-1{
+  @include iconimg("../images/content1/part02-icon",2,'bg');
+}
+.content-2{
+  @include iconimg("../images/content1/part03-icon",2,'bg');
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <script src="../js/wyboot/wyboot.js"></script>
+    <style>
+        [v-cloak] { display: none }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="app-nav">
+        <i-menu v-cloak mode="horizontal" theme="dark" active-name="1" class="app-nav-item">
+            <menu-item name="1">
+                <icon type="ios-paper"></icon>
+                内容管理
+            </menu-item>
+            <menu-item name="2">
+                <icon type="ios-people"></icon>
+                用户管理
+            </menu-item>
+            <submenu name="3">
+                <template slot="title">
+                    <icon type="stats-bars"></icon>
+                    统计分析
+                </template>
+                <menu-group title="使用">
+                    <menu-item name="3-1">新增和启动</menu-item>
+                    <menu-item name="3-2">活跃分析</menu-item>
+                    <menu-item name="3-3">时段分析</menu-item>
+                </menu-group>
+                <menu-group title="留存">
+                    <menu-item name="3-4">用户留存</menu-item>
+                    <menu-item name="3-5">流失用户</menu-item>
+                </menu-group>
+            </submenu>
+            <menu-item name="4">
+                <icon type="settings"></icon>
+                综合设置
+            </menu-item>
+            <menu-item name="5">
+                <icon type="settings"></icon>
+                综合设置
+            </menu-item>
+            <menu-item name="6">
+                <icon type="settings"></icon>
+                综合设置
+            </menu-item>
+            <div class="demo-avatar" style="float: right">
+                <avatar icon="person" />
+            </div>
+        </i-menu>
+    </div>
+    <div class="app-banner">
+        <carousel autoplay v-model="value2" loop>
+            <carousel-item>
+                <div class="demo-carousel">1</div>
+            </carousel-item>
+            <carousel-item>
+                <div class="demo-carousel">2</div>
+            </carousel-item>
+            <carousel-item>
+                <div class="demo-carousel">3</div>
+            </carousel-item>
+            <carousel-item>
+                <div class="demo-carousel">4</div>
+            </carousel-item>
+        </carousel>
+    </div>
+</div>
+<script>
+new Vue({
+    el: "#app",
+    data:{
+        value2: 0
+    }
+})
+</script>
+</body>
+</html>

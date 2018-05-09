@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #2c3e50
+        }
+        .box:hover {
+            background: rgba(255,255,255,0);
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        .box {
+            width: 300px;
+            height: 460px;
+            position: relative;
+            background: rgba(255,255,255,1);
+            display: inline-block;
+            margin: 0 10px;
+            cursor: pointer;
+            color: #2c3e50;
+            box-shadow: inset 0 0 0 3px #2c3e50;
+            -webkit-transition: background 0.4s 0.5s;
+            transition: background 0.4s 0.5s;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+        <section class="demo-1">
+				<div class="grid">
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<line class="top" x1="0" y1="0" x2="900" y2="0"></line>
+							<line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
+							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"></line>
+							<line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
+						</svg>
+						<h3>D</h3>
+						<span>2012</span>
+						<span>Broccoli, Asparagus, Curry</span>
+					</div>
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<line class="top" x1="0" y1="0" x2="900" y2="0"></line>
+							<line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
+							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"></line>
+							<line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
+						</svg>
+						<h3>A</h3>
+						<span>2013</span>
+						<span>Arugula, Chickweed</span>
+					</div>
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<line class="top" x1="0" y1="0" x2="900" y2="0"></line>
+							<line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
+							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"></line>
+							<line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
+						</svg>
+						<h3>S</h3>
+						<span>2014</span>
+						<span>Strawberry, Lemon</span>
+					</div>
+				</div><!-- /grid -->
+			</section>
+</div>
+</body>
+</html>

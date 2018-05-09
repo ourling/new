@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav-template</title>
+    <script src="../js/wyboot/wyboot.js"></script>
+    <link rel="stylesheet" href="../css/templates/nav.css">
+    <link rel="stylesheet" href="../css/templates/footer.css">
+</head>
+<body>
+<div id="app">
+    <input v-focus type="text" placeholder="请输入姓名">
+    <input v-ttt type="text" placeholder="请输入姓名">
+</div>
+<script>
+//   全局自定义指令开始
+    Vue.directive('focus',{
+        inserted(el){
+            console.log(el);
+            $(el).focus()
+        }
+    });
+    let app = new Vue({
+        el: "#app",
+        data:{},
+//        局部自定义指令开始
+        directives: {
+//            ttt   绑定名称
+          ttt: {
+//              inserted  页面加载生命周期  配合vue生命周期
+              inserted(el){
+//                  自定义指令绑定处理事件
+                  $(el).focus()
+              }
+          }
+        },
+        mounted(){},
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords"
+          content="外卖行业解决方案，多门店解决方案，企业订餐营销，企业订餐管理，外卖配送解决方案，零佣金外卖系统。外卖系统，外卖软件，外卖配送软件，外卖管理软件，智慧餐厅，多门店管理系统，小程序点餐品台，小程序外卖平台">
+    <meta name="description"
+          content="爱聚新零售外卖行业解决方案，打通外卖各个环节，从点餐到配送，我们提供完整的解决方案，提供多门店管理系统，打通线上资源和线下客流，通过线上微商城，小程序等互动营销工具，让线下消费者转化为线上粉丝，提高门店转化">
+    <title>外卖行业新零售解决方案-爱聚新零售</title>
+    <script src="../js/wyboot/wyboot.js"></script>
+    <link rel="stylesheet" href="../css/index/index.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+</head>
+<body>
+<div id="app">
+    <my-head :num="0"></my-head>
+    <!--banner-->
+    <div class="banner">
+        <div class="banner-container">
+            <h5 class="title-bar">互联网+外卖</h5>
+            <h4 class="title">用云店宝外卖餐厅就够了!</h4>
+            <h5 class="title-bar">完美整合</h5>
+            <div class="item-container">
+                <span class="item item-1">营销</span>
+                <span class="item item-2">会员</span>
+                <span class="item item-3">门店</span>
+                <span class="item item-4">支付</span>
+                <span class="item item-5">外卖等</span>
+            </div>
+            <p class="title-txt">餐厅经营所需的所有功能</p>
+            <a href="javascript:;" target="_blank" class="title-btn">免费体验</a>
+        </div>
+    </div>
+    <div class="container-1">
+        <div class="container">
+            <div class="title-container">
+                <h4 class="title">{{container_1.title}}</h4>
+            </div>
+            <div class="card-container card-container-1">
+                <div v-for="item in container_1.arr" class="card-5">
+                    <i :class="['icon','animated','icon-'+item.id]"></i>
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="txt">{{item.titleBar}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="container">
+            <div class="title-container">
+                <h4 class="title align-c">{{container_2.title}}</h4>
+                <h5 class="title-bar">{{container_2.titleBar}}</h5>
+            </div>
+            <div class="card-container card-container-2">
+                <div v-for="item in container_2.arr" class="card-5">
+                    <i :class="['icon','animated','icon-'+item.id]"></i>
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="txt">{{item.titleBar}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-3">
+        <div class="container">
+            <div class="title-container">
+                <h4 class="title align-c">{{container_3.title}}</h4>
+                <h5 class="title-bar">{{container_3.titleBar}}</h5>
+            </div>
+            <div class="card-container card-container-3">
+                <div v-for="item in container_3.arr" :class="['card-4','donut-item','donut-item-'+item.id]">
+                    <div class="donut donut-img">
+                        <i :class="['icon','icon-'+item.id]"></i>
+                        <p class="card-title-bar">{{item.title}}</p>
+                    </div>
+                    <div class="donut donut-txt">{{item.titleBar}}</div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <span class="card-btn">查看更多功能</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-4">
+        <div class="container">
+            <div class="title-container">
+                <h4 class="title align-c">{{container_4.title}}</h4>
+                <h5 class="title-bar">{{container_4.titleBar}}</h5>
+            </div>
+            <div class="card-container card-container-4">
+                <img class="response-img" src="../images/index/part04-bg.png" alt="">
+            </div>
+            <div class="btn-container">
+                <span class="card-btn">查看更多功能</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-5">
+        <div class="container">
+            <div class="title-container">
+                <h4 class="title align-c">{{container_5.title}}</h4>
+                <h5 class="title-bar">{{container_5.titleBar}}</h5>
+            </div>
+            <div class="card-container card-container-5">
+                <div v-for="item in container_5.arr" class="card-6">
+                    <i :class="['icon','icon-'+item.id]"></i>
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="txt-s">{{item.titleBar}}</p>
+                </div>
+            </div>
+            <div class="btn-container">
+                <span class="card-btn">查看更多功能</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-6">
+        <div class="container">
+            <div class="title-container">
+                <h4 class="title align-c">{{container_5.title}}</h4>
+                <h5 class="title-bar">{{container_5.titleBar}}</h5>
+            </div>
+            <div class="card-container card-container-6">
+                <div v-for="item in container_6.arr" class="card-4">
+                    <i :class="['icon','animated','icon-'+item.id]"></i>
+                    <h5 class="card-title-bar">快餐便当</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-7">
+        <div class="container">
+            <div class="title-container">
+                <h4 class="title align-c">最完善的服务体系</h4>
+                <h5 class="title-bar">满足您业务的软件和硬件只是我们的外在，超越您期望的服务才是我们的核心</h5>
+            </div>
+            <div class="card-container card-container-7">
+                <div class="card-4">
+                    <i class="icon animated icon-1"></i>
+                    <h5 class="card-title">全天候客服</h5>
+                    <p class="txt align-c">7*24小时一对一沟通</p>
+                </div>
+                <div class="card-4">
+                    <i class="icon animated icon-2"></i>
+                    <h5 class="card-title">专业指导</h5>
+                    <p class="txt align-c">免费指导带你玩转强大功能</p>
+                </div>
+                <div class="card-4">
+                    <i class="icon animated icon-3"></i>
+                    <h5 class="card-title">极速响应</h5>
+                    <p class="txt align-c">随时待命，为您解决各种难题</p>
+                </div>
+                <div class="card-4">
+                    <i class="icon animated icon-4"></i>
+                    <h5 class="card-title">免费维护</h5>
+                    <p class="txt align-c">专业团队随时为您保驾护航</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="warp-container">
+        <div class="container">
+            <div class="card-container card-container-4">
+                <div class="card-2-spe">
+                    <div class="swiper-container swiper-container-2 swiper-container-horizontal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="response-img" src="../images/comm/warpcomm/agent-foot-bg-1.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="response-img" src="../images/comm/warpcomm/agent-foot-bg-2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="response-img" src="../images/comm/warpcomm/agent-foot-bg-3.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="card-2-spe">
+                    <div class="item-title-container">
+                        <h5 class="item-title">加盟动态</h5>
+                        <a href="//ketang.ecbao.cn/" class="item-more">更多>></a>
+                    </div>
+                    <div id="newsContainer" class="item-container">
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                        <a href="javascript:;" class="item">爱聚”HR“正式发布，开启工作”第二春“！</a>
+                    </div>
+                    <div class="item-btn-container">
+                        <a href="javascript:;" class="card-3-spe">咖啡</a>
+                        <a href="javascript:;" class="card-3-spe">烘焙</a>
+                        <a href="javascript:;" class="card-3-spe">便当</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot-container">
+            <h5 class="title-bar">云店宝 外卖系统</h5>
+            <h4 class="title">火热招商，共赢万亿市场！</h4>
+            <a href="javascript:;" target="_blank" class="foot-btn-s">提交加盟表单</a>
+        </div>
+    </div>
+    <!--底部-->
+    <my-foot></my-foot>
+</div>
+<script src="../js/warpcomm.js"></script>
+<script src="../js/comm.js"></script>
+<script src="../js/index/index.js"></script>
+<script>
+    $(".container-1").on('mouseenter', '.card-5', function () {
+        $(this).find('.animated').addClass('bounce')
+    }).on('mouseleave', '.card-5', function () {
+        $(this).find('.animated').removeClass('bounce')
+    });
+    $(".container-2").on('mouseenter', '.card-5', function () {
+        $(this).find('.animated').addClass('rubberBand')
+    }).on('mouseleave', '.card-5', function () {
+        $(this).find('.animated').removeClass('rubberBand')
+    });
+    $(".container-6").on('mouseenter', '.card-4', function () {
+        $(this).find('.animated').addClass('rubberBand')
+    }).on('mouseleave', '.card-4', function () {
+        $(this).find('.animated').removeClass('rubberBand')
+    });
+    $(".container-7").on('mouseenter', '.card-4', function () {
+        $(this).find('.animated').addClass('bounce')
+    }).on('mouseleave', '.card-4', function () {
+        $(this).find('.animated').removeClass('bounce')
+    });
+</script>
+<script>
+    $(".dropmenu").mouseenter(function(){
+        $(this).find('.a').addClass("active");
+        var $container = $(this).find('.dropDownList');
+        var $item = $(this).find('.menuSystemList');
+        var boo_c = $container.is(":animated");
+        if(!boo_c){
+            $container.animate({height: $item.height()},300);
+        }
+    }).mouseleave(function(){
+        $(this).find('.a').removeClass("active");
+        var $container = $(this).find('.dropDownList');
+        $container.animate({height: 0},200);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+@mixin iconimg($path,$num,$start:1,$z:"png") {
+  @for $i from $start through $num {
+    .my-icon-#{$i} {
+      background: url("#{$path}#{$i}.#{$z}") no-repeat center center;
+      background-size: contain;
+    }
+  }
+}
+
+@mixin align($t:left) {
+  @if $t {
+    text-align: $t;
+  } @else {
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+  }
+}
+
+@mixin icon($w,$h,$b:block) {
+  display: $b;
+  height: $h;
+  width: $w;
+  margin: auto;
+}
+
+@mixin card($w,$b:false,$c:1%) {
+  @if $b {
+    border: $border-color;
+    width: ($w - $c);
+  } @else {
+    width: $w;
+  }
+  box-sizing: border-box;
+  float: left;
+}
+
+@mixin font($s:16px,$c: #000, $b:0) {
+  @if $c {
+    color: $c;
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  } @else {
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }
+}
+
+@mixin iconimages($path,$num,$width,$start:0) {
+  @for $i from $start through $num {
+    .my-icon-#{$i + 1} {
+      background: url("#{$path}") no-repeat center center;
+      background-position: -#{$i * $width}px;
+    }
+  }
+}

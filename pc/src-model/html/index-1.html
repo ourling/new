@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/index/index.css">
+    <script src="../js/wyboot/wyboot.js"></script>
+</head>
+<body>
+<div id="app">
+    <donut :arr="donutArr" :obj="donutObj"></donut>
+    <agent-show :arr="agentArr"></agent-show>
+    <active-show :obj="activeObj"></active-show>
+    <h3>白底    底部   美车优选</h3>
+    <app-foot-white></app-foot-white>
+    <h3>黑底    底部   电商宝</h3>
+    <app-foot-black></app-foot-black>
+</div>
+<script src="../js/templates/donut.js"></script>
+<script src="../js/templates/methods.js"></script>
+<script src="../js/templates/activeShow.js"></script>
+<script src="../js/templates/agentShow.js"></script>
+<script src="../js/templates/foot.js"></script>
+<script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+.clear:before, .info-container:before,
+.clear:after,
+.info-container:after {
+  display: table;
+  content: "";
+  clear: both; }
+
+.card-1-b {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-2-b {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 49%;
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+  margin-bottom: .18rem; }
+
+.card-2-b:nth-child(2n-1) {
+  margin-right: 2%; }
+
+.card-3-b {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 32.3%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-3-b:nth-child(2) {
+  margin: 0 1.5%; }
+
+.card-2 {
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-3 {
+  width: 33.3%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-4 {
+  width: 25%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.card-5 {
+  width: 20%;
+  box-sizing: border-box;
+  float: left;
+  position: relative; }
+
+.none {
+  display: none; }
+
+.response-img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+body {
+  background: #fff; }
+
+.bg {
+  position: absolute;
+  background-size: contain;
+  display: block;
+  height: 2.54rem;
+  width: 3.37rem;
+  margin: auto;
+  z-index: -1; }
+  .bg.top {
+    background: url("../images/register/bg-top.png") no-repeat center;
+    background-size: contain;
+    top: 0;
+    right: 0; }
+  .bg.bottom {
+    background: url("../images/register/bg-bottom.png") no-repeat center;
+    background-size: contain;
+    bottom: 0;
+    left: 0; }
+
+.container {
+  padding: 10% .9rem; }
+  .container .title {
+    color: #333;
+    font-size: 0.54rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 10%; }
+
+.input-group {
+  border-bottom: 1px solid #DFDFDF;
+  width: 100%;
+  position: relative;}
+  .input-group.no-border {
+    border: none; }
+  .input-group .form-control {
+    color: #333;
+    font-size: 0.3rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    border: none;
+    padding: .3rem 0;
+    position: relative;
+    top: -.02rem;
+    width: 100%; }
+    .input-group .form-control.code {
+      width: 65%; }
+  .input-group .form-control:focus {
+    outline-offset: 0;
+    outline: none; }
+
+.txt {
+  color: #F96868;
+  font-size: 0.28rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  position: absolute;
+  top: 102%;
+  display: none; }
+
+.txt:before {
+  background-size: contain;
+  display: inline-block;
+  height: 0.25rem;
+  width: 0.28rem;
+  margin: auto;
+  content: "";
+  background: url("../images/register/error.png") no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: .15rem; }
+
+.btn {
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+  background: #5AA2E7;
+  padding: .2rem;
+  border-radius: .16rem; }
+  .btn.disabled {
+    background: #D8DCE5; }
+#app{
+  background: url('../images/register/bg.png') no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+.btn-txt {
+  color: #fff;
+  font-size: 0.34rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  text-align: center; }
+
+.code-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #5AA2E7;
+  font-size: 0.34rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  right: 0; }
+
+.code-container {
+  position: relative; }
+
+.code-container:after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: "";
+  background: #D2D2D2;
+  width: 1px;
+  height: 85%; }
+
+.info-container {
+  padding-top: .6rem;
+  border: none; }
+  .info-container .info {
+    float: left; }
+  .info-container .info-desc {
+    color: #666;
+    font-size: 0.28rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    float: left; }
+
+.error {
+  border-bottom-color: #ff0000 !important; }
+
+.active {
+  border-color: #5AA2E7 !important; }
+.icon{
+  color: #666;
+  font-size: 0.28rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(8%);
+  transform: translateY(8%);
+}

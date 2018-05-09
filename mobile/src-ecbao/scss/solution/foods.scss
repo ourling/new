@@ -1,0 +1,109 @@
+@import "../mixin/template";
+%position {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.banner {
+  width: 100%;
+  .banner-container{
+    top: 2rem;
+    .banner-btn{
+      @include icon(2.8rem,.9rem);
+      background: url('../../images/solutions/foods/banner-btn.png') no-repeat center;
+      background-size: contain;
+      padding: 0;
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+  overflow: hidden;
+  width: 100%;
+}
+.foods-container {
+  color: #666;
+  min-height: 5rem;
+  width: 100%;
+}
+.part{
+  border: none;
+  margin-bottom: 0;
+  background: #F8F8F8;
+  .title-container{
+    @include font(.3rem,#000);
+    text-align: center;
+    padding: .2rem .2rem .08rem;
+  }
+}
+.card-container{
+  position: relative;
+  overflow: hidden;
+  .btn{
+    @include font(.24rem,#40B0FF);
+    display: block;
+    margin: auto;
+    border: 1px solid #169EF4;
+    border-radius: .08rem;
+    padding: .17rem .2rem;
+    text-align: center;
+  }
+  .title{
+    @include font(.28rem,#40B0FF,.25rem);
+    &.align-c{
+      @include align(center)
+    }
+  }
+  .txt{
+    @include font(.22rem,#787878,.1rem);
+    line-height: .4rem;
+    @include align(false);
+  }
+}
+.part-3{
+  background: url('../../images/solutions/foods/part03-bg.png') no-repeat center;
+  background-size: cover;
+  height: 5.2rem;
+  .title-container{
+    padding-top: .5rem;
+  }
+}
+.part-4{
+  background: url('../../images/solutions/foods/part04-bg.png') no-repeat center;
+  background-size: cover;
+  height: 4.35rem;
+}
+.part-5{
+  padding: .3rem .2rem;
+}
+.part-7{
+  .has-more{
+    display: block;
+    margin: .3rem auto 0;
+    width: 1.6rem;
+    @include font(.2rem,#fff);
+    text-align: center;
+    padding: .08rem 0;
+    background: #F4A44B;
+  }
+}
+.foods-foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    position: absolute;
+    text-align: center;
+    top: 1.38rem;
+    width: 100%;
+    .foot-btn{
+      @include font(.2rem, #F4A44B);
+      background: #fff;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      padding: .04rem 0;
+      width: 2.5rem;
+    }
+  }
+}

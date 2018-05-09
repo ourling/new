@@ -1,0 +1,225 @@
+@import "../mixin/template";
+.banner{
+  width: 100%;
+  .banner-container{
+    padding:  0 .28rem;
+    top: .58rem;
+    .banner-title{
+      @include font(.46rem,#fff);
+    }
+    .banner-title-bar{
+      @include font(.36rem, #fff)
+    }
+    .response-img{
+      width: 3.9rem;
+      margin: .49rem auto;
+    }
+    .banner-btn{
+      @include font(.47rem,#fff);
+      background: #4799FF;
+      width: 3.55rem;
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+  margin-bottom: .3rem;
+}
+.part{
+  margin-bottom: 0;
+  border-bottom: 1px solid #D2D2D2;
+  .card-container{
+    padding-top: .22rem;
+    padding-bottom: .3rem;
+  }
+  .title-container{
+    .title{
+      @include font(.4rem, #333);
+      text-align: center;
+    }
+    .title-bar{
+      @include font(.22rem,#666);
+      text-align: center;
+      margin-top: .3rem;
+    }
+    .line{
+      position: relative;
+    }
+    .line:after{
+      background: #52ABFF;
+      content: "";
+      @include position('X');
+      bottom: -.15rem;
+      height: .05rem;
+      width: 15%;
+    }
+  }
+}
+.store-container {
+  color: #666;
+  width: 100%;
+}
+.card-container {
+  position: relative;
+  .title {
+    @include font(.24rem, #000,.15rem);
+    text-align: center;
+  }
+  .txt{
+    @include font(.2rem,#666666);
+    @include align();
+  }
+}
+.part-1{
+  background: #fff;
+}
+.part-2{
+  background: #fff;
+}
+.part-3{
+  background: #313131;
+  .title-container{
+    .title{
+      color: #fff;
+    }
+  }
+  .card-container {
+    padding: .3rem 0 .5rem;
+    .title {
+      color: #fff;
+    }
+    .txt{
+      color: #A5A5A5;
+      text-align: center;
+      margin-bottom: .25rem;
+      padding: .1rem;
+    }
+  }
+}
+.part-4{
+  background: #F3F3F3;
+  .card-title-container{
+    .card-title{
+      @include font(.3rem, #333);
+      text-align: left;
+      padding: .3rem  .15rem;
+      position: relative;
+    }
+    .card-title:before{
+      @include position('Y');
+      content: "";
+      height: .24rem;
+      width: .05rem;
+      background: #52ABFF;
+      left: 0;
+    }
+    .card-title-bar{
+      @include font(.22rem, #666);
+      @include align();
+    }
+  }
+}
+.part-5{
+  background: #fff;
+}
+.part-6{
+  border-bottom: none;
+  background: #fff;
+  .title-container{
+    padding-bottom: 0;
+  }
+  .card-container {
+    .title {
+      font-size: .3rem;
+      text-align: center;
+    }
+    .txt{
+      text-align: center;
+    }
+  }
+}
+.card-container-1 {
+  .card-3{
+    height: 3rem;
+    .txt{
+      padding: 0 .1rem;
+    }
+  }
+  .icon{
+    @include icon(.74rem,.74rem);
+    margin-bottom: .3rem;
+  }
+  @include iconimg("../../images/store/part01-icon", 5,'icon');
+}
+.card-container-3 {
+  .card-2{
+    border-top: 1px solid #535353;
+  }
+  .card-2:first-child,.card-2:nth-child(2){
+    border-top: none;
+  }
+  .icon{
+    @include icon(1.02rem,.57rem);
+    margin-bottom: .3rem;
+    margin-top: .28rem;
+  }
+  @include iconimg("../../images/store/part03-icon", 8,'icon');
+}
+.card-container-4 {
+  .card-1-b{
+    background: #fff;
+    padding: .25rem .45rem;
+    margin-bottom: .2rem;
+  }
+  .card-1-b:last-child{
+    margin-bottom: 0;
+  }
+  .icon{
+    @include icon(1.02rem,.57rem);
+    margin-bottom: .3rem;
+    margin-top: .28rem;
+  }
+  @include iconimg("../../images/store/part03-icon", 8,'icon');
+}
+.card-container-6 {
+  .icon{
+    @include icon(1rem,1rem);
+    margin-bottom: .35rem;
+    margin-top: .5rem;
+  }
+  @include iconimg("../../images/store/part06-icon", 4,'icon');
+}
+.foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    @include position('X');
+    top: .65rem;
+    text-align: center;
+    width: 100%;
+    .foot-title{
+      @include font(.57rem,#fff,.2rem);
+    }
+    .foot-title-bar{
+      @include font(.5rem,#fff,.2rem);
+    }
+    .foot-btn{
+      @include font(.35rem,#fff);
+      background: #E60012;
+      box-sizing: border-box;
+      display: block;
+      text-align: center;
+      width: 4.9rem;
+      padding: .36rem 0;
+      margin: auto;
+    }
+  }
+  .foot-mark{
+    background: url("../../images/store/foot-text.png") no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    height: .63rem;
+    width: 2.9rem;
+    vertical-align: sub;
+  }
+}

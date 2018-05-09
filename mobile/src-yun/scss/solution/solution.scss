@@ -1,0 +1,60 @@
+@import "../mixin/template";
+.banner{
+  width: 100%;
+  .banner-container{
+    top: 1.3rem;
+    .banner-title{
+      @include font(.42rem,#fff,.36rem);
+      font-weight: 700;
+    }
+    .banner-title-bar{
+      @include font(.3rem,#fff);
+    }
+  }
+}
+.mobile-body{
+  background: url("../../images/solution/bg.png");
+  min-height: 80%;
+}
+.manage-container{
+  box-sizing: border-box;
+  padding: .2rem;
+  margin-bottom: .9rem;
+  width: 100%;
+}
+.content{
+  width: 4.2rem;
+  margin-left: 1.06rem;
+  .title{
+    @include font(.32rem,#fff,.15rem);
+  }
+  .text{
+    @include font(.22rem,#fff);
+    @include align();
+  }
+}
+.part{
+  background: rgba(255,255,255,.15);
+  border-radius: .08rem;
+  margin-bottom: .22rem;
+  padding: .15rem .1rem;
+  position: relative;
+  .icon{
+    @include icon(.68rem,.68rem);
+    @include position('Y');
+    left: .2rem;
+  }
+  .btn-right{
+    @include position('Y');
+    @include font(.24rem,#00A4FB);
+    background: #fff;
+    border-radius: .2rem;
+    text-align: center;
+    right: .1rem;
+    line-height: .44rem;
+    width: 1.32rem
+  }
+}
+.part{
+  @include iconimg('../../images/solution/icon',5)
+}

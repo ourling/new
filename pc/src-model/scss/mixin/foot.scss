@@ -1,0 +1,141 @@
+@import "template";
+footer {
+  background: #1A1F25;
+  width: 100%;
+}
+.footer-container {
+  width: 1200px;
+  margin: auto;
+}
+.down-icon{
+  @include font(13px,#DEDEDE,0);
+  .footer-container{
+    width: 1200px;
+    padding: 20px 0;
+    text-align: center;
+  }
+  p{
+    margin-bottom: 12px;
+  }
+  a{
+    color: #666;
+  }
+  a:hover{
+    color: #666;
+    text-decoration: none;
+  }
+}
+
+//美车优选底部  白底
+.foot-white{
+  .partner{
+    background: #fff;
+    padding: 45px 0;
+    .card-container{
+      position: relative;
+    }
+    .top-item{
+      line-height: 32px;
+      margin-bottom: 40px;
+      .logo{
+        float: left;
+        margin-right: 40px;
+      }
+      .item{
+        @include font(14px,#333);
+        position: relative;
+        float: left;
+        padding: 0 10px;
+      }
+      .cut-off:first-child{
+        padding-left: 0;
+      }
+      .cut-off:after{
+        content: "";
+        @include position('Y');
+        width: 1px;
+        height: 16px;
+        background: #D2D2D2;
+        right: 0;
+      }
+    }
+    .card-2-spe{
+      @include card(50%);
+      .foot-desc{
+        @include font(14px,#666,18px);
+      }
+      .tel{
+        color: #333;
+      }
+    }
+    .card-2-spe:last-child{
+      @include position('Y');
+      right: 0;
+      text-align: center;
+      .txt{
+        @include font(16px,#333);
+        margin-top: 15px;
+      }
+    }
+  }
+}
+//电商宝底部  黑色
+.foot-black{
+  .information {
+    color: #fff;
+    padding: 30px 0;
+    .footer-title {
+      @include font(16px, #fff);
+      text-align: center;
+    }
+    .my-icon {
+      @include icon(44px, 44px);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    @include iconimg("../../images/comm/foot/black/foot-part01-icon", 4, 'my-icon');
+  }
+  .partner{
+    background: url("../../images/comm/foot/black/foot_backg.png") no-repeat center center;
+    background-size: cover;
+    padding: 40px 0;
+    .partner-top{
+      padding-bottom: 30px;
+    }
+    .partner-title{
+      @include font(18px,#666,15px);
+      text-align: center;
+    }
+    .partner-img{
+      background: url("../../images/comm/foot/black/dsb_foot.png") no-repeat center center;
+      background-size: contain;
+      display: block;
+      height: 85px;
+    }
+    .card-2-spe{
+      @include card(76%);
+      &.right{
+        @include font(12px,#898989,5px);
+      }
+      .tel{
+        @include font(20px,#fff,5px);
+        font-weight: 700;
+      }
+      .footer-logo{
+        background: url("../../images/comm/foot/black/dsb_foot_logo.png") no-repeat;
+        height: 32px;
+      }
+    }
+    .card-2-spe:last-child{
+      @include card(24%);
+    }
+    .partner-title-bar{
+      @include font(14px,#fff,25px);
+    }
+    .partner-title-li{
+      @include font(12px,#898989,8px);
+      cursor: pointer;
+      display: block;
+    }
+  }
+}

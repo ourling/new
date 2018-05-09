@@ -1,0 +1,166 @@
+@import "../comm";
+/**************导航样式****************/
+.fix-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  box-shadow: 0 0 5px #169ef4;
+  width: 100%;
+  .nav-container {
+    background: $bg-def;
+    margin: auto;
+    padding: $padding-sm 0;
+    width: $container-w;
+    .logo {
+      cursor: pointer;
+      display: block;
+      line-height: $l-height-fix;
+    }
+    .tip-block {
+      font-size: $font;
+      line-height: $l-height-fix;
+    }
+  }
+}
+.static-nav {
+  background: $bg-nav;
+  color: $color-def;
+  font-size: $font;
+  position: relative;
+  margin-top: $margin-fixed;
+  a {
+    color: $color-def;
+  }
+  a:hover, a:active, a:focus {
+    color: $color-aHover;
+    text-decoration: none;
+  }
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+  .open .dropdown-menu {
+    top: 94%;
+  }
+  .dropdown-menu > li > a {
+    padding: 10px 20px;
+  }
+  .nav-container {
+    margin: auto;
+    width: $container-w;
+    .toggle-nav{
+      padding: $padding-m 0;
+    }
+    .head-middle {
+      margin: auto;
+      width: 63%;
+      .item {
+        float: left;
+        padding: $padding-m;
+      }
+    }
+    .head-rt {
+      padding: $padding-m 0;
+      .nav-login {
+        color: $color-aHover;
+        margin-right: 15px;
+      }
+      .nav-register {
+        border: 1px solid $bor-nav;
+        border-radius: 5px;
+        padding: 6px 12px;
+      }
+    }
+  }
+  .dropDownList {
+    background: rgba(22, 158, 244, 0.85);
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0.9;
+    z-index: 2;
+    .menuSystemList {
+      width: $container-w;
+      margin: auto;
+      .width1200 {
+        width: 60%;
+        margin: auto;
+        padding: 25px 0;
+        .item-drop {
+          float: left;
+          font-size: 18px;
+          padding: 0 20px;
+          .url, .li {
+            display: block;
+            padding: 10px 0;
+          }
+          .url {
+            border-bottom: 1px dashed $bor-dashed;
+            font-size: 18px;
+            .s-icon {
+              display: inline-block;
+              vertical-align: sub;
+              margin-right: 10px;
+              height: 23px;
+              width: 21px;
+            }
+          }
+          .li{
+            font-size: 16px;
+          }
+          &.one .s0 {
+            background: url("../../images/nav/aj_nav_goods.png") no-repeat center;
+            background-size: contain;
+          }
+          &.one .s1 {
+            background: url("../../images/nav/aj_nav_money.png") no-repeat center;
+            background-size: contain;
+          }
+          &.one .s2 {
+            background: url("../../images/nav/aj_nav_client.png") no-repeat center;
+            background-size: contain;
+          }
+          &.one .s3 {
+            background: url("../../images/nav/aj_nav_staff.png") no-repeat center;
+            background-size: contain;
+          }
+          &.two .s0 {
+            background: url("../../images/nav/aj_nav_mode_01.png") no-repeat center;
+            background-size: contain;
+          }
+          &.two .s1 {
+            background: url("../../images/nav/aj_nav_mode_02.png") no-repeat center;
+            background-size: contain;
+          }
+          &.two .s2 {
+            background: url("../../images/nav/aj_nav_mode_03.png") no-repeat center;
+            background-size: contain;
+          }
+          &.three .s0 {
+            background: url("../../images/nav/aj_nav_scheme_01.png") no-repeat center;
+            background-size: contain;
+          }
+          &.three .s1 {
+            background: url("../../images/nav/aj_nav_scheme_02.png") no-repeat center;
+            background-size: contain;
+          }
+          &.three .s2 {
+            background: url("../../images/nav/aj_nav_scheme_03.png") no-repeat center;
+            background-size: contain;
+          }
+        }
+        &.border {
+          .item-drop {
+            border-right: 1px solid $bor-dashed;
+          }
+          .item-drop:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}

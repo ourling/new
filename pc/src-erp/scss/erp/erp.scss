@@ -1,0 +1,338 @@
+@import "../minix/template";
+@mixin bannericon($path,$num,$s:1,$z:"png") {
+  @for $i from $s through $num {
+    .item-#{$i}:before {
+      content: url('#{$path}#{$i}.#{$z}');
+    }
+  }
+}
+.mark{
+  @include font(40px,#3B87FE);
+}
+.erp-btn{
+  @include icon(256px,65px);
+  background: url('../../images/erp/erp-btn.png') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  margin-top: 56px;
+}
+.erp{
+  min-width: 1200px;
+}
+.banner {
+  position: relative;
+  background: url("../../images/erp/banner.png") no-repeat center;
+  background-size: cover;
+  height: 605px;
+  min-width: 1200px;
+  box-sizing: border-box;
+  .banner-container{
+    width: 1200px;
+    margin: auto;
+    padding: 142px 50px;
+    box-sizing: border-box;
+    .title{
+      @include font(70px,#fff,12px);
+    }
+    .title-bar{
+      @include font(50px,#FFFEFE,12px);
+    }
+    .title-txt{
+      @include font(24px,#FFFEFE,20px);
+    }
+  }
+}
+.container-1 {
+  padding-top: 33px;
+}
+.container-2 {
+  background: #F7FAFF;
+  box-sizing: border-box;
+  padding: 32px 0 78px;
+}
+.container-3 {
+  padding-top: 33px;
+}
+.container-4 {
+  padding-top: 50px;
+  background: #F7FAFF;
+  .content{
+    @include position('X');
+    top: 150px;
+  }
+  .card-content{
+    //margin-left: 100px;
+  }
+  .card-container {
+    .card-title {
+      font-weight: 700;
+    }
+    .txt{
+      position: relative;
+      padding-left: 10px;
+    }
+    .txt:before{
+      @include position('Y');
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #3B87FE;
+      left: 0;
+    }
+  }
+}
+.container-5 {
+  padding-top: 46px;
+  padding-bottom: 60px;
+  .card-container {
+    .card-title {
+      @include font(20px, #3A3A46);
+      font-weight: 700;
+      text-align: left;
+      margin-left: 38px;
+    }
+  }
+}
+.container-6 {
+  background: url("../../images/erp/part06-bg.png") no-repeat center;
+  background-size: cover;
+  padding-top: 30px;
+  .title{
+    color: #fff !important;
+  }
+  .card-container{
+    .card-title-bar{
+      color: #fff;
+      margin-bottom: 8px;
+    }
+  }
+}
+.container {
+  margin: auto;
+  width: 1200px;
+}
+.title-container {
+  background: url("../../images/erp/title-bg.png") no-repeat center;
+  background-size: contain;
+  .title {
+    line-height: 80px;
+    @include font(30px, #000F27);
+    margin: 0;
+    @include align(center);
+  }
+  .title-bar {
+    @include font(20px,#85888D);
+    @include align(center);
+  }
+}
+.card-container {
+  @extend .clear;
+  .card-title {
+    @include font(20px, #000F27,10px);
+    @include align(center);
+  }
+  .card-title-bar {
+    @include font(20px,#696969);
+    @include align(center);
+  }
+  .txt{
+    @include font(16px,#696969);
+    @include align();
+  }
+  .txt-s{
+    @include font(14px,#73777A);
+    @include align();
+  }
+}
+.btn-container{
+  text-align: center;
+  margin: 45px auto 36px;
+  .card-btn{
+    background: #fff;
+    @include font(18px,#2591FF);
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 36px;
+  }
+}
+.card-container-1 {
+  padding-top: 35px;
+  .card-4{
+    padding: 0 35px;
+  }
+  .icon {
+    @include icon(58px, 46px);
+    margin-bottom: 15px;
+  }
+  @include iconimg('../../images/erp/part01-icon', 4,'.icon');
+}
+.card-container-2 {
+  padding-top: 56px;
+  .card-4{
+    padding: 0 15px;
+  }
+  .content{
+    @extend .clear;
+    box-sizing: border-box;
+    height: 264px;
+    padding: 25px 25px;
+  }
+  .card-4:nth-child(2n-1){
+    top: 77px;
+  }
+  .icon{
+    @include icon(31px,27px);
+    float: left;
+  }
+  &.card-container{
+    .card-title{
+      margin-top: 40px;
+      text-align: left;
+    }
+  }
+  @include iconimg('../../images/erp/part02-bg', 4, '.img',cover);
+  @include iconimg('../../images/erp/part02-icon', 4);
+}
+.card-container-3 {
+  padding: 50px 0 55px;
+}
+.card-container-4 {
+  padding: 40px 0 85px;
+  .card-3{
+    height: 354px;
+  }
+  .card-1{
+    box-sizing: border-box;
+    height: 293px;
+    float: left;
+    width: 100%;
+    padding: 38px 95px 0 235px;
+    .title{
+      @include font(20px,#000F27,30px);
+      text-align: left;
+      font-weight: 700;
+    }
+    .card-txt{
+      text-align: center;
+    }
+  }
+  .icon{
+    @include icon(69px,69px);
+  }
+  .card-6:after{
+    @include position('Y');
+    content: url("../../images/erp/icon.png");
+    height: 17px;
+    width: 13px;
+    right: -5%;
+    top: 28%;
+  }
+  .card-6:last-child:after{
+    content: "";
+  }
+  @include iconimg('../../images/erp/part04-img', 7,'.img');
+  @include iconimg('../../images/erp/part04-icon', 6);
+}
+.card-container-5 {
+  padding-top: 45px;
+  .card-3{
+    height: 440px;
+    padding: 0 35px;
+    border-bottom: 1px solid #B6B6B6;
+    &.b{
+      padding-top: 36px;
+      border-bottom: none;
+    }
+    &.m{
+      border-left: 1px solid #B6B6B6;
+      border-right: 1px solid #B6B6B6;
+    }
+  }
+  .content{
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .content:nth-child(2n){
+    margin-top: 30px;
+  }
+  .txt{
+    margin-bottom: 35px;
+  }
+  .icon {
+    @include icon(26px, 26px);
+    position: absolute;
+  }
+  .icon-img{
+    @include icon(300px,218px);
+    &.spe{
+      position: absolute;
+      bottom: 50px;
+    }
+  }
+  @include iconimg('../../images/erp/part05-icon', 6);
+  @include iconimg('../../images/erp/part05-img', 6,'.img');
+}
+.card-container-6 {
+  padding-top: 30px;
+  .icon {
+    @include icon(150px, 130px);
+    position: absolute;
+    left: 68%;
+    transform: translateX(-50%);
+  }
+  .card-title-bar{
+    margin-top: 105px;
+  }
+  @include iconimg('../../images/erp/part06-icon', 16);
+}
+.foot{
+  .foot-top{
+    background: url("../../images/erp/foot-top.png") no-repeat center;
+    background-size: cover;
+    height: 310px;
+    position: relative;
+    .foot-container{
+      @include position('B');
+      text-align: center;
+      .title{
+        @include font(40px,#fff,40px);
+      }
+      .title-bar{
+        @include font(30px,#fff,15px);
+      }
+    }
+  }
+  .foot-bottom{
+    background: url("../../images/erp/foot-bottom.png") no-repeat center;
+    background-size: cover;
+    height: 420px;
+    position: relative;
+    .container{
+      position: relative;
+      height: 420px;
+    }
+    .foot-container{
+      @include position('Y');
+      text-align: center;
+      right: 0;
+      .title{
+        @include font(39px,#fff,52px);
+      }
+      .title-bar{
+        @include font(33px,#fff,5px);
+      }
+      .foot-erp-btn{
+        @include font(30px,#40B0FF,14px);
+        display: inline-block;
+        background: #fff;
+        line-height: 62px;
+        padding: 0 40px;
+        text-decoration: none;
+      }
+      .foot-text{
+        @include font(24px,#fff);
+      }
+    }
+  }
+}

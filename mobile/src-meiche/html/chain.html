@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="keywords"
+          content="电商宝，电商宝ERP、电商宝财务管理、电商宝SCRM、爱聚云进销存，电商erp，电子商务erp，网店erp，电商打单软件，电商管理软件，淘宝天猫财务管理软件，京东财务软件，电商数据分析，库存管理软件，crm，企业oa，saas平台">
+    <meta name="description"
+          content="电商宝ERP是国内电商全渠道管理领导品牌，为电商多平台卖家提供最专业、精准、全面的财务数据店铺管理软件，无缝对接多电商平台，提供全渠道订单处理、批量打单发货、库存管理、商品管理；解决电商卖家在多个电商平台经营时的复杂性，将多平台统一管理">
+    <title>美车供应链</title>
+    <link rel="stylesheet" href="../css/chain/chain.css?t=20171219">
+    <script src="../js/wyboot/wyboot.js"></script>
+</head>
+<body>
+<div id="app" class="clear">
+    <app-head></app-head>
+    <div id="mobile-body" class="mobile-body">
+        <section id="banner">
+            <div class="banner">
+                <img class="response-img" :src="banner.url" alt="">
+                <div class="banner-container">
+                    <h2 class="banner-title">{{banner.title}}</h2>
+                    <p class="banner-text">{{banner.titleBar}}</p>
+                </div>
+            </div>
+        </section>
+        <section id="main" class="mobile-container chain-container">
+            <div class="part">
+                <div class="title-container"><i class="icon"></i>{{part01.title}}</div>
+                <div class="card-container">
+                    <img class="response-img" :src="part01.url" alt="">
+                </div>
+            </div>
+            <div class="part part-02">
+                <div class="title-container"><i class="icon"></i>{{part02.title}}</div>
+                <div class="card-container">
+                    <p class="txt">{{part02.txt}}</p>
+                    <img class="response-img" :src="part02.url" alt="">
+                </div>
+            </div>
+            <div class="part">
+                <div class="title-container"><i class="icon"></i>{{part03.title}}</div>
+                <div class="card-container">
+                    <img class="response-img" :src="part03.url" alt="">
+                </div>
+            </div>
+            <div class="part part-04">
+                <div class="card-container">
+                    <img class="response-img" :src="part04.url" alt="">
+                    <p class="txt txt-top">{{part04.phone}}</p>
+                    <p class="txt">{{part04.date}}</p>
+                    <p class="txt">{{part04.address}}</p>
+                    <p class="txt">{{part04.mailNum}}</p>
+                    <p class="txt">{{part04.mail}}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 遮罩层区 -->
+    <app-foot :active="hasMark"></app-foot>
+    <!-- 遮罩层区 -->
+    <app-mask-tel></app-mask-tel>
+    <app-mask-menu @mask="mask"></app-mask-menu>
+</div>
+<script src="../js/comm.js?t=20171219"></script>
+<script src="../js/chain/chain.js?t=20171219"></script>
+</body>
+</html>

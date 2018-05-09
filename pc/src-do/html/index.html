@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/summernote.css" rel="stylesheet">
+</head>
+<body>
+<button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit 1</button>
+<button id="save" class="btn btn-primary" onclick="save()" type="button">Save 2</button>
+<div class="click2edit"></div>
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/summernote.min.js"></script>
+<script src="../js/summernote-zh-CN.js"></script>
+<script>
+    var edit = function (){
+        $('.click2edit').summernote({
+            height: 300,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: true,
+            lang: 'zh-CN',
+            dialogsFade : true,// 增加summernote上弹出窗口滑进滑出的动态效果。
+            dialogsInBody : true,// 这个属性也很关键，默认为false，字面上的意思是summernote的弹出框是否在body中（in嘛），设置为false时，dialog的式样会继承其上一级外部（如上文中的form-horizontal）容器式样，那么显示的效果就很别扭，这里也不再上图；那么设置为true时，就不会继承上一级外部div的属性啦，从属于body嘛。
+            disableDragAndDrop : false,// 设置为false吧，有的时候拖拽会出点问题，你可实践。
+            // and drop
+        callbacks: {
+            onImageUpload: function(files) {
+                console.log(files);
+                console.log(files[0]);
+                $(this).summernote('insertImage',files[0].name,'img');
+//                this.summernote('insertImage', imageUrl, function($image) {
+//                    console.log(files);
+//                });
+            }
+        }
+//        callbacks : {
+//            onImageUpload : function(files) {
+//                console.log(files);
+//                var $files = $(files);
+//                $files.each(function() {
+//                    var file = this;
+//                    var data = new FormData();
+//                    data.append("file", file);
+//                    $.ajax({
+//                        data : data,
+//                        type : "POST",
+//                        url : url,
+//                        cache : false,
+//                        contentType : false,
+//                        processData : false,
+//                        success : function(response) {
+//                            var json = YUNM.jsonEval(response);
+//                            YUNM.debug(json);
+//                            YUNM.ajaxDone(json);
+//                            if (json[YUNM.keys.statusCode] == YUNM.statusCode.ok) {
+//                                // 文件不为空
+//                                if (json[YUNM.keys.result]) {
+//                                    var imageUrl = json[YUNM.keys.result].completeSavePath;
+//                                    $this.summernote('insertImage', imageUrl, function($image) {
+//
+//                                    });
+//                                }
+//                            }
+//
+//                        },
+//                        error : YUNM.ajaxError
+//                    });
+//                });
+//            }
+//        }
+        });
+    }
+    var save = function() {
+        var markup = $('.click2edit').summernote('code');
+        console.log(markup);
+        $('.click2edit').summernote('destroy');
+    };
+    var YUNM = {
+        debug : function(msg) {
+            if (this._set.debug) {
+                if (typeof (console) != "undefined")
+                    console.log(msg);
+                else
+                    alert(msg);
+            }
+        },
+        jsonEval : function(data) {
+            try {
+                if ($.type(data) == 'string')
+                    return eval('(' + data + ')');
+                else
+                    return data;
+            } catch (e) {
+                return {};
+            }
+        },
+        ajaxError : function(xhr, ajaxOptions, thrownError) {
+            if (xhr.responseText) {
+                $.showErr("<div>" + xhr.responseText + "</div>");
+            } else {
+                $.showErr("<div>Http status: " + xhr.status + " " + xhr.statusText + "</div>" + "<div>ajaxOptions: " + ajaxOptions + "</div>"
+                        + "<div>thrownError: " + thrownError + "</div>");
+            }
+
+        },
+        ajaxDone : function(json) {
+            if (json[YUNM.keys.statusCode] == YUNM.statusCode.error) {
+                if (json[YUNM.keys.message]) {
+                    YUNM.debug(json[YUNM.keys.message]);
+                    $.showErr(json[YUNM.keys.message]);
+                }
+
+            } else if (json[YUNM.keys.statusCode] == YUNM.statusCode.timeout) {
+                YUNM.debug(json[YUNM.keys.message]);
+                $.showErr(json[YUNM.keys.message] || YUNM.msg("sessionTimout"), YUNM.loadLogin);
+            }
+        },
+    }
+
+</script>
+</body>
+</html>

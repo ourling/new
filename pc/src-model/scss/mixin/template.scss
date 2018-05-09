@@ -1,0 +1,149 @@
+//width size
+$container-w: 1200px;
+
+//font  size
+$font: 16px;
+
+//ine-height size
+$l-height-fix: 50px;
+
+//padding size
+$padding-m: 15px;
+$padding-sm: 10px;
+
+//margin size
+$margin-fixed: 70px;
+
+//color bg
+$bg-def: #fff;
+$bg-nav: #169EF4;
+
+//color font
+$color-def: #fff;
+$color-aHover: #46DEFF;
+
+//color border
+$bor-nav: #6FC9F2;
+$bor-dashed: #47b5fa;
+//$s 字体大小 $c 字体颜色  $b margin-bottom 大小
+@mixin font($s:24px,$c: #333, $b:0){
+  @if $c{
+    color: $c;
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }@else {
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }
+}
+//$t 字体对其方式   默认left
+@mixin align($t:left){
+  @if $t{
+    text-align: $t;
+  }@else{
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+  }
+}
+//卡片 $w 每张卡片对应宽（占据盒子的百分比）   $b: boolean值  (true:卡片有边框；false:卡片无边框)
+@mixin card($w,$b:false,$c:1%){
+  @if $b {
+    border: 1px solid rgba(0,0,0,.1);
+    width: ($w - $c);
+  }@else {
+    width: $w;
+  }
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+}
+//icon大小   $w 宽; $h 高; $b 盒子类型
+@mixin icon($w,$h,$b:block){
+  background-size: contain;
+  display: $b;
+  height: $h;
+  width: $w;
+  margin: auto;
+}
+//icon填充  $path:icon路径  $num:icon个数  $name: 填充icon的类名  $size: 填充类型(contain,cover等等) $s: 起始值(默认1)  $z: icon的类型(默认png)
+@mixin iconimg($path,$num,$name:'icon',$size:contain,$s:1,$z:"png"){
+  @for $i from $s through $num {
+    .#{$name}-#{$i} {
+      background: url('#{$path}#{$i}.#{$z}') no-repeat center center;
+      background-size: $size;
+    }
+  }
+}
+//对齐方式  $type:对齐方式  (X:左右居中对齐   Y:上下居中对齐  B:上下左右居中对齐) (使用方法：父级元素需为relative定位)
+@mixin position($type:'X'){
+  position: absolute;
+  @if($type == 'X'){
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }@else if($type == 'Y'){
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }@else {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+//mixin  end
+//单体清除浮动
+.clear:before,.clear:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+//card-container 统一清除浮动
+.card-container{
+  @extend .clear;
+}
+//card 布局  start
+//有边框
+.card-1-b{
+  @include card(100%,true,0%);
+}
+.card-2-b{
+  @include card(50%,true);
+  margin-bottom: 20px;
+  margin-right: 2%;
+}
+.card-2-b:nth-child(2n){
+  margin-right: 0;
+}
+.card-3-b{
+  @include card(33.3%,true);
+  margin-left: 1.5%;
+}
+.card-3-b:nth-child(3n){
+  margin-left: 0;
+}
+.card-4-b{
+  @include card(25%,true,1.5%);
+  margin-left: 1%;
+}
+.card-4-b:nth-child(4n){
+  margin-left: 0;
+}
+//无边框
+.card-2{
+  @include card(50%);
+}
+.card-3{
+  @include card(33.3%);
+}
+.card-4{
+  @include card(25%);
+}
+.card-5{
+  @include card(20%);
+}
+//card 布局  end

@@ -1,0 +1,192 @@
+@import "../mixin/template";
+%position {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.banner {
+  width: 100%;
+  .banner-container{
+    top: 1.9rem;
+    .banner-btn{
+      @include font(.28rem,#fff);
+      background: transparent;
+      height: .5rem;
+      width: 2.4rem;
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+}
+.part{
+  border: none;
+  margin-bottom: 0;
+}
+.liren-container {
+  color: #666;
+  min-height: 5rem;
+  width: 100%;
+}
+.title-container {
+  @include align(center);
+  padding: .25rem 0;
+  position: relative;
+  .title {
+    @include font(.3rem, #66635E, .15rem);
+    @include align(center);
+    display: inline-block;
+    &.spe{
+      color: #fff;
+    }
+  }
+  .title:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: .3rem;
+  }
+  .title-bar {
+    @include font(.2rem, #3F4952,.2rem);
+  }
+  &.spe{
+    .title {
+      color: #fff;
+    }
+    .title-bar {
+      color: #fff;
+    }
+  }
+}
+.card-container{
+  &.info{
+    padding: .2rem 0;
+  }
+  .title{
+    @include font(.2rem,#5988B4 ,.25rem);
+    &.align-c{
+      @include align(center)
+    }
+  }
+  .txt{
+    @include font(.2rem,#783006);
+    @include align(center);
+  }
+}
+.liren-foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    position: absolute;
+    top: .8rem;
+    text-align: center;
+    width: 100%;
+    .foot-btn{
+      background: transparent;
+      box-sizing: border-box;
+      border-radius: .1rem;
+      display: block;
+      padding: .18rem .23rem;
+      width: 1.8rem;
+      margin-left: 4.2rem;
+    }
+  }
+}
+.part-1{
+  .title:after {
+    background: url("../../images/solutions/liren/part01-line.png") no-repeat;
+    background-size: cover;
+    height: .15rem;
+    width: 2.8rem;
+  }
+}
+.part-2{
+  background: url("../../images/solutions/liren/liren-part02-bg.png") no-repeat center;
+  background-size: cover;
+  .title:after {
+    background: url("../../images/solutions/liren/part02-line.png") no-repeat;
+    background-size: cover;
+    height: .15rem;
+    width: 2.8rem;
+  }
+}
+.part-3{
+  background: #F4FAFF;
+  .title:after {
+    background: url("../../images/solutions/liren/part03-line.png") no-repeat;
+    background-size: cover;
+    height: .1rem;
+    width: 3rem;
+  }
+}
+.part-4{
+  .title:after {
+    background: url("../../images/solutions/liren/part04-line.png") no-repeat;
+    background-size: cover;
+    height: .14rem;
+    width: 4.8rem;
+  }
+}
+.part-5{
+  background: url("../../images/solutions/liren/liren-part05-bg.png") no-repeat center;
+  background-size: cover;
+  .icon-btn{
+    background: url("../../images/solutions/liren/persion-btn.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 0.46rem;
+    right: 1.8rem;
+    height: .29rem;
+    width: .81rem;
+  }
+  .title:after {
+    background: url("../../images/solutions/liren/part05-line.png") no-repeat;
+    background-size: cover;
+    height: .15rem;
+    width: 2.78rem;
+  }
+}
+.part-6{
+  .title:after {
+    background: url("../../images/solutions/liren/part06-line.png") no-repeat;
+    background-size: cover;
+    height: .15rem;
+    width: 5.32rem;
+  }
+  .card-container{
+    position: relative;
+  }
+  .btn{
+    position: absolute;
+    bottom: .3rem;
+    right: 1.4rem;
+    height: .35rem;
+    width: 1.05rem;
+  }
+}
+.card-container-2{
+  .icon{
+    @include icon(1.1rem,1.65rem);
+  }
+  @include iconimg("../../images/solutions/liren/liren-part02-icon",4,"icon");
+}
+.card-container-5{
+  .card-4{
+    margin-bottom: .3rem;
+    height: 2rem;
+    .title{
+      margin-top: 1.8rem;
+    }
+  }
+  .icon{
+    @include icon(2.2rem,2.2rem);
+    position: absolute;
+    top: 0;
+    left: .2rem;
+  }
+  @include iconimg("../../images/solutions/liren/liren-part05-icon",12,"icon");
+}

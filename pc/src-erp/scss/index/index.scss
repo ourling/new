@@ -1,0 +1,550 @@
+@import "../minix/template";
+@mixin bannericon($path,$num,$s:1,$z:"png") {
+  @for $i from $s through $num {
+    .item-#{$i}:before {
+      content: url('#{$path}#{$i}.#{$z}');
+    }
+  }
+}
+.mark{
+  color: #2591FF;
+  font-size: 40px;
+}
+.banner {
+  position: relative;
+  background: url("../../images/index/banner.png") no-repeat center;
+  background-size: cover;
+  height: 605px;
+  box-sizing: border-box;
+  .banner-container{
+    width: 1200px;
+    margin: auto;
+    padding: 142px 50px;
+    box-sizing: border-box;
+    .title{
+      @include font(70px,#fff,12px);
+    }
+    .title-bar{
+      @include font(50px,#FFFEFE,12px);
+    }
+    .title-txt{
+      @include font(24px,#FFFEFE,20px);
+    }
+  }
+}
+.container-1 {
+  padding: 33px 0;
+  .card-4{
+    height: 393px;
+    overflow: hidden;
+    margin-right: 26.5px;
+    width: 280px;
+    border: 5px solid transparent;
+    box-shadow: 0 0 35px #F4F4F4;
+    transition: .5s;
+  }
+  .card-4:hover{
+    border: 5px solid #19B1FF;
+    box-shadow: 0 10px 5px #9DC3DD;
+    .content{
+      margin-top: -100px;
+      opacity: 0;
+    }
+    .text-content{
+      top: 0;
+      opacity: 1;
+    }
+  }
+  .card-4:last-child{
+    margin-right: 0;
+  }
+  .card-container {
+    .card-title {
+      @include font(24px, #3A3A46,15px);
+      text-align: left;
+      padding-left: 30px;
+    }
+    .txt{
+      @include font(16px,#85888D);
+      @include align();
+      padding-left: 30px;
+      height: 75px;
+    }
+  }
+}
+.container-2 {
+  background: #F5F6F9;
+  box-sizing: border-box;
+  padding: 65px 0;
+}
+.container-3 {
+  padding-top: 45px;
+  .card-container {
+    .card-title {
+      @include font(20px, #3A3A46);
+      font-weight: 700;
+      text-align: left;
+      margin-left: 62px;
+    }
+    .card-title-bar {
+      @include font(16px,#3A3A46);
+      @include align();
+    }
+  }
+}
+.container-4 {
+  padding-top: 50px;
+  background: url("../../images/index/part04-bg.png") no-repeat center;
+  background-size: cover;
+  .top-container{
+    .title{
+      @include font(24px,#fff);
+      margin-right: 21px;
+    }
+    .title-btn{
+      @include font(18px,#2D3948);
+      background: #FFDA30;
+      display: inline-block;
+      line-height: 32px;
+      text-align: center;
+      width: 117px;
+    }
+  }
+  .middle-container{
+    .title{
+      @include font(24px,#fff,24px);
+    }
+    .card-title-bar{
+      color: #fff;
+    }
+    .card-container{
+      padding: 19px 100px;
+      border-top: 1px dashed #fff;
+    }
+  }
+  .bottom-container{
+    padding: 19px 0;
+    .card-title {
+      @include font(20px, #fff,22px);
+      text-align: left;
+    }
+    .txt{
+      @include font(18px,#fff);
+      @include align();
+      line-height: 36px;
+    }
+    .card-2{
+      padding-right: 200px;
+      img{
+        width: 287px;
+      }
+      &.img{
+        padding-left: 200px;
+        padding-right: 0;
+      }
+    }
+  }
+  .img-do{
+    height: 325px;
+    overflow: hidden;
+  }
+  #show_2,#show_3,#show_4{
+    display: none;
+  }
+}
+.container-5 {
+  padding-top: 35px;
+  margin-bottom: 85px;
+  position: relative;
+  .left{
+    background: url("../../images/index/part05-bg.png") no-repeat center;
+    background-size: cover;
+    height: 525px;
+    width: 335px;
+    .left-btn{
+      @include font(20px,#3A3A46);
+      display: block;
+      background: #FFDA30;
+      text-align: center;
+      line-height: 37px;
+      width: 170px;
+      margin: 403px auto 0;
+    }
+  }
+  .container-content{
+    width: 869px;
+    margin-right: -5px;
+  }
+}
+.container-6 {
+  background: url("../../images/index/part06-bg.png") no-repeat center;
+  background-size: cover;
+  padding-top: 42px;
+  .title-container {
+    .title {
+      color: #fff;
+    }
+  }
+  .top{
+    background: url("../../images/index/part06-icon1.png") no-repeat center;
+    background-size: contain;
+    height: 420px;
+    .top-btn{
+      @include font(24px,#3A3A46);
+      display: block;
+      background: #FADA31;
+      line-height: 56px;
+      width: 230px;
+      text-align: center;
+      position: relative;
+      top: -33px;
+    }
+  }
+  .bottom{
+    background: url("../../images/index/part06-icon2.png") no-repeat center;
+    background-size: contain;
+    height: 270px;
+    .bottom-info{
+      @include font(24px,#fff);
+      position: relative;
+      left: 20px;
+    }
+  }
+}
+.container-7 {
+  background: url("../../images/index/part07-bg.png") no-repeat center;
+  background-size: cover;
+  padding-top: 55px;
+  .title{
+    color: #fff !important;
+  }
+  .card-container{
+    .card-title-bar{
+      color: #fff;
+      margin-bottom: 8px;
+    }
+  }
+}
+.container-8 {
+  padding-top: 55px;
+}
+.container {
+  margin: auto;
+  width: 1200px;
+}
+.title-container {
+  .title {
+    @include font(30px, #3A3A46, 20px);
+    @include align(center);
+  }
+  .title-bar {
+    @include font(20px,#85888D);
+    @include align(center);
+  }
+}
+.card-container {
+  @extend .clear;
+  .card-title {
+    @include font(24px, #52565D);
+    @include align(center);
+  }
+  .card-title-bar {
+    @include font(20px,#333);
+    @include align(center);
+  }
+  .txt{
+    @include font(14px,#333);
+    @include align();
+  }
+  .txt-s{
+    @include font(14px,#73777A);
+    @include align();
+  }
+}
+.btn-container{
+  text-align: center;
+  margin: 45px auto 36px;
+  .card-btn{
+    background: #fff;
+    @include font(18px,#2591FF);
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 36px;
+  }
+}
+.card-container-1 {
+  padding-top: 62px;
+  .content{
+    padding-top: 38px;
+    transition: .5s;
+  }
+  .text-content{
+    box-sizing: border-box;
+    position: absolute;
+    padding: 70px 40px 0;
+    width: 100%;
+    top: 100px;
+    opacity: 0;
+    transition: .5s;
+    .txt-title{
+      @include font(22px,#85888D,30px);
+    }
+    .txt-txt{
+      @include font(16px,#85888D,22px);
+      @include align();
+    }
+    .txt-txt-m{
+      @include font(16px,#19B1FF,50px);
+      @include align();
+    }
+    .txt-btn{
+      @include font(16px,#85888D);
+      border: 3px solid #19B1FF;
+      border-radius: 16px;
+      line-height: 32px;
+      text-align: center;
+      display: block;
+      margin: auto;
+      width: 150px;
+
+    }
+  }
+  .icon {
+    @include icon(270px, 224px);
+  }
+  @include iconimg('../../images/index/part01-icon', 4,'.icon',cover);
+}
+.card-container-2 {
+  padding-top: 65px;
+  .card-1{
+    height: 706px;
+ }
+  .card-content-right{
+    margin-left: 418px;
+    width: 755px;
+    @include bannericon("../../images/index/part02-1-icon",4)
+  }
+  .card-content-left{
+    width: 755px;
+    margin-left: 28px;
+    @include bannericon("../../images/index/part02-2-icon",4)
+  }
+  .top{
+    padding: 20px 28px;
+  }
+  .top-bar{
+    background: #E4ECEE;
+    padding: 20px 28px;
+  }
+  .card-btn-info{
+    @include font(18px,#303742);
+    background: #FADA31;
+    line-height: 32px;
+    margin-left: 27px;
+    padding: 0 15px;
+  }
+  .card-btn{
+    @include font(18px,#fff);
+    background: #1991FF;
+    line-height: 32px;
+    padding: 0 15px;
+  }
+  .item-container{
+    .item-title{
+      @include font(20px,#062F71);
+    }
+    .item{
+      @include font(16px,#062F71);
+      margin-right: 11px;
+    }
+    .item:before{
+      display: inline-block;
+      height: 18px;
+      margin-right: 8px;
+      vertical-align: sub;
+      width: 20px;
+    }
+  }
+  .middle-content{
+    .card-container{
+      padding-left: 148px;
+      padding-right: 50px;
+      .card-title {
+        @include font(16px, #73777A,10px);
+        @include align(center);
+      }
+      .card-title-bar {
+        @include font(14px,#73777A);
+        @include align(center);
+        padding: 0 20px;
+      }
+      .spe{
+        position: relative;
+      }
+      .spe:before{
+        content: url("../../images/index/part02-arrow.png");
+        display: inline-block;
+        width: 59px;
+        height: 27px;
+        position: absolute;
+        top: 33px;
+        left: -30px;
+      }
+    }
+  }
+  .content-title{
+    @include font(20px,#52565D);
+    padding: 28px;
+    padding-bottom: 0;
+  }
+  .bottom-content{
+    .card-container{
+      padding-left: 148px;
+      padding-right: 50px;
+      .response-img{
+        width: auto;
+        margin: auto;
+      }
+    }
+  }
+  .icon{
+    @include icon(86px,86px);
+    margin-bottom: 23px;
+  }
+  @include iconimg('../../images/index/part02-bg', 2, '.img');
+  @include iconimg('../../images/index/part02-icon', 6);
+}
+.card-container-3 {
+  padding-top: 50px;
+  padding-bottom: 85px;
+  .card-3{
+    height: 182px;
+    padding: 0 35px;
+    border-bottom: 1px solid #B6B6B6;
+    &.b{
+      padding-top: 50px;
+      border-bottom: none;
+    }
+    &.m{
+      border-left: 1px solid #B6B6B6;
+      border-right: 1px solid #B6B6B6;
+    }
+  }
+  .content{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+  }
+  .icon {
+    @include icon(50px, 50px);
+    position: absolute;
+  }
+  @include iconimg('../../images/index/part03-icon', 6);
+}
+.card-container-4 {
+  padding-top: 40px;
+  .active:before{
+    content: url("../../images/index/part04-point.png");
+    display: inline-block;
+    position: absolute;
+    height: 28px;
+    width: 22px;
+    top: -50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    transition: .5s;
+  }
+  .icon{
+    @include icon(74px,74px);
+    margin-bottom: 20px;
+  }
+  @include iconimg('../../images/index/part04-icon', 4);
+}
+.card-container-5 {
+  margin-top: 60px;
+  box-shadow: 2px 10px 15px #92C8FF;
+  .card-3{
+    box-sizing: border-box;
+    border: 1px solid #2591FF;
+    padding: 50px 0;
+    margin-bottom: -1px;
+    margin-left: -1px;
+  }
+  .icon {
+    @include icon(110px, 110px);
+    margin-bottom: 20px;
+  }
+  @include iconimg('../../images/index/part05-icon', 6);
+  padding-bottom: 0;
+}
+.card-container-6 {
+  padding-top: 65px;
+  width: 1000px;
+  margin: auto;
+  .icon {
+    @include icon(105px, 75px);
+    margin-bottom: 35px;
+  }
+  @include iconimg('../../images/index/part06-icon', 16);
+}
+.card-container-7 {
+  .icon {
+    @include icon(170px, 180px);
+    position: absolute;
+    left: 61%;
+    transform: translateX(-50%);
+  }
+  .card-title-bar{
+    margin-top: 135px;
+  }
+  @include iconimg('../../images/index/part07-icon', 4);
+}
+.card-container-8 {
+  .icon {
+    @include icon(54px, 54px);
+    margin-bottom: 28px;
+  }
+  @include iconimg('../../images/index/part08-icon', 7);
+}
+.foot{
+  background: url("../../images/index/foot-bg.png") no-repeat center;
+  background-size: cover;
+  height: 420px;
+  .foot-container{
+    padding-top: 175px;
+    width: 1200px;
+    margin: auto;
+    line-height: 62px;
+    .title{
+      @include font(40px,#fff,22px);
+      margin-right: 53px;
+    }
+    .foot-btn-s{
+      @include font(30px,#40B0FF);
+      display: inline-block;
+      background: #fff;
+      padding: 0 40px;
+    }
+  }
+}
+.warp-container{
+  height: 670px;
+}
+.swiper-4{
+  transform: scale(1.6);
+  z-index: 7;
+}
+.swiper-3,.swiper-5{
+  transform: scale(1.4);
+  z-index: 5;
+}
+.swiper-2,.swiper-6{
+  transform: scale(1.2);
+  z-index: 3;
+}
+.swiper-1,.swiper-7{
+  transform: scale(1);
+  z-index: 1;
+}

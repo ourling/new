@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        @media screen and (min-width: 1633px) {
+            .photo-wall {
+                width: 1520px; }
+            .photo-wall:before {
+                display: none;
+                content: '6'; } }
+        @media screen and (max-width: 1632px) and (min-width: 1377px) {
+            .photo-wall {
+                width: 1264px; }
+            .photo-wall:before {
+                display: none;
+                content: '5'; } }
+        @media screen and (max-width: 1376px) and (min-width: 1121px) {
+            .photo-wall {
+                width: 1008px; }
+            .photo-wall:before {
+                display: none;
+                content: '4'; } }
+        @media screen and (max-width: 1120px) and (min-width: 865px) {
+            .photo-wall {
+                width: 752px; }
+            .photo-wall:before {
+                display: none;
+                content: '3'; } }
+        @media screen and (max-width: 864px) and (min-width: 609px) {
+            .photo-wall {
+                width: 496px; }
+            .photo-wall:before {
+                display: none;
+                content: '2'; } }
+        @media screen and (max-width: 608px) and (min-width: 353px) {
+            .photo-wall {
+                width: 240px; }
+            .photo-wall:before {
+                display: none;
+                content: '1'; } }
+        @media screen and (max-width: 352px) {
+            .photo-wall {
+                width: 100%; }
+            .photo-wall:before {
+                display: none;
+                content: '1'; } }
+        @media screen and (max-width: 768px) {
+            .nav-header {
+                top: 40px; } }
+        .photo-card{
+            transition: 1s;
+        }
+    </style>
+    <script src="../js/wyboot/wyboot.js"></script>
+    <title>照片墙</title>
+</head>
+<body>
+<!-- 频道 开始 -->
+<div id="app" style="min-height: 800px;">
+    <!-- 照片墙 START -->
+    <div id="photo-wall" class="photo-wall">
+        <ul id="photo-wall-list" class="photo-wall-list"></ul>
+        <div id="load-more" class="load-more"><img src="http://static.westlakevr.cn/images/loading.gif"></div>
+        <div id="no-more" class="no-more">无更多加载数据</div>
+    </div>
+    <!-- 照片墙 END -->
+
+    <!-- 照片墙镜像 开始 -->
+    <div id="mirror-dom" class='mirror-dom photo-card'></div>
+    <!-- 照片墙镜像 结束 -->
+</div>
+<script>
+    var photoData = [{"praiseUserNum":1462,"totalVisitCount":56952,"panoDesc":"苍南中学（原名苍南一中）创办于1984年秋，现为省一级重点中学，省文明单位，温州市首批现代化学校。\n学校坐落于苍南县城新区，占地150亩，建筑面积6.5万平方米，绿化面积4.1万平方米。校园绿树掩映，清河泛波，楼舍轩昂，环境怡人。图书馆、艺术馆、体育馆、灯光球场、网络中心、广播电视中心等设施设备一应俱全。\n学校现有58个教学班，2317名学生。专任教师210人，其中教授级中学高级教师2人，高级教师121人，县级以上各类教学骨干113人，具有研究生学历或硕士学位（含在读）30人。优秀的师资、淳朴的校风创造了一流的教学质量。近年来，学校送出了4名温州市高考状元，高考和学科竞赛成绩稳居温州市前列。\n学校始终秉承 “自强不息”的精神，践行“发展为本，美丽人生”办学理念，坚持“为学生的美丽人生奠基”的办学宗旨，谋划构建了“美丽人生”三色课程体系，正在培养“人格健康、知识厚实、特长鲜明”的现代公民和打造“现代化，高质量，高规格，有特色”的浙江名校的道路上迈出坚实的步伐。\n现任校长苏守康同志，党总支书记黄斯敏同志。\n希望各位校友积极转发","panoId":"ee52a9618c1699002","panoPic":"http://image.youbim.cn/user/images/0279c03826742020/28313f9754292000.png","panoPicHeight":240,"panoTitle":"苍南中学"},{"praiseUserNum":13,"totalVisitCount":23630,"panoDesc":"五水共治是指治污水、防洪水、排涝水、保供水、抓节水这五项。这是一个大目标、大思路。这是浙江省政府近期推出的大政方针，是推进浙江新一轮改革发展的关键之策。","panoId":"2388c973a01778001","panoPic":"http://image.youbim.cn/pano/20170423105546-0279c03826742020/panos/thumb.jpg?v=1493972899026","panoPicHeight":240,"panoTitle":"全民剿劣大行动"},{"praiseUserNum":601,"totalVisitCount":15367,"panoDesc":"浙江中瑞大厦欢迎您！","panoId":"d338e9d1611683013","panoPic":"http://image.youbim.cn/pano/20170210190420-0279c03826742020/panos/thumb.jpg?v=1491902762734","panoPicHeight":247,"panoTitle":"浙江中瑞大厦"},{"praiseUserNum":223,"totalVisitCount":14650,"panoDesc":"魅力星海，群星璀璨","panoId":"ec9e9c07e91708002","panoPic":"http://image.youbim.cn/pano/20170225110324-0279c03826742020/panos/thumb.png?v=1491903265378","panoPicHeight":239,"panoTitle":"星海学校"},{"praiseUserNum":52,"totalVisitCount":9840,"panoDesc":"宁波市总工会","panoId":"c490e07f4d1830001","panoPic":"http://image.youbim.cn/pano/20170724194558-0279c03826742020/panos/thumb.jpg?v=1504245722152","panoPicHeight":240,"panoTitle":"宁波市职工创新成果展"},{"praiseUserNum":106,"totalVisitCount":9784,"panoDesc":"上外附属浙江宏达南浔学校","panoId":"6629001d641725012","panoPic":"http://image.youbim.cn/pano/20170309193225-0279c03826742020/panos/thumb.jpg?v=1491903337432","panoPicHeight":245,"panoTitle":"上外附属浙江宏达南浔学校欢迎您！"},{"praiseUserNum":72,"totalVisitCount":4960,"panoDesc":"正是钱塘春色浓，樱花悄然绽放，滨江长达15.5公里的沿江最美跑到“彻底红了”！","panoId":"f16a5b75301752004","panoPic":"http://image.youbim.cn/user/images/0279c03826742020/0d69989d4e324000.jpg","panoPicHeight":144,"panoTitle":"美爆了！2000株樱花让滨江最美跑道变身樱花大道！"},{"praiseUserNum":22,"totalVisitCount":4404,"panoDesc":"龙港镇先后荣获联合国开发署可持续发展试点镇、全国小城镇建设示范镇、全国小城镇综合改革试点镇、浙江省中心镇和小城市培育试点镇、浙江省城乡统筹现代商贸服务示范镇和温州市强镇扩权改革试点镇、全国新型城镇化试点镇等荣誉。","panoId":"b68ca2fcba1844001","panoPic":"http://image.youbim.cn/pano/20170824091104-0279c03826742020/panos/thumb.jpg?v=1504145376438","panoPicHeight":240,"panoTitle":"美丽家乡-龙港镇"},{"praiseUserNum":57,"totalVisitCount":2079,"panoDesc":"万科天空之城120户型","panoId":"a0c90958e01766009","panoPic":"http://image.youbim.cn/user/pano-images/8f14dd31d8782000/20170414215817-137d49f142277099-8f14dd31d8782000/panos/137d49f142277099.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"万科天空之城120户型"},{"praiseUserNum":0,"totalVisitCount":1539,"panoDesc":"一号家居网 设计师：董卓鑫 美式乡村风格","panoId":"674f7ef342455028","panoPic":"http://image.youbim.cn/pano/20160829235304-2e1fd9765b2001/panos/scene0.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"一号家居网 设计师：董卓鑫 美式乡村风格"},{"praiseUserNum":26,"totalVisitCount":1266,"panoDesc":"温州名豪大酒店","panoId":"0907008f861704002","panoPic":"http://image.youbim.cn/pano/20170223151913-0279c03826742020/panos/thumb.jpg?v=1489997721323","panoPicHeight":240,"panoTitle":"温州名豪大酒店"},{"praiseUserNum":24,"totalVisitCount":1208,"panoDesc":"古有兰亭，礼贤承序","panoId":"42f0aed5831752001","panoPic":"http://image.youbim.cn/user/images/0279c03826742020/73878f604b327005.jpg","panoPicHeight":240,"panoTitle":"祥生·群贤府K7户型全景图"},{"praiseUserNum":40,"totalVisitCount":1009,"panoDesc":"万科天空之城95户型","panoId":"0c823b3f251766007","panoPic":"http://image.youbim.cn/user/pano-images/a50b1b37f4775008/20170414220109-e171a8246e277090-a50b1b37f4775008/panos/e171a8246e277090.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"万科天空之城95户型"},{"praiseUserNum":5,"totalVisitCount":990,"panoDesc":"湘湖开元森泊度假乐园，总用地面积约290.8亩，投资总额约人民币11.7亿元。森泊是开元探索研究出的适合中国游客短期度假需求的旅游综合体项目。湘湖开元森泊度假乐园包括中央服务设施和休闲度假区两大部分。中央设施是整个乐园的核心部分，分为以热带雨林为主题的室内外水上乐园，以家庭体验和亲子为主的儿童游乐场所，以及丰富多样的餐厅、酒吧、商店及客房组成的度假酒店。休闲度假区则隐身于树林景观之中，拥有现代舒适的度假木屋、餐厅、宴会厅等。","panoId":"a4d355aa561620007","panoPic":"http://image.youbim.cn/user/pano-images/0279c03826742020/20161230215126-dc406ba2c0118008-0279c03826742020/panos/dc406ba2c0118008.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"杭州湘湖开元森泊度假乐园"},{"praiseUserNum":4,"totalVisitCount":963,"panoDesc":"衢州万达","panoId":"1da91e963f1738003","panoPic":"http://image.youbim.cn/user/pano-images/6c3fc89f01762002/20170321162243-ee8d5522d7247088-6c3fc89f01762002/panos/ee8d5522d7247088.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"0321衢州万达"},{"praiseUserNum":12,"totalVisitCount":950,"panoDesc":"锋潮美发","panoId":"42a80b1c9a1803001","panoPic":"http://image.youbim.cn/user/pano-images/0279c03826742020/20170525191249-c9b3d341e5298001-0279c03826742020/panos/c9b3d341e5298001.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"锋潮美发"},{"praiseUserNum":12,"totalVisitCount":900,"panoDesc":"古有兰亭 礼贤承序","panoId":"1606e10ecc1750002","panoPic":"http://image.youbim.cn/user/images/8f14dd31d8782000/4e1d3a4714327003.jpg","panoPicHeight":240,"panoTitle":"祥生·群贤府H2户型全景图"},{"praiseUserNum":10,"totalVisitCount":803,"panoDesc":"应用案例：胜利小学新城校区，24班小学及社会停车库，总建筑面积约25853平方米。 附属幼儿园：9班幼儿园，总建筑面积约3477平方米。\n       \n        建设单位：杭州市钱江新城投资集团有限公司  \n        设计单位：浙江大学建筑设计研究院有限公司\n        监理单位：浙江江南工程管理股份有限公司\n        施工单位：杭州通达集团有限公司\n        咨询单位：杭州优辰建筑设计咨询有限公司","panoId":"ba8cc814d81608004","panoPic":"http://image.youbim.cn/user/pano-images/6c3fc89f01762002/20161221113107-dcc273fb9c105030-6c3fc89f01762002/panos/dcc273fb9c105030.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"BIM成果全景展示技术平台"},{"praiseUserNum":7,"totalVisitCount":608,"panoDesc":"崇文实验学校室内","panoId":"5346bdfe941739002","panoPic":"http://image.youbim.cn/user/pano-images/0279c03826742020/20170321233457-787343deaf248017-0279c03826742020/panos/787343deaf248017.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"杭州市崇文实验学校"},{"praiseUserNum":29,"totalVisitCount":559,"panoDesc":"湘湖石岩山一览亭位于湘湖国家旅游风景区内，毗邻湘湖开元森泊度假乐园，是萧山人民户外健身锻炼的福地！","panoId":"0d70e410531871001","panoPic":"http://image.youbim.cn/user/pano-images/b92d053bb41219000/20171013163326-3ce7b8610f379000-b92d053bb41219000/panos/3ce7b8610f379000.tiles/thumb.jpg","panoPicHeight":240,"panoTitle":"湘湖石岩山一览亭，毗邻湘湖开元森泊度假乐园，是萧山人民户外健身锻炼的福地！"}];
+    var menuData =  [{"title":"全部","value":-1,"selected":true},{"title":"旅游","value":"3","child":[{"title":"全部","value":"3"},{"title":"国内","value":"34","child":[{"title":"建筑","value":"8"},{"title":"田园","value":"9"}]},{"title":"国外","value":"35","child":[{"title":"建筑","value":"10"},{"title":"田园","value":"11"}]}]},{"title":"商业","value":"25","child":[{"title":"全部","value":"25"},{"title":"会所","value":"110"},{"title":"毕业","value":"111"},{"title":"旅馆","value":"113"},{"title":"酒吧","value":"114"},{"title":"影城","value":"115"},{"title":"酒店","value":"116"},{"title":"影城","value":"117"},{"title":"婚礼","value":"118"},{"title":"汽车","value":"119"},{"title":"咖啡","value":"120"},{"title":"庄园","value":"121"},{"title":"商场","value":"122"}]},{"other":[{"title":"客厅","value":"0"},{"title":"餐厅","value":"1"},{"title":"主卧","value":"2"},{"title":"次卧","value":"3"},{"title":"客卧","value":"4"},{"title":"厨房","value":"5"},{"title":"主卫","value":"6"},{"title":"书房","value":"7"},{"title":"儿童房","value":"8"},{"title":"全屋","value":"9"}],"title":"样板房","value":"16","child":[{"title":"全部","value":"16"},{"title":"现代","value":"123","child":[{"title":"现代简约","value":"131"},{"title":"现代前卫","value":"100"}]},{"title":"欧式","value":"124","child":[{"title":"简约欧式","value":"103"},{"title":"北欧","value":"106"}]},{"title":"中式","value":"125","child":[{"title":"新中式","value":"108"},{"title":"中式","value":"129"}]},{"title":"古典","value":"127","child":[{"title":"新古典","value":"128"},{"title":"欧式古典","value":"130"}]},{"title":"田园","value":"101"},{"title":"地中海","value":"102"},{"title":"日式","value":"104"},{"title":"美式","value":"105","child":[{"title":"美式田园","value":"132"},{"title":"美式古典","value":"133"},{"title":"美式现代","value":"134"}]},{"title":"混搭","value":"107"},{"title":"雅致主义","value":"126"}]},{"title":"大学","value":"112","child":[{"title":"全部","value":"112"},{"title":"国内","value":"12"},{"title":"国外","value":"13"}]},{"title":"航拍","value":"4","child":[{"title":"全部","value":"4"},{"title":"国内","value":"14"},{"title":"国外","value":"15"}]},{"title":"自拍","value":"5","child":[{"title":"全部","value":"5"},{"title":"国内","value":"22"},{"title":"国外","value":"17"}]},{"title":"纪实","value":"6","child":[{"title":"全部","value":"6"},{"title":"国内","value":"18"},{"title":"国外","value":"19"}]},{"title":"创意","value":"7","child":[{"title":"全部","value":"7"},{"title":"国内","value":"20"},{"title":"国外","value":"21"}]},{"title":"BIM","value":"46","child":[{"title":"全部","value":"46"},{"title":"国内","value":"135"},{"title":"国外","value":"136"}]}];
+</script>
+<script src="../js/wall/widget.js"></script>
+<script src="../js/wall/wall.js"></script>
+</body>
+</html>

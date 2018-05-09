@@ -1,0 +1,114 @@
+$border-color: 1px solid rgba(0,0,0,.1);
+//mixin  start
+//$s 字体大小 $c 字体颜色  $b margin-bottom 大小
+@mixin font($s:.24rem,$c: #333, $b:0){
+  @if $c{
+    color: $c;
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }@else {
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }
+}
+@mixin align($t:left){
+  @if $t{
+    text-align: $t;
+  }@else{
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+  }
+}
+@mixin card($w,$b:false,$c:1%){
+  @if $b {
+    border: $border-color;
+    width: ($w - $c);
+  }@else {
+    width: $w;
+  }
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+}
+@mixin icon($w,$h,$b:block){
+  background-size: contain;
+  display: $b;
+  height: $h;
+  width: $w;
+  margin: auto;
+}
+@mixin iconimg($path,$num,$name:'icon',$s:1,$z:"png"){
+  @for $i from $s through $num {
+    .#{$name}-#{$i} {
+      background: url('#{$path}#{$i}.#{$z}') no-repeat center center;
+      background-size: contain;
+    }
+  }
+}
+@mixin position($type:'X'){
+  position: absolute;
+  @if($type == 'X'){
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }@else if($type == 'Y'){
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }@else {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+
+.clear:before,
+.clear:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+//card 布局  start
+//有边框
+.card-1-b{
+  @include card(100%,true,0%);
+}
+.card-2-b{
+  @include card(50%,true);
+  margin-bottom: .18rem;
+}
+.card-2-b:nth-child(2n-1){
+  margin-right: 2%;
+}
+.card-3-b{
+  @include card(33.3%,true);
+}
+.card-3-b:nth-child(2){
+  margin: 0 1.5%;
+}
+//无边框
+.card-2{
+  @include card(50%);
+}
+.card-3{
+  @include card(33.3%);
+}
+.card-4{
+  @include card(25%);
+}
+.card-5{
+  @include card(20%);
+}
+//card 布局  end
+.none{
+  display: none;
+}
+.response-img{
+  display: block;
+  width: 100%;
+  height: auto;
+}

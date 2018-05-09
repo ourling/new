@@ -1,0 +1,96 @@
+@import "../mixin/template";
+.top-container{
+  padding: .2rem;
+  .title{
+    @include font(.26rem,#333,.25rem);
+    font-weight: 700;
+  }
+  .title-mark{
+    @include font(.28rem,#30D0FE,.38rem);
+  }
+  .text{
+    @include font(.24rem,#333,.2rem);
+    @include align();
+  }
+  .let-bar{
+    margin-bottom: .15rem;
+    .num{
+      @include font(.24rem,#333);
+      float: right;
+    }
+  }
+  .icon-bar{
+    .icon-item{
+      @include font(.2rem,#333);
+      display: inline-block;
+      position: relative;
+      padding-left: .4rem;
+      margin-right: .4rem;
+      float: left;
+    }
+    .icon-item:before{
+      @include position('Y');
+      @include icon(.3rem,.3rem);
+      content: "";
+      left: 0;
+    }
+    .icon-item-1:before{
+      background: url("../../images/book/icon-num.png") no-repeat center;
+      background-size: contain;
+    }
+    .icon-item-2:before{
+      background: url("../../images/book/icon-time.png") no-repeat center;
+      background-size: contain;
+    }
+    i{
+      color: #30D0FE;
+    }
+  }
+}
+.book-container{
+  padding-top: 0;
+  margin-bottom: .8rem;
+}
+.part{
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+.bar-unfill {
+  height: .32rem;
+  float: left;
+  background:#d2d2d2;
+  width:88%;
+  border-radius:0.08rem
+}
+.bar-fill-stripes {
+  width: 60%;
+  height: .32rem;
+  display: block;
+  background: #30D0FE;
+  border-radius: 0.08rem;
+  background-image: linear-gradient(-45deg,
+          rgba(255, 255, 255, .2) 5%, transparent 5%,
+          transparent 10%, rgba(255, 255, 255, .2) 10%,
+          rgba(255, 255, 255, .2) 15%, transparent 15%,
+          transparent 20%, rgba(255, 255, 255, .2) 20%,
+          rgba(255, 255, 255, .2) 25%, transparent 25%,
+          transparent 30%, rgba(255, 255, 255, .2) 30%,
+          rgba(255, 255, 255, .2) 35%, transparent 35%,
+          transparent 40%, rgba(255, 255, 255, .2) 40%,
+          rgba(255, 255, 255, .2) 45%, transparent 45%,
+          transparent 50%, rgba(255, 255, 255, .2) 50%,
+          rgba(255, 255, 255, .2) 55%, transparent 55%,
+          transparent 60%, rgba(255, 255, 255, .2) 60%,
+          rgba(255, 255, 255, .2) 65%, transparent 65%,
+          transparent 70%, rgba(255, 255, 255, .2) 70%,
+          rgba(255, 255, 255, .2) 75%, transparent 75%,
+          transparent 80%, rgba(255, 255, 255, .2) 80%,
+          rgba(255, 255, 255, .2) 85%, transparent 85%,
+          transparent 90%, rgba(255, 255, 255, .2) 90%,
+          rgba(255, 255, 255, .2) 95%, transparent 95%,
+          transparent 100%, rgba(255, 255, 255, .2) 100%,
+          transparent);
+
+}

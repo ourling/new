@@ -1,0 +1,136 @@
+<!DOCTYPE html >
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <!-- include summernote css/js-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+</head>
+<body>
+<div id="summernote"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        /* function sendFile(file, editor,welEditable) {
+
+         console.log("file="+file);
+
+         console.log("editor="+editor);
+
+         console.log("welEditable="+welEditable);
+
+         data = new FormData();
+
+         data.append("blog_image[image]", file);
+
+         $.ajax({
+
+         url: 'blog_images.jsp',
+
+         data: data,
+
+         cache: false,
+
+         contentType: false,
+
+         processData: false,
+
+         type: 'POST',
+
+         success: function(data){
+
+         editor.insertImage(welEditable, data.url);
+
+         }
+
+         });
+
+         }
+
+         */
+        $('#summernote').summernote({
+            height: 300, /*高度指定*/
+            lang: 'zh-CN', // default: 'en-US'
+            focus: true,
+            toolbar: [
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                ['insert', ['picture', 'video']]
+            ],
+            /* image: {
+             selectFromFiles: '选择文件'
+             }, */
+            /*onImageUpload: function(files, editor, welEditable) {
+             sendFile(files[0], editor,welEditable);
+             }*/
+            callback: {
+                onImageUpload: function (files, editor, $editable) {
+                    console.log(files);
+                    sendFile(files[0], editor, $editable);
+                }
+            }
+        });
+    });
+//    function sendFile(file, editor, $editable) {
+//        console.log(2);
+//        $(".note-toolbar.btn-toolbar").append('正在上传图片');
+//        var filename = false;
+//        try {
+//            filename = file['name'];
+//            alert(filename);
+//        } catch (e) {
+//            filename = false;
+//        }
+//        if (!filename) {
+//            $(".note-alarm").remove();
+//        }
+////以上防止在图片在编辑器内拖拽引发第二次上传导致的提示错误
+//        var ext = filename.substr(filename.lastIndexOf("."));
+//        ext = ext.toUpperCase();
+//        var timestamp = new Date().getTime();
+//        var name = timestamp + "_" + $("#summernote").attr('aid') + ext;
+////name是文件名，自己随意定义，aid是我自己增加的属性用于区分文件用户
+//        data = new FormData();
+//        data.append("file", file);
+//        data.append("key", name);
+//        data.append("token", $("#summernote").attr('token'));
+//        $.ajax({
+//            data: data,
+//            type: "POST",
+//            url: "/summernote/fileupload", //图片上传出来的url，返回的是图片上传后的路径，http格式
+//            contentType: "json",
+//            cache: false,
+//            processData: false,
+//            success: function (data) {
+////data是返回的hash,key之类的值，key是定义的文件名
+//                alert(data);
+////把图片放到编辑框中。editor.insertImage 是参数，写死。后面的http是网上的图片资源路径。
+////网上很多就是这一步出错。
+//                $('#summernote').summernote('editor.insertImage', "http://res.cloudinary.com/demo/image/upload/butterfly.jpg");
+//                $(".note-alarm").html("上传成功,请等待加载");
+//                setTimeout(function () {
+//                    $(".note-alarm").remove();
+//                }, 3000);
+//            },
+//            error: function () {
+//                $(".note-alarm").html("上传失败");
+//                setTimeout(function () {
+//                    $(".note-alarm").remove();
+//                }, 3000);
+//            }
+//        });
+//    }
+</script>
+</body>
+</html>

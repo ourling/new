@@ -1,0 +1,64 @@
+@import "../mixin/template";
+.banner{
+  width: 100%;
+  .banner-container{
+    top: 1.2rem;
+    .banner-title{
+      @include font(.72rem,#fff,.2rem);
+      font-weight: 700;
+    }
+  }
+}
+.mobile-body{
+  background: #F5F5F5;
+  padding-bottom: .9rem;
+}
+.chain-container{
+  padding-top: .2rem;
+  width: 100%;
+}
+.part{
+  background: #fff;
+  border-bottom: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
+  .card-container{
+    padding: .4rem .2rem;
+  }
+}
+.part-02{
+  background: url('../../images/chain/part02-bg.png') no-repeat center;
+  background-size: cover;
+  .title-container{
+    border-bottom: none;
+    color: #fff;
+    .icon{
+      background: #fff;
+    }
+  }
+  .card-container{
+    text-align: center;
+    padding-top: 0;
+    .txt{
+      @include font(.28rem,#FBFBF9,.18rem);
+      font-weight: 700;
+    }
+    .response-img{
+      width: 1.8rem;
+      margin: auto;
+    }
+  }
+}
+.part-04{
+  margin-bottom: 0;
+  .title-container{
+    padding-top: 0;
+  }
+  .card-container{
+    .txt{
+      @include font(.2rem,#333,.25rem);
+    }
+    .txt-top{
+      margin-top: .45rem;
+    }
+  }
+}

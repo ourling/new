@@ -1,0 +1,172 @@
+@mixin font($s:.24rem,$c: #333, $b:0){
+  @if $c{
+    color: $c;
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }@else {
+    font-size: $s;
+    font-weight: normal;
+    margin-bottom: $b;
+  }
+}
+@mixin align($t:left){
+  @if $t{
+    text-align: $t;
+  }@else{
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+  }
+}
+@mixin position($type:'X'){
+  position: absolute;
+  @if($type == 'X'){
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }@else if($type == 'Y'){
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }@else {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+html,body{
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.symbol_header {
+  background-color: #399bf4;
+  height: 4px;
+  position: relative;
+  width: 100%;
+}
+.register-container{
+  box-sizing: border-box;
+  padding: .2rem .2rem;
+  position: relative;
+  height: 100%;
+  left: 0;
+  right: 0;
+  .logo-title{
+    @include font(.24rem,#399bf4);
+    font-weight: 700;
+  }
+  .register_content{
+    @include position('B');
+    width: 100%;
+    margin: 0;
+    .left_area{
+      padding: 0 .2rem;
+      width: auto;
+    }
+    .input{
+      @include font(.28rem,#333);
+      width: 100%;
+      height: auto;
+      padding-top: .4rem;
+    }
+    .input_group{
+      position: relative;
+    }
+    .input_group>input.last_child {
+      @include position('Y');
+      @include font(.28rem,#399bf4);
+      background: #fff;
+      color: #399bf4;
+      height: auto;
+      border: none;
+      margin-top: 0;
+      width: 3.75rem;
+    }
+  }
+  .mybox_con_top{
+    @include font(.34rem,#47525d);
+    font-weight: 700;
+    margin-bottom: .36rem;
+    text-align: center;
+  }
+  .error{
+   @include font(.24rem,#d0021b);
+    line-height: inherit;
+  }
+  .txt{
+    @include font(.2rem,#333);
+    position:relative;
+    width:100%;
+    input{
+      width: .3rem;
+      height: .3rem;
+      margin: 0 .2rem 0 0;
+      vertical-align: middle;
+    }
+  }
+  .register-btn{
+    margin-top: .8rem;
+    .btn_primary{
+      @include font(.32rem,#fff);
+      padding: .25rem 0;
+      -webkit-border-radius: .5rem;
+      border-radius: .5rem;
+      width: 3rem;
+      text-align: center;
+      height: auto;
+    }
+  }
+}
+.foot-copyright{
+  @include font(.24rem,#999);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .25rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.mybox_con{
+  @include position('B');
+  background: #fff;
+  margin: 0;
+  width: 85%;
+  z-index: 10000;
+  div.mybox_con_top{
+    @include font(.36rem,#333);
+    padding: .3rem 0;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+    height: auto;
+    a{
+      @include font(.5rem,#000)
+    }
+  }
+  .mybox_con_body h2{
+    font-size: .28rem;
+  }
+  .mybox_con_body p{
+    font-size: .24rem;
+  }
+  div.mybox_con_body{
+    height: 7rem;
+  }
+}
+#showSuccessLoopTip {
+  background: #1f7adb;
+  border: 1px solid #7cb1e9;
+  border-radius: .1rem;
+  color: #ffffff;
+  text-align: center;
+  z-index: 9999;
+  opacity: 1;
+  position: absolute;
+  font-size: .28rem;
+  width: 100%;
+  padding: .4rem;
+}

@@ -1,0 +1,233 @@
+@import "template";
+//总盒子统一样式
+.container {
+  margin: auto;
+  width: 1200px;
+}
+//title统一样式
+.title-container {
+  padding-top: 33px;
+  .title {
+    @include font(30px, #3A3A46, 20px);
+    @include align(center);
+  }
+  .title-bar {
+    @include font(20px,#85888D);
+    @include align(center);
+  }
+}
+//4列  上下滑动效果
+.slide-animate-container {
+  padding: 50px 0;
+  &.card-container {
+    .card-title {
+      @include font(24px, #3A3A46,15px);
+      text-align: left;
+      padding-left: 30px;
+    }
+    .txt{
+      @include font(16px,#85888D);
+      @include align();
+      padding-left: 30px;
+      height: 75px;
+    }
+  }
+  .card-4{
+    height: 393px;
+    overflow: hidden;
+    margin-right: 26.5px;
+    width: 280px;
+    border: 5px solid transparent;
+    box-shadow: 0 0 35px #F4F4F4;
+    transition: .5s;
+  }
+  .card-4:hover{
+    border: 5px solid #19B1FF;
+    box-shadow: 0 5px 10px #9DC3DD;
+    .content{
+      margin-top: -100px;
+      opacity: 0;
+    }
+    .text-content{
+      top: 0;
+      opacity: 1;
+    }
+  }
+  .card-4:last-child{
+    margin-right: 0;
+  }
+  .content{
+    padding-top: 38px;
+    transition: .5s;
+  }
+  .text-content{
+    box-sizing: border-box;
+    position: absolute;
+    padding: 70px 40px 0;
+    width: 100%;
+    top: 100px;
+    opacity: 0;
+    transition: .5s;
+    .txt-title{
+      @include font(22px,#85888D,30px);
+    }
+    .txt-txt{
+      @include font(16px,#85888D,22px);
+      @include align();
+    }
+    .txt-txt-m{
+      @include font(16px,#19B1FF,50px);
+      @include align();
+    }
+    .txt-btn{
+      @include font(16px,#85888D);
+      border: 3px solid #19B1FF;
+      border-radius: 16px;
+      line-height: 32px;
+      text-align: center;
+      display: block;
+      margin: auto;
+      width: 150px;
+
+    }
+  }
+  .icon {
+    @include icon(270px, 224px);
+  }
+  @include iconimg('../../images/index/part01-icon', 4,'.icon',cover);
+}
+//2列  左图右文/左文右图
+.double-photo-container{
+  padding: 50px 0;
+  .photo{
+
+  }
+  .text{
+    @include position('Y');
+    .txt{
+      @include font(18px,#666);
+      @include align(false);
+    }
+  }
+  .content{
+    @extend .clear;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .content:nth-child(2n+1){
+    .photo{
+      float: left;
+    }
+    .text{
+      right: 0;
+    }
+    .card-2:first-child{
+      padding-right: 30px;
+    }
+    .card-2:last-child{
+      padding-left: 30px;
+    }
+  }
+  .content:nth-child(2n){
+    .photo{
+      float: right;
+    }
+    .text{
+      left: 0;
+    }
+    .card-2:first-child{
+      padding-left: 30px;
+    }
+    .card-2:last-child{
+      padding-right: 30px;
+    }
+  }
+  .content:last-child{
+    margin-bottom: 0;
+  }
+}
+//左文右图
+.news-book{
+  padding: 20px 0;
+  position: relative;
+  .card-4{
+    float: right;
+  }
+  .card-4:first-child{
+    @include position('Y');
+  }
+  .title{
+    @include font(18px,#333,10px);
+    text-align: center;
+  }
+  .title-bar{
+    @include font(16px,#333,5px);
+    text-align: center;
+  }
+  .icon{
+    @include icon(52px,52px);
+    margin-bottom: 12px;
+  }
+  .txt{
+    @include font(12px,#666);
+    text-align: center;
+  }
+  @include iconimg('../../images/index/part01-icon',3);
+}
+//4 背景图片+文本覆盖
+.bg-4{
+  .card-4{
+    height: 440px;
+  }
+  .content{
+    margin-top: 110px;
+    padding: 0 32px;
+  }
+  .icon{
+    @include icon(65px,65px);
+    margin-bottom: 34px;
+  }
+  .title{
+    @include font(20px,#fff,20px);
+    text-align: center;
+  }
+  .txt{
+    @include font(14px,#C8C8C8);
+    @include align(false);
+  }
+  @include iconimg('../../images/index/part02-icon',4);
+  @include iconimg('../../images/index/part02-bg',4,'card-bg');
+}
+//2列切上下覆盖  存在层次感
+.stack-up-2{
+  position: relative;
+  .card-2-spe:last-child{
+    @include card(62%);
+    float: right;
+  }
+  .card-2-spe:first-child{
+    box-sizing: border-box;
+    @include position('Y');
+    padding: 100px 75px 0 60px;
+    z-index: 1;
+    .title{
+      @include font(26px,#333,40px);
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .txt{
+      @include font(16px,#333333);
+      @include align(false);
+    }
+    .title:after{
+      content: '';
+      width: 152px;
+      height: 2px;
+      background: #1B1B1B;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

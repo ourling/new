@@ -1,0 +1,64 @@
+@import "../mixin/template";
+
+.banner{
+  width: 100%;
+  .banner-container{
+    padding:  0 .28rem;
+    top: .45rem;
+  }
+}
+
+.mobile-body {
+  background: #F8F8F8;
+  margin-bottom: .9rem;
+}
+
+.part{
+  border: none;
+  .card-container{
+    padding-top: .22rem;
+    padding-bottom: 0;
+  }
+}
+
+.product-container {
+  color: #666;
+  width: 100%;
+}
+
+.card-container {
+  position: relative;
+  .title {
+    @include font(.3rem, #000);
+    text-align: center;
+    position: absolute;
+    bottom: .55rem;
+    width: 100%;
+  }
+}
+
+.card-container-1 {
+  .card-2-b{
+    height: 3.26rem;
+  }
+  .icon{
+    @include position('X');
+  }
+  .icon-1{
+    @include icon(1.79rem,1.4rem);
+    top: .5rem;
+  }
+  .icon-2{
+    @include icon(1.27rem,1.54rem);
+    top: .47rem;
+  }
+  .icon-3{
+    @include icon(.78rem,1.88rem);
+    top: .36rem;
+  }
+  .icon-4{
+    @include icon(2.04rem,1.02rem);
+    top: .83rem;
+  }
+  @include iconimg("../../images/product/part01-icon", 4,'icon');
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav-template</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/wyboot/wyboot.js"></script>
+</head>
+<body>
+<header id="head" v-cloak>
+    <fix-nav :fixnav="fixNav"></fix-nav>
+    <static-nav :staticnav="staticNav" @drop-open="dropOpen" @drop-close="dropClose"></static-nav>
+</header>
+<script src="../js/nav/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>jQuery分层轮播3d旋转切换代码 - 站长素材</title>
+
+    <link rel="stylesheet" href="../css/lunbo.css">
+    <style>
+        body{ background-color:#2E2E2E}
+        .zy-Slide section{ color: #FFFFFF; border-width: 1px; border-style: solid; }
+    </style>
+
+</head>
+
+<body style="">
+<div id="Slide1" class="zy-Slide" style="border: 0px solid blue;">
+    <!--prev:元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。-->
+    <section>前一张</section>
+    <section>后一张</section>
+    <ul>
+        <!--alt + shift : 可以创建一个矩形选择区域-->
+        <li style="z-index: 3; width: 170px; height: 218px; top: 37px; left: 468px;"><img src="images/1.jpg" style="opacity: 0.7;"></li>
+        <li style="z-index: 2; width: 130px; height: 170px; top: 61px; left: 620px;"><img src="images/2.jpg" style="opacity: 0.6;"></li>
+        <li style="z-index: 1; width: 120px; height: 150px; top: 71px; left: 496px;"><img src="images/3.jpg" style="opacity: 0.5;"></li>
+        <li style="z-index: 1; width: 120px; height: 150px; top: 71px; left: 134px;"><img src="images/4.jpg" style="opacity: 0.5;"></li>
+        <li style="z-index: 2; width: 130px; height: 170px; top: 61px; left: 0px;"><img src="images/5.jpg" style="opacity: 0.6;"></li>
+        <li style="z-index: 3; width: 170px; height: 218px; top: 37px; left: 110px;"><img src="images/6.jpg" style="opacity: 0.7;"></li>
+        <li style="z-index: 4; width: 224px; height: 288px; top: 0px; left: 262px;"><img src="images/7.jpg" style="opacity: 1;"></li>
+    </ul>
+</div>
+<div id="Slide2" class="zy-Slide" style="border: 0px solid blue;">
+    <!--prev:元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。-->
+    <section>前一张</section>
+    <section>后一张</section>
+    <ul>
+        <!--alt + shift : 可以创建一个矩形选择区域-->
+        <li style="z-index: 3; width: 170px; height: 218px; top: 37px; left: 468px;"><img src="images/4.jpg" style="opacity: 0.7;"></li>
+        <li style="z-index: 2; width: 130px; height: 170px; top: 61px; left: 620px;"><img src="images/5.jpg" style="opacity: 0.6;"></li>
+        <li style="z-index: 1; width: 120px; height: 150px; top: 71px; left: 496px;"><img src="images/6.jpg" style="opacity: 0.5;"></li>
+        <li style="z-index: 1; width: 120px; height: 150px; top: 71px; left: 134px;"><img src="images/7.jpg" style="opacity: 0.5;"></li>
+        <li style="z-index: 2; width: 130px; height: 170px; top: 61px; left: 0px;"><img src="images/1.jpg" style="opacity: 0.6;"></li>
+        <li style="z-index: 3; width: 170px; height: 218px; top: 37px; left: 110px;"><img src="images/2.jpg" style="opacity: 0.7;"></li>
+        <li style="z-index: 4; width: 224px; height: 288px; top: 0px; left: 262px;"><img src="images/3.jpg" style="opacity: 1;"></li>
+    </ul>
+</div>
+
+<script src="jquery.js"></script>
+<script src="lunbo.js"></script>
+<script src="index.js"></script>
+
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/common.css?t=20170926">
+    <link rel="stylesheet" href="../css/agency.css?t=20170927">
+    <script>
+        var timestamp = (new Date()).valueOf();
+    </script>
+</head>
+<body>
+<header id="head">
+    <div class="nav">
+        <span class="logo"></span>
+        <span class="head-btn fr register">免费注册</span>
+    </div>
+</header>
+
+<footer id="foot" class="static-foot mobile-foot">
+    <div class="icon fl bottom-menu">
+        <i class="icon-1"></i>
+        <ul class="dropdown-menu">
+            <li><a class="item" href="./index.html">返回首页</a></li>
+            <li><a class="item" href="./market.html">市场管理</a></li>
+            <li><a class="item" href="./server.html">服务中心</a></li>
+            <li><a class="item" href="./marketing.html">营销活动</a></li>
+            <li><a class="item" href="./platform.html">平台支持</a></li>
+        </ul>
+    </div>
+    <span class="icon fr contact-btn" data-phone="0571-89935939">
+        <i class="icon-3"></i>
+    </span>
+    <span class="icon static qq-btn">
+        <i class="icon-2"></i>
+    </span>
+</footer>
+<!-- 遮罩层区 -->
+<div class="mask mask-tel">
+    <div class="tel-alert">
+        <p class="title">提示</p>
+        <p class="info">确定拨打电话：<span id="alertNum"></span>？</p>
+        <div class="tel-btn-container">
+            <span class="tel-btn remove">取消</span>
+            <a id="alertA" class="tel-btn sure">确定</a>
+        </div>
+    </div>
+</div>
+<div class="mask mask-foot-nav"></div>
+<script src="../js/jquery-1.7.2.js"></script>
+<script src="../js/comm.js?t=20171116"></script>
+</body>
+</html>

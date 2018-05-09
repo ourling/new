@@ -1,0 +1,150 @@
+@import "../mixin/template";
+.banner {
+  width: 100%;
+  .banner-container{
+    top: 2.5rem;
+    .banner-btn{
+      @include font(.28rem,#fff);
+      background: #FF3D68;
+    }
+  }
+}
+.mobile-body {
+  background: #F8F8F8;
+}
+.cos-container {
+  color: #666;
+  min-height: 5rem;
+  padding-top: $padding;
+  width: 100%;
+}
+.part{
+  &.spe{
+    margin-top: .2rem;
+  }
+  .title-container{
+    @include font(.32rem, #000);
+    padding: .4rem .3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .icon {
+      background: #FF3D68;
+    }
+  }
+}
+.card-container{
+  &.info{
+    padding: .2rem 0;
+  }
+  .title{
+    @include font(.3rem,#333,.25rem);
+    &.align-c{
+      @include align(center)
+    }
+  }
+  .txt{
+    @include font(.2rem,#7E7777);
+    @include align(false);
+  }
+  .card-btn{
+    @include font(.24rem,#fff);
+    display: block;
+    border-radius: .1rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: .15rem;
+    width: 25%;
+  }
+}
+.donut-container{
+  margin-bottom: .4rem;
+  .card-4{
+    height: 2.11rem;
+    width: 23.5%;
+    margin: 0 1%;
+  }
+  .card-4:first-child{
+    margin-right: 1%;
+    margin-left: 0;
+  }
+  .card-4:last-child{
+    margin-right: 0;
+    margin-left: 1%;
+  }
+  .donut{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+.cos-foot{
+  position: relative;
+  margin-bottom: .8rem;
+  .foot-container{
+    position: absolute;
+    top: 3rem;
+    text-align: center;
+    width: 100%;
+    .foot-btn{
+      @include font(.3rem, #40B0FF);
+      background: #fff;
+      box-sizing: border-box;
+      border-radius: .1rem;
+      display: block;
+      margin: .2rem auto;
+      padding: .18rem .23rem;
+      width: 3.36rem;
+    }
+  }
+}
+.donut{
+  position: absolute;
+  transition: .8s;
+  height: 100%;
+  width: 100%;
+}
+.donut-img {
+  z-index: 5;
+  backface-visibility: hidden;
+}
+.donut-txt{
+  z-index: 5;
+  backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card-container-3{
+  .title{
+    color: #A767FF;
+    font-weight: 700;
+    padding-top: .15rem;
+  }
+  .card-btn{
+    background: #A767FF;
+  }
+  @include iconimg('../../images/solutions/COS/cos-part03-icon',4,'icon');
+  @include iconimg('../../images/solutions/COS/cos-part03-s-icon',4,'icon-s');
+}
+.card-container-4{
+  .title{
+    color: #8BC83D;
+    font-weight: 700;
+    padding-top: .15rem;
+  }
+  .card-btn{
+    background: #8BC83D;
+  }
+  @include iconimg('../../images/solutions/COS/cos-part04-icon',4,'icon');
+  @include iconimg('../../images/solutions/COS/cos-part04-s-icon',4,'icon-s');
+}
+.card-container-5{
+  .title{
+    color: #F387DC;
+    font-weight: 700;
+    padding-top: .15rem;
+  }
+  .card-btn{
+    background: #F387DC;
+  }
+  @include iconimg('../../images/solutions/COS/cos-part05-icon',4,'icon');
+  @include iconimg('../../images/solutions/COS/cos-part05-s-icon',4,'icon-s');
+}

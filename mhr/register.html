@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱聚移动招聘</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/register.css?t=232323">
+</head>
+<body>
+<div id="app">
+    <!--<span class="bg top"></span>-->
+    <!--<span class="bg bottom"></span>-->
+    <div class="container">
+        <h3 class="title">注 册</h3>
+            <div v-if="isStep1" class="step-1">
+                <div id="email" class="input-group">
+                    <input v-model="arg.email"
+                           @blur="blurEvent($event,'email')"
+                           @keyup="contentUpdate('email')"
+                           type="email" class="form-control" placeholder="请填写企业邮箱（不支持个人邮箱）">
+                    <i v-if="arg.email != ''" class="icon icon-1" @click="arg.email = ''">×</i>
+                    <p class="txt">请输入您的邮箱</p>
+                </div>
+                <div id="phone" class="input-group">
+                    <input v-model="arg.phone"
+                           @blur="blurEvent($event,'phone')"
+                           @keyup="contentUpdate('phone')"
+                           type="number" class="form-control" placeholder="请输入您的手机号">
+                    <p class="txt">请输入您的手机号</p>
+                </div>
+                <div id="code" class="input-group code-container">
+                    <input v-model="arg.code"
+                           @blur="blurEvent($event,'code')"
+                           type="number" class="form-control code" placeholder="请输入验证码">
+                    <span v-if="isCodeBtn"
+                          @click="countDown"
+                          class="code-btn">获取验证码</span>
+                    <span v-if="!isCodeBtn"
+                          class="code-btn" style="color: #999">{{codeTxt}}</span>
+                    <p class="txt">请输入验证码</p>
+                </div>
+                <div class="input-group">
+                    <input v-model="arg.password"
+                           @blur="blurEvent($event,'password')"
+                           @keyup="contentUpdate('password')"
+                           type="password" class="form-control" placeholder="请输入密码">
+                    <p class="txt">请输入密码</p>
+                </div>
+            </div>
+            <div v-if="!isStep1" class="step-2">
+                <div class="input-group">
+                    <input  v-model="arg.shopName"
+                            @blur="blurEvent($event,'shopName')"
+                            @keyup="contentUpdate"
+                            type="text" class="form-control" placeholder="请输入公司名称">
+                    <p class="txt">请输入公司名称</p>
+                </div>
+                <div class="input-group">
+                    <input  v-model="arg.userName"
+                            @blur="blurEvent($event,'userName')"
+                            @keyup="contentUpdate"
+                            type="text" class="form-control" placeholder="请输入您的姓名">
+                    <p class="txt">请输入您的姓名</p>
+                </div>
+                <div class="input-group info-container">
+                    <input type="checkbox" checked disabled class="info">
+                    <span class="info-desc">我已阅读并同意爱聚HR的企业注册协议</span>
+                </div>
+            </div>
+        <span :class="['btn','btn-txt',isOver ? '': 'disabled']"
+                @click="submit"
+        >{{btnTxt}}</span>
+
+    </div>
+</div>
+<script src="lib/jquery-1.7.2.js"></script>
+<script src="lib/vue2.0.js"></script>
+<script src="lib/vue-resource.min.js"></script>
+<script src="//scrm.ecbao.cn/assert/libs/layer/layer.js"></script>
+<script src="js/comm.js"></script>
+<script src="js/register.js?t=232333333"></script>
+</body>
+</html>

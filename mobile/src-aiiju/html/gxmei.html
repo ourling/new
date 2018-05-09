@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>果小美</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/gxmei/gxmei.css">
+</head>
+<body>
+<div id="app">
+    <img class="response-img" src="../images/gxmei/banner-bg.png" alt="">
+    <transition name="fade">
+        <div v-if="isShow" class="mark-form">
+            <div class="content">
+                <div class="input-group">
+                    <input id="agCompany" type="text" class="form-control" placeholder="请输入公司名">
+                </div>
+                <div class="input-group">
+                    <input id="userName" type="text" class="form-control" placeholder="请输入姓名">
+                </div>
+                <div class="input-group">
+                    <input id="phoneId" type="number" class="form-control" placeholder="请输入手机号或固定电话">
+                </div>
+                <span class="btn btn-txt" @click="submit">提交</span>
+                <p class="txt">恭喜您领取成功！</p>
+            </div>
+        </div>
+    </transition>
+    <div class="mark-btn">
+        <span class="btn btn-txt" @click="isShow=true">立即申请</span>
+    </div>
+</div>
+<script src="../plugins/jq/jquery-1.7.2.js"></script>
+<script src="../plugins/vue/vue2.0.js"></script>
+<script src="../plugins/vue/vue-resource.min.js"></script>
+<script src="../js/gxmei.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@import "../mixin/template";
+.banner{
+  width: 100%;
+  .banner-container{
+    padding:  0 .28rem;
+    top: .45rem;
+  }
+}
+.mobile-body{
+  background: #223B56;
+  padding-bottom: .9rem;
+}
+.index-container{
+  margin-bottom: .6rem;
+  padding-top: .2rem;
+  width: 100%;
+}
+.part{
+  .part-bg{
+    height: 2.46rem;
+    width: 4.55rem;
+  }
+  .part-sm{
+    height: 2.46rem;
+    width: 2.76rem;
+  }
+}

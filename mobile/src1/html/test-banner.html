@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>MovingBoxes滑动放大图片插件</title>
+
+    <link type="text/css" href="/api/jq/5733e358c8829/css/style.css" rel="external nofollow" rel="stylesheet">
+
+    <script type="text/javascript" src="/api/jq/5733e358c8829/js/jquery.js"></script>
+
+    <script type="text/javascript" src="/api/jq/5733e358c8829/js/jquery.movingboxes.js"></script>
+
+    <script type="text/javascript">
+
+        $(function() {
+
+            $('#focus').movingBoxes({
+
+                startPanel: 1, // 从第一个li开始
+
+                reducedSize: .5, // 缩小到原图50%的尺寸
+
+                wrap: true, // 是否无缝循环
+
+                buildNav: false, // 是否显示分页
+
+                navFormatter: function() {
+
+                    return "●";// 返回分页格式
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+<!-- 代码开始 -->
+
+<ul id="focus">
+
+    <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" ><img src="/api/jq/5733e358c8829/images/img01.jpg"></a></li>
+
+    <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" ><img src="/api/jq/5733e358c8829/images/img02.jpg"></a></li>
+
+    <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" ><img src="/api/jq/5733e358c8829/images/img03.jpg"></a></li>
+
+    <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" ><img src="/api/jq/5733e358c8829/images/img04.jpg"></a></li>
+
+    <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" ><img src="/api/jq/5733e358c8829/images/img05.jpg"></a></li>
+
+</ul>
+
+<!-- 代码结束 -->
+
+</body>
+
+</html>
